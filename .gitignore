@@ -1,2 +1,4 @@
 DataScienceProject.pem
 *.pem
+*.DS_Store
+*.pyc
