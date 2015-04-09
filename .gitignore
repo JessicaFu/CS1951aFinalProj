@@ -1,4 +1,5 @@
 DataScienceProject.pem
+server/db_settings
 *.pem
 *.DS_Store
 *.pyc

@@ -74,10 +74,16 @@ WSGI_APPLICATION = 'data_science_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+db_settings = open('db_settings')
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'data_science_db',
+        'USER': db_settings.readline(),
+        'PASSWORD': db_settings.readline(),
+        'HOST' : db_settings.readline(),
+        'PORT' : db_settings.readline()),
     }
 }
 
