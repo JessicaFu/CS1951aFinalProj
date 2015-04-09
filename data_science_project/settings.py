@@ -14,7 +14,13 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_ROOT = os.path.abspath(PROJECT_PATH)
 
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -37,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'news'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -75,18 +82,23 @@ WSGI_APPLICATION = 'data_science_project.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 db_settings = open('db_settings')
+user = db_settings.readline().strip()
+pw = db_settings.readline().strip()
+host = db_settings.readline().strip()
+port = db_settings.readline().strip()
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'data_science_db',
-        'USER': db_settings.readline(),
-        'PASSWORD': db_settings.readline(),
-        'HOST' : db_settings.readline(),
-        'PORT' : db_settings.readline()),
+        'USER': user,
+        'PASSWORD': pw,
+        'HOST': host,
+        'PORT': port
     }
 }
 
+db_settings.close()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
