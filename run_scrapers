@@ -1,0 +1,7 @@
+#! /usr/bin/python
+
+import datetime
+
+log = open('/home/ubuntu/log_file', 'a')
+
+log.write('job was run at' + str(datetime.datetime.now()) + '\n')
