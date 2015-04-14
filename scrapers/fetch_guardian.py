@@ -1,13 +1,7 @@
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
-from time import sleep
-# Server stuff
-import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
-
-from django.db import models
-from news.models import Source
+import datetime
 
 def main():
     source="The Guardian"
@@ -30,13 +24,13 @@ def main():
                 break
             else:
                 a.download()
-
-        if not a.is_downloaded:
-            print("Error: Did not donwnload something")
+        try:
+            a.parse()
+            a.nlp()
+        except:
+            print("Error: Not parsed/downloaded correctly.")
             continue
 
-        a.parse()
-        a.nlp()
         html = a.html
         summary = a.summary
         keywords = a.keywords
@@ -49,6 +43,8 @@ def main():
         date_time = date + " " + time
         #print(title)
         #print(date_time)
+        date_obj = datetime.datetime.strptime(date_time,'%m/%d/%Y %H:%M')
+        #print(date_obj.strftime('%Y/%m/%d %I:%M %p'))
         #TODO: Add stuff to the DB
 
 if __name__ == "__main__":
