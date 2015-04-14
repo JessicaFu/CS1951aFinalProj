@@ -36,8 +36,19 @@ def main():
         url = article.url
         a = Article(url, language='en')
         a.download()
-        a.parse()
-        a.nlp()
+        for i in range(10):
+            if a.is_downloaded:
+                break
+            else:
+                a.download()
+        
+        try:
+            a.parse()
+            a.nlp()
+        except:
+            print("Error: Not parsed/downloaded correctly.")
+            continue
+
         html = a.html
         summary = a.summary
         keywords = a.keywords
@@ -66,6 +77,8 @@ def main():
         date_time = str(date) + " " + str(time)
         #print(title)
         #print(date_time)
+        date_obj = datetime.datetime.strptime(date_time,'%m/%d/%Y %H:%M')
+        #print(date_obj.strftime('%Y/%m/%d %I:%M %p'))
         #TODO: Add stuff to the DB
 
 if __name__ == "__main__":
