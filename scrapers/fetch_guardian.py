@@ -2,6 +2,12 @@ import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
 from time import sleep
+# Server stuff
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+
+from django.db import models
+from news.models import Source
 
 def main():
     source="The Guardian"

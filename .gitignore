@@ -3,3 +3,4 @@ db_settings
 *.pem
 *.DS_Store
 *.pyc
+.*.py.swp

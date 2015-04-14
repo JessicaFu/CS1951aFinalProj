@@ -1,0 +1,3 @@
+#! /bin/sh
+python /home/ubuntu/CS1951aFinalProj/manage.py makemigrations
+python /home/ubuntu/CS1951aFinalProj/manage.py migrate
