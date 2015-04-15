@@ -1,7 +1,7 @@
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
-import datetime
+from datetime import datetime, timedelta
 
 def main():
     source="The Guardian"
@@ -39,7 +39,8 @@ def main():
         date = str(a.publish_date).split()[0].split("-")
         date[0], date[1], date[2] = date[1], date[2], date[0]
         date = "/".join(date)
-        time = re.search(r'<span class="content__dateline-time">(.*)</span>' , html).group(1).replace(".",":").split()[0]
+        delta = re.search(r'<span class="content__dateline-time">(.*)</span>' , html).group(1).replace(".",":").split()[0]
+	time = datetime.now() + timedelta(hours=delta )
         date_time = date + " " + time
         #print(title)
         #print(date_time)
