@@ -1,3 +1,9 @@
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+
+from django.db import models
+from news.models import *
+
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
@@ -36,7 +42,18 @@ def fetch_data(bbc):
         	#time = re.search(r'<span class="date date--v2 relative-time">(.*)<\/span>' , html).group(1).replace(".",":").split()[0]
 		#bbc does not have a time div in html
 		date_time = datetime.now().strftime('%m/%d/%Y %H:%M')	
-        	#date_time = date + " " + time
+        	
+		try:
+                    article = {
+                        'headline': title,
+                        'url': url,
+                        'text': text,
+                        'date': date_time
+                    }
+                    newspaper_article('BBC', article, keywords=keywords)
+                except Exception as ex:
+                    print 'Article could not be created due to following error'
+                    print ex
 
 def main():
     source="BBC"

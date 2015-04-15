@@ -1,3 +1,9 @@
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+
+from django.db import models
+from news.models import *
+
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
@@ -38,7 +44,18 @@ def fetch_data(cnn):
 		time = time[0] + ":" + time[1]
 		date_time = date + " " + time
 		datetime_obj=datetime.strptime(date_time,'%m/%d/%Y %H:%M')
-		print datetime_obj	
+		try:
+                    article = {
+                        'headline': title,
+                        'url': url,
+                        'text': text,
+                        'date': date_time
+                    }
+                    newspaper_article('CNN', article, keywords=keywords)
+		    print "inserted"
+                except Exception as ex:
+                    print 'Article could not be created due to following error'
+                    print ex
 
 def main():
     source="CNN"
