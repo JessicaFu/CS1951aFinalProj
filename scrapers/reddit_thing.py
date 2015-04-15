@@ -1,6 +1,6 @@
 import praw
-r = praw.Reddit(user_agent="lol_stuff")
-subreddit = r.get_subreddit('news')
+r = praw.Reddit(user_agent="data_science_project")
+subreddit = r.get_subreddit('news') #Right now, its just getting from /r/news. We could either do all the same steps below, also with /r/worldnews, OR, do news+worldnews to do both at the same time. 
 for submission in subreddit.get_hot(limit=1): #May want to change limit=1 to something higher. The max for a single call to the server is 200 (i think).
 	post_score =  submission.score
 	post_title = submission.title
