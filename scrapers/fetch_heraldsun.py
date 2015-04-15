@@ -1,3 +1,10 @@
+import sys, os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+sys.path.append('/home/ubuntu/CS1951aFinalProj/')
+
+from django.db import models
+from news.models import *
+
 import newspaper
 from newspaper import Article
 import re
@@ -52,11 +59,24 @@ def main():
 		date_time = None
 		if not (t == None or d == None):
 			#print t + " " + d
-			date_time = datetime.datetime.strptime(d + " " + t,'%B %d, %Y %I:%M%p').strftime('%c')
+			date_time = datetime.datetime.strptime(d + " " + t,'%B %d, %Y %I:%M%p')
 			#print date_time
 
 			#writer.writerow(map(lambda x: x.encode('utf-8'), [source, url, title, t, d, text, str(keywords), summary]))
 			#print title
+                try:
+                    article = {
+                        'headline': title,
+                        'url': url,
+                        'text': text,
+                        'date': date_time
+                    }
+                    newspaper_article('Herald Sun', article, keywords=keywords)
+                except Exception as ex:
+                    print 'Article could not be created due to following error'
+                    print ex
+
+
 
 if __name__ == "__main__":
 	main()

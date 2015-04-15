@@ -1,5 +1,6 @@
-import os
+import sys, os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+sys.path.append('/home/ubuntu/CS1951aFinalProj/')
 
 from django.db import models
 from news.models import *

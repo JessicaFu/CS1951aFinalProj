@@ -1,3 +1,10 @@
+import sys, os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+sys.path.append('/home/ubuntu/CS1951aFinalProj/')
+
+from django.db import models
+from news.models import *
+
 import newspaper
 from newspaper import Article
 import re
@@ -55,6 +62,18 @@ def main():
 		#if not date == "Null":
 		#	writer.writerow(map(lambda x: x.encode('utf-8'), [source, url, title, t, d, text, str(keywords), summary]))
 		#	print title
+                try:
+                    article = {
+                        'headline': title,
+                        'url': url,
+                        'text': text,
+                        'date': date_time
+                    }
+                    newspaper_article(source_name, article, keywords=keywords)
+                except Exception as ex:
+                    print 'Article could not be created due to following error'
+                    print ex
+
 
 if __name__ == "__main__":
 	main()

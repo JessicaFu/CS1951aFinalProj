@@ -75,13 +75,15 @@ def newspaper_article(source, article, keywords=[]):
     try: 
         art = Article(source=src, **article)
         art.save()
+        for kw in keywords:
+            try:
+                keyword = Keyword(article=art, word=kw)
+                keyword.save()
+            except Exception as ex:
+                print ex
+                print 'keyword ' + kw + ' could not be saved to db'
     except IntegrityError:
         print 'not unique headline for ' + article['headline'] + ' skipping.'
 
-    for kw in keywords:
-        try:
-            keyword = Keyword(article=art, word=kw)
-            keyword.save()
-        except:
-            print 'keyword ' + kw + ' could not be saved to db'
+    
 

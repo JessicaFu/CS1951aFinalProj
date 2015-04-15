@@ -1,7 +1,22 @@
 #! /usr/bin/python
 
+import os
+from subprocess import Popen, PIPE
 import datetime
 
-log = open('/home/ubuntu/log_file', 'a')
+log_path = '/home/ubuntu/log_files'
+scrapers_path = '/home/ubuntu/CS1951aFinalProj/scrapers'
+
+scrapers = os.listdir(scrapers_path)
+
+for scraper_name in scrapers:
+    scraper_log = open(log_path + scraper_name + '_log', 'a')
+    scraper_log.write('job began at' + str(datetime.datetime.now()))
+    processes.append(Popen(["python", scraper_name], stdout=PIPE))
+    (output, err) = process.communicate()
+    scraper_log.write(output + '\n')
+    scraper_log.write('job ended at' + str(datetime.datetime.now()) + '\n\n')
+    exit_code = process.wait()
+
 
 log.write('job was run at' + str(datetime.datetime.now()) + '\n')

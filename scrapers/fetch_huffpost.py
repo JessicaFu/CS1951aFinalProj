@@ -1,3 +1,10 @@
+import sys, os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
+sys.path.append('/home/ubuntu/CS1951aFinalProj/')
+
+from django.db import models
+from news.models import *
+
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
@@ -79,7 +86,20 @@ def main():
         #print(date_time)
         date_obj = datetime.datetime.strptime(date_time,'%m/%d/%Y %H:%M')
         #print(date_obj.strftime('%Y/%m/%d %I:%M %p'))
-        #TODO: Add stuff to the DB
+
+        url = ""
+
+        try:
+            article = {
+                'headline': title,
+                'url': url,
+                'text': text,
+                'date': date_obj
+            }
+            newspaper_article('Huffington Post', article, keywords=keywords)
+        except Exception as ex:
+            print 'Article could not be created due to following error'
+            print ex
 
 if __name__ == "__main__":
     main()
