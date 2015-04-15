@@ -1,0 +1,2 @@
+#! /bin/sh
+python /home/ubuntu/CS1951aFinalProj/manage.py dbshell
