@@ -1,4 +1,4 @@
-import os
+import os,sys
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
 sys.path.append('/home/ubuntu/CS1951aFinalProj/')
 
@@ -8,7 +8,6 @@ from news.models import *
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
-from time import sleep
 from datetime import datetime
 
 def fetch_data(aj):
@@ -34,7 +33,7 @@ def fetch_data(aj):
         	keywords = a.keywords
         	title = a.title
         	text = a.text
-
+                datetime_obj = None
         	date = re.search(r'<span class="date">(.*)<\/span>' , html)
 		if date != None:
 			date  = date.group(1).replace("'","")
@@ -54,7 +53,7 @@ def fetch_data(aj):
                         'headline': title,
                         'url': url,
                         'text': text,
-                        'date': date_time
+                        'date': datetime_obj
                     }
                     newspaper_article('Al Jazeera', article, keywords=keywords)
                 except Exception as ex:

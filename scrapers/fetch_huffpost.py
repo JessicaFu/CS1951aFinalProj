@@ -87,8 +87,6 @@ def main():
         date_obj = datetime.datetime.strptime(date_time,'%m/%d/%Y %H:%M')
         #print(date_obj.strftime('%Y/%m/%d %I:%M %p'))
 
-        url = ""
-
         try:
             article = {
                 'headline': title,

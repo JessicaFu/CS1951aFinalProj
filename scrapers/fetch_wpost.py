@@ -97,14 +97,12 @@ def main():
         #print(date_time)
         #TODO: Add stuff to the DB
 
-        url=""
-
         try:
             article = {
                 'headline': title,
                 'url': url,
                 'text': text,
-                'date': date_time
+                'date': date_obj
             }
             newspaper_article(source, article, keywords=keywords)
         except Exception as ex:

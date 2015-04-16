@@ -6,17 +6,10 @@ from django.db import models
 from news.models import *
 
 import newspaper
-from newspaper import Article
-import re
 import datetime
 
-
-def main():
-	source = 'http://www.theonion.com/'
-	#file_name = 'onion.csv'
-	#writer = csv.writer(open(file_name, 'w'))
-
-	paper = newspaper.build(source, memoize_articles=False)
+def scrape(source_name, source_url, date_func):
+	paper = newspaper.build(source_url, memoize_articles=False)
 
 	for article in paper.articles:
 		article.download()
@@ -35,32 +28,27 @@ def main():
 			article.parse()
 			article.nlp()
 		except newspaper.article.ArticleException, e:
+                        print 'nlp parsing failed'
 			continue
 
-        # Here are all of the fields to be entered into the DB
-        ####################################
-		source_name = 'The Onion'
 		date_time = None
 		title = article.title
+		html = article.html.replace('\r','').replace('\n','')
 		url = article.url
 		summary = article.summary
 		keywords = article.keywords
 		text = article.text
-		####################################
-		html = article.html.replace('\r','').replace('\n','')
+                dt = None
+                try:
+                    dt = date_func(article)
+                except Exception as ex:
+                    print 'date func failed with exception'
+                    print ex
 
-		m = re.search('class="pubdate">(.+?)</span>', html)
-		date = None
-		if not m == None:
-			date = m.group(1).strip()
-
-		if not date == None:
-			date_time = datetime.datetime.strptime(date + ' 12PM','%b %d, %Y %I%p').strftime('%c')
-			#print date_time + ": " + title + " - " + summary
-
-		#if not date == "Null":
-		#	writer.writerow(map(lambda x: x.encode('utf-8'), [source, url, title, t, d, text, str(keywords), summary]))
-		#	print title
+                if dt == None:
+                    print 'date could not be found, setting time to now'
+                    dt = datetime.datetime.now()
+               
                 try:
                     article = {
                         'headline': title,
@@ -68,12 +56,9 @@ def main():
                         'text': text,
                         'date': date_time
                     }
-                    newspaper_article(source_name, article, keywords=keywords)
+                    newspaper_article(source, article, keywords=keywords)
+                    print 'article created'
                 except Exception as ex:
                     print 'Article could not be created due to following error'
                     print ex
-
-
-if __name__ == "__main__":
-	main()
 

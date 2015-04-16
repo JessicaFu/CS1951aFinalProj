@@ -41,6 +41,7 @@ def main():
 		summary = article.summary
 		keywords = article.keywords
 		text = article.text
+                dt = None
 
 		m = re.search('class="auth-details">(.+?)</div>', html)
 		if not m == None:
@@ -74,6 +75,6 @@ def main():
 		#writer.writerow(map(lambda x: x.encode('utf-8'), [source, url, title, t, d, text, str(keywords), summary]))
 
 if __name__ == "__main__":
-	main()
+    main()
 
 print 'DONE'

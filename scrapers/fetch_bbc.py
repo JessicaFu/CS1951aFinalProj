@@ -1,4 +1,4 @@
-import os
+import os,sys
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
 sys.path.append('/home/ubuntu/CS1951aFinalProj/')
 
@@ -8,7 +8,6 @@ from news.models import *
 import newspaper
 from newspaper import news_pool, Config, Article, Source
 import re
-from time import sleep
 from datetime import datetime
 
 def fetch_data(bbc):

@@ -55,8 +55,6 @@ def main():
         #print(date_obj.strftime('%Y/%m/%d %I:%M %p'))
         #TODO: Add stuff to the DB
 
-        url = ""        
-
         try:
             article = {
                 'headline': title,

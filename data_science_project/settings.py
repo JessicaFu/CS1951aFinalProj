@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'data_science_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-db_settings = open('db_settings')
+db_settings = open(PROJECT_PATH + '/db_settings')
 user = db_settings.readline().strip()
 pw = db_settings.readline().strip()
 host = db_settings.readline().strip()

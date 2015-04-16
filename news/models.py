@@ -5,7 +5,7 @@ import django.utils.timezone as timezone
 # Create your models here.
 
 class Source(models.Model):
-    name = models.CharField(max_length=16)
+    name = models.CharField(max_length=64)
     url = models.URLField()
 
 class Article(models.Model):
@@ -17,7 +17,7 @@ class Article(models.Model):
 
 class Keyword(models.Model):
     article = models.ForeignKey(Article)
-    word = models.CharField(max_length=24)
+    word = models.CharField(max_length=32)
 
 class RedditPost(models.Model):
     source = models.ForeignKey(Source)
