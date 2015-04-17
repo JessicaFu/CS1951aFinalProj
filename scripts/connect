@@ -1,4 +1,4 @@
 #! /bin/sh
 
 chmod 400 ../DataScienceProject.pem
-ssh -i ../DataScienceProject.pem ubuntu@52.4.241.67
+ssh -i ../DataScienceProject.pem ubuntu@52.1.2.203
