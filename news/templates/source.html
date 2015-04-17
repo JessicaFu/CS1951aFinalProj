@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block body_content %}
-    <h1> {{source}} </h1>
+    <h1> {{source_name}} </h1>
     {% for headline, dt in articles %}
         <p> {{ headline }} <strong>at time {{dt}}</strong></p> 
     {% endfor %}
