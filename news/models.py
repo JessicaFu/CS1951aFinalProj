@@ -20,7 +20,7 @@ class Keyword(models.Model):
     word = models.CharField(max_length=32)
 
 class RedditPost(models.Model):
-    source = models.ForeignKey(Source)
+    post_source = models.ForeignKey(Source)
     date = models.DateTimeField(default=timezone.now)
     url = models.URLField()
     text = models.TextField()
@@ -84,6 +84,4 @@ def newspaper_article(source, article, keywords=[]):
                 print 'keyword ' + kw + ' could not be saved to db'
     except IntegrityError:
         print 'not unique headline for ' + article['headline'] + ' skipping.'
-
-    
 

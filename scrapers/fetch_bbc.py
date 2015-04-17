@@ -41,7 +41,7 @@ def fetch_data(bbc):
         	#date = "/".join(date)
         	#time = re.search(r'<span class="date date--v2 relative-time">(.*)<\/span>' , html).group(1).replace(".",":").split()[0]
 		#bbc does not have a time div in html
-		date_time = datetime.now().strftime('%m/%d/%Y %H:%M')	
+		date_time = datetime.now()	
         	
 		try:
                     article = {

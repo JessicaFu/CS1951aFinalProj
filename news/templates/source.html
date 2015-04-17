@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+    <h1> {{source}} </h1>
+    {% for headline, dt in articles %}
+        <p> {{ headline }} <strong>at time {{dt}}</strong></p> 
+    {% endfor %}
+
+{% endblock body_content %}

@@ -56,6 +56,8 @@ def main():
 
 		if not date == None:
 			date_time = datetime.datetime.strptime(date + ' 12PM','%b %d, %Y %I%p').strftime('%c')
+                else:
+                    continue
 			#print date_time + ": " + title + " - " + summary
 
 		#if not date == "Null":

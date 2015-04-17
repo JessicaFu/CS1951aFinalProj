@@ -15,7 +15,7 @@ for scraper_name in scrapers:
     scraper_log = open(log_path + scraper_name + '_log', 'a')
     log_files.append(scraper_log)
     scraper_log.write('job began at ' + str(datetime.datetime.now()) + '\n')
-    processes.append(Popen(["python", scrapers_path + scraper_name], stdout=PIPE))
+    processes.append(Popen(["python", scrapers_path + scraper_name], stdout=PIPE, stderr=PIPE))
 
 for proc in processes:
     (output, error) = proc.communicate()

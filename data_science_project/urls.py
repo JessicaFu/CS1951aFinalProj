@@ -5,6 +5,5 @@ admin.autodiscover()
 
 urlpatterns = [
     # Examples:
-    url(r'^$', 'news.views.home', name='home'),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('news.urls'))
 ]
