@@ -4,7 +4,7 @@ sys.path.append('/home/ubuntu/CS1951aFinalProj/')
 
 from django.db import models
 from news.models import *
-
+from datetime import datetime
 import praw
 
 
@@ -20,6 +20,7 @@ for submission in subreddit.get_hot(limit=100): #May want to change limit=1 to s
 
 
 	forest_of_comments = submission.comments
+        comments = []
 	for x in range(0, 10): # Just getting the top ten comments for now. This also assumes that there are at least 10 comments (which I think will always be true for the top articles)
 		comment = forest_of_comments[x]
 
@@ -27,5 +28,21 @@ for submission in subreddit.get_hot(limit=100): #May want to change limit=1 to s
 		comment_score = comment.score
 		
 		#Similar thing here. Time needs to be converted to actual date.
-		comment.created
+		comment_date = datetime.strptime(comment.created)
 		comment.created_utc
+                comments.append({
+                    'text' : comment_text,
+                    'creation_time' : comment_date
+        
+        data = {
+            'article' : post_url,
+            'subreddit' : 'news',
+            'post_title' : post_title,
+            'votes' : post_score,
+            'submission_time' : post_created_at 
+        }
+        try:
+            reddit_post(data, comments)
+        except Exception as ex:
+            print 'reddit post could not be created'
+            print ex

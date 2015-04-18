@@ -1,7 +1,12 @@
+import sys
+
+sys.path.append('/home/ubuntu/CS1951aFinalProj/')
+
 from django.db import models, IntegrityError
 import datetime
 import django.utils.timezone as timezone
 
+from paper_scraper import *
 # Create your models here.
 
 class Source(models.Model):
@@ -20,19 +25,20 @@ class Keyword(models.Model):
     word = models.CharField(max_length=32)
 
 class RedditPost(models.Model):
-    post_source = models.ForeignKey(Source)
     date = models.DateTimeField(default=timezone.now)
     url = models.URLField()
     text = models.TextField()
     headline = models.CharField(max_length=255)
-    
+   
+    subreddit = models.ForeignKey(Source, related_name='subreddit') 
     post_title = models.CharField(max_length=255)
     votes = models.IntegerField()
+    submission_time = models.DateTimeField(default=timezone.now)
 
 class RedditComment(models.Model):
     reddit_post = models.ForeignKey(RedditPost)
     text = models.CharField(max_length=200)
-    parent_comment = models.ForeignKey('self')
+    creation_time = models.DateTimeField(default=timezone.now)
 
 
 
@@ -42,6 +48,20 @@ class RedditComment(models.Model):
 
 #############################################################
 
+def make_keywords(keywords):
+    """
+        turns a list of keywords into database entries
+
+        keywords
+            list of keywords
+    """
+    for kw in keywords:
+        try:
+            keyword = Keyword(article=art, word=kw)
+            keyword.save()
+        except Exception as ex:
+            print ex
+            print 'keyword ' + kw + ' could not be saved to db'
 
 def newspaper_article(source, article, keywords=[]):
     """
@@ -75,13 +95,62 @@ def newspaper_article(source, article, keywords=[]):
     try: 
         art = Article(source=src, **article)
         art.save()
-        for kw in keywords:
-            try:
-                keyword = Keyword(article=art, word=kw)
-                keyword.save()
-            except Exception as ex:
-                print ex
-                print 'keyword ' + kw + ' could not be saved to db'
+        make_keywords(keywords)
     except IntegrityError:
         print 'not unique headline for ' + article['headline'] + ' skipping.'
 
+def make_comments(post, comments):
+    """
+        puts all the reddit comments into the db
+        
+        Args:
+        post - the RedditPost the comment belongs to
+
+        comments - a list of dictionaries with the following keys
+            text - the text of the comment
+            creation_time - the time the comment was created
+    """
+    for comment in comments:
+        try:
+            com = RedditComment(post, **comment)
+            com.save()
+        except Exception as ex:
+            print 'comment could not be created'
+            print ex
+
+def reddit_post(data, comments):
+    """
+        makes a reddit post and associated db entries
+
+        Args:
+        data - a dictionary with the following keys
+            article - the url of the article
+            subreddit - name of subreddit, eg. 'news'
+            post_title - the title of the post as it appears on reddit
+            votes - the votes as counted when the api is run
+            submission_time - the time the post is submitted
+            
+        comments - a list of dictionaries with each dictionary having entries as specified by the make_comments procedure
+    """
+
+    sub = None
+    try:
+        sub = Source.objects.get(name=data['subreddit'])
+    except Source.DoesNotExist:
+        #This is jank but can be touched up manually
+        sub = Source(name=data['subreddit'], url=article['url'])
+        sub.save()
+        print 'source added to db with name: ' + data['subreddit']
+   
+    data['subreddit'] = sub
+    
+    (article, keywords) = scrape_article(data['article'], lambda: timezone.now()) 
+    data.pop('article', None)
+    data.update(article)
+    try:
+        post = RedditPost(**data)
+        post.save()
+        make_keywords(keywords)
+        make_comments(comments, post)
+    except IntegrityError:
+        print 'not unique reddit post for ' + data['post_title']
