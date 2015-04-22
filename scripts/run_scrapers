@@ -11,21 +11,27 @@ scrapers = os.listdir(scrapers_path)
 
 processes = []
 log_files = []
-for scraper_name in scrapers:
-    scraper_log = open(log_path + scraper_name + '_log', 'a')
-    log_files.append(scraper_log)
-    scraper_log.write('job began at ' + str(datetime.datetime.now()) + '\n')
-    processes.append(Popen(["python", scrapers_path + scraper_name], stdout=PIPE, stderr=PIPE))
-
-for proc in processes:
-    (output, error) = proc.communicate()
-    scraper_log = log_files.pop()
-    scraper_log.write(output)
-    scraper_log.write(error)
-    scraper_log.write('job ended at ' + str(datetime.datetime.now()) + '\n\n')
-    scraper_log.close()
-
 with open(log_path + 'log', 'a') as log:
-    log.write('job complete at ' + str(datetime.datetime.now()) + '\n\n')
+    try:
+        for scraper_name in scrapers:
+            scraper_log = open(log_path + scraper_name + '_log', 'a')
+            log_files.append(scraper_log)
+            scraper_log.write('job began at ' + str(datetime.datetime.now()) + '\n')
+            processes.append(Popen(["python", scrapers_path + scraper_name], stdout=PIPE, stderr=PIPE))
 
+        for proc in processes:
+            (output, error) = proc.communicate()
+            scraper_log = log_files.pop(0)
+            scraper_log.write(output)
+            scraper_log.write(error)
+            scraper_log.write('job ended at ' + str(datetime.datetime.now()) + '\n\n')
+            scraper_log.close()
+            log.write('finished with script ' + scraper_log.name + '\n')
+
+    except Exception as ex:
+        log.write('error: ' + str(ex))
+
+    finally:
+        log.write('job complete at ' + str(datetime.datetime.now()) + '\n\n')
+        log.close()
 

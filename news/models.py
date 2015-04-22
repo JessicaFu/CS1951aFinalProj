@@ -48,10 +48,12 @@ class RedditComment(models.Model):
 
 #############################################################
 
-def make_keywords(keywords):
+def make_keywords(art, keywords):
     """
         turns a list of keywords into database entries
 
+        art
+            article model
         keywords
             list of keywords
     """
@@ -95,7 +97,7 @@ def newspaper_article(source, article, keywords=[]):
     try: 
         art = Article(source=src, **article)
         art.save()
-        make_keywords(keywords)
+        make_keywords(art, keywords)
     except IntegrityError:
         print 'not unique headline for ' + article['headline'] + ' skipping.'
 
