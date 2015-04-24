@@ -28,7 +28,7 @@ class RedditPost(models.Model):
     date = models.DateTimeField(default=timezone.now)
     url = models.URLField()
     text = models.TextField()
-    headline = models.CharField(max_length=255)
+    headline = models.CharField(unique=True, max_length=255)
    
     subreddit = models.ForeignKey(Source, related_name='subreddit') 
     post_title = models.CharField(max_length=255)
@@ -40,7 +40,9 @@ class RedditComment(models.Model):
     text = models.CharField(max_length=200)
     creation_time = models.DateTimeField(default=timezone.now)
 
-
+class RedditKeyword(models.Model):
+    post = models.ForeignKey(RedditPost)
+    word = models.CharField(max_length=64)
 
 #############################################################
 
@@ -60,6 +62,23 @@ def make_keywords(art, keywords):
     for kw in keywords:
         try:
             keyword = Keyword(article=art, word=kw)
+            keyword.save()
+        except Exception as ex:
+            print ex
+            print 'keyword ' + kw + ' could not be saved to db'
+
+def make_reddit_keywords(post, keywords):
+    """
+        turns a list of keywords into database entries
+
+        art
+            article model
+        keywords
+            list of keywords
+    """
+    for kw in keywords:
+        try:
+            keyword = RedditKeyword(post=post, word=kw)
             keyword.save()
         except Exception as ex:
             print ex
@@ -140,19 +159,21 @@ def reddit_post(data, comments):
         sub = Source.objects.get(name=data['subreddit'])
     except Source.DoesNotExist:
         #This is jank but can be touched up manually
-        sub = Source(name=data['subreddit'], url=article['url'])
+        sub = Source(name=data['subreddit'], url='reddit.com')
         sub.save()
         print 'source added to db with name: ' + data['subreddit']
    
     data['subreddit'] = sub
     
-    (article, keywords) = scrape_article(data['article'], lambda: timezone.now()) 
-    data.pop('article', None)
-    data.update(article)
+    (article, keywords) = scrape_article(data['url'], lambda x: timezone.now()) 
+    data['text'] = article['text']
+    data['date'] = article['date']
+    data['headline'] = article['headline']
+
     try:
         post = RedditPost(**data)
         post.save()
-        make_keywords(keywords)
-        make_comments(comments, post)
+        make_reddit_keywords(post,keywords)
+        make_comments(post, comments)
     except IntegrityError:
         print 'not unique reddit post for ' + data['post_title']

@@ -55,7 +55,7 @@ def main():
 			date = m.group(1).strip()
 
 		if not date == None:
-			date_time = datetime.datetime.strptime(date + ' 12PM','%b %d, %Y %I%p').strftime('%c')
+			date_time = datetime.datetime.strptime(date + ' 12PM','%b %d, %Y %I%p')
                 else:
                     continue
 			#print date_time + ": " + title + " - " + summary

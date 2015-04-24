@@ -4,3 +4,4 @@ db_settings
 *.DS_Store
 *.pyc
 .*.py.swp
+news/migrations/*

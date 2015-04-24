@@ -18,6 +18,7 @@ def scrape_article(article, date_func):
         date_func
                 a function to extract the date given an article
     """
+    article = newspaper.Article(article)
     article.download()
     for i in range(10):
         if article.is_downloaded:
