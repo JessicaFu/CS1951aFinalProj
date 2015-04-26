@@ -8,7 +8,7 @@ from news.models import *
 import newspaper
 import datetime
 
-def scrape_article(article, date_func):
+def scrape_article(url, date_func):
     """
         scrapes a single article using newspaper returning all the article data
 
@@ -18,7 +18,7 @@ def scrape_article(article, date_func):
         date_func
                 a function to extract the date given an article
     """
-    article = newspaper.Article(article)
+    article = newspaper.Article(url)
     article.download()
     for i in range(10):
         if article.is_downloaded:
@@ -27,7 +27,7 @@ def scrape_article(article, date_func):
                 article.download()
 
         if not article.is_downloaded:
-            print("Error: Did not donwnload something")
+            print("Error: Did not download something")
             continue
 
         try:
@@ -36,11 +36,10 @@ def scrape_article(article, date_func):
         except newspaper.article.ArticleException, e:
             print 'nlp parsing failed'
             continue
-
+    
     date_time = None
     title = article.title
     html = article.html.replace('\r','').replace('\n','')
-    url = article.url
     summary = article.summary
     keywords = article.keywords
     text = article.text

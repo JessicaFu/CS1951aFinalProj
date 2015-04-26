@@ -28,10 +28,10 @@ class RedditPost(models.Model):
     date = models.DateTimeField(default=timezone.now)
     url = models.URLField()
     text = models.TextField()
-    headline = models.CharField(unique=True, max_length=255)
+    headline = models.CharField(max_length=255)
    
     subreddit = models.ForeignKey(Source, related_name='subreddit') 
-    post_title = models.CharField(max_length=255)
+    post_title = models.CharField(unique=True, max_length=255)
     votes = models.IntegerField()
     submission_time = models.DateTimeField(default=timezone.now)
 
@@ -175,5 +175,6 @@ def reddit_post(data, comments):
         post.save()
         make_reddit_keywords(post,keywords)
         make_comments(post, comments)
-    except IntegrityError:
+    except IntegrityError as ex:
+        print ex
         print 'not unique reddit post for ' + data['post_title']

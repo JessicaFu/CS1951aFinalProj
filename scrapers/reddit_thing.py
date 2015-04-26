@@ -13,7 +13,7 @@ import time
 
 r = praw.Reddit(user_agent="data_science_project")
 subreddit = r.get_subreddit('news') #Right now, its just getting from /r/news. We could either do all the same steps below, also with /r/worldnews, OR, do news+worldnews to do both at the same time. 
-for submission in subreddit.get_hot(limit=100): #May want to change limit=1 to something higher. The max for a single call to the server is 200 (i think).
+for submission in subreddit.get_hot(limit=30): #May want to change limit=1 to something higher. The max for a single call to the server is 200 (i think).
 	post_score =  submission.score
 	post_title = submission.title
 	post_url = submission.url #Sometimes this just links to an image, or reddit post. It's not always an article.
@@ -23,11 +23,8 @@ for submission in subreddit.get_hot(limit=100): #May want to change limit=1 to s
 
 	forest_of_comments = submission.comments
         comments = []
-	for x in range(0, 10): # Just getting the top ten comments for now. This also assumes that there are at least 10 comments (which I think will always be true for the top articles)
-		if x not in forest_of_comments:
-                    continue
+	for x in xrange(min(len(forest_of_comments), 30)): # Just getting the top ten comments for now. This also assumes that there are at least 10 comments (which I think will always be true for the top articles)
                 comment = forest_of_comments[x]
-
 		comment_text = comment.body
 		comment_score = comment.score
 		
