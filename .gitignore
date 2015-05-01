@@ -5,3 +5,4 @@ db_settings
 *.pyc
 .*.py.swp
 news/migrations/*
+nohup.out

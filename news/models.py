@@ -133,7 +133,7 @@ def make_comments(post, comments):
     """
     for comment in comments:
         try:
-            com = RedditComment(post, **comment)
+            com = RedditComment(reddit_post=post, **comment)
             com.save()
         except Exception as ex:
             print 'comment could not be created'
@@ -173,7 +173,7 @@ def reddit_post(data, comments):
     try:
         post = RedditPost(**data)
         post.save()
-        make_reddit_keywords(post,keywords)
+        make_reddit_keywords(post, keywords)
         make_comments(post, comments)
     except IntegrityError as ex:
         print ex
