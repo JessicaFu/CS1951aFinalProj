@@ -17,14 +17,15 @@ with open(log_path + 'log', 'a') as log:
             scraper_log = open(log_path + scraper_name + '_log', 'a')
             log_files.append(scraper_log)
             scraper_log.write('job began at ' + str(datetime.datetime.now()) + '\n')
-            processes.append(Popen(["python", scrapers_path + scraper_name], stdout=PIPE, stderr=PIPE))
+            processes.append(Popen(["python", scrapers_path + scraper_name])) #, stdout=PIPE, stderr=PIPE))
 
         for proc in processes:
-            (output, error) = proc.communicate()
+            #(output, error) = proc.communicate()
+            proc.wait()
             scraper_log = log_files.pop(0)
-            scraper_log.write(output)
-            scraper_log.write(error)
-            scraper_log.write('job ended at ' + str(datetime.datetime.now()) + '\n\n')
+            #scraper_log.write(output)
+            #scraper_log.write(error)
+            #scraper_log.write('job ended at ' + str(datetime.datetime.now()) + '\n\n')
             scraper_log.close()
             log.write('finished with script ' + scraper_log.name + '\n')
 

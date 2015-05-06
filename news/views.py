@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.template import RequestContext
 from django.http import Http404, HttpResponse
+<<<<<<< HEAD
 from datetime import datetime
 import csv
+=======
+>>>>>>> 0ac7bdd9b2b9c6d37efa5545d4e8e036be15099d
 
 from models import *
 # Create your views here.
