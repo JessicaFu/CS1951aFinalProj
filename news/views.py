@@ -1,11 +1,8 @@
 from django.shortcuts import render
 from django.template import RequestContext
 from django.http import Http404, HttpResponse
-<<<<<<< HEAD
-from datetime import datetime
+import datetime
 import csv
-=======
->>>>>>> 0ac7bdd9b2b9c6d37efa5545d4e8e036be15099d
 
 from models import *
 # Create your views here.
@@ -35,25 +32,25 @@ def timeline(request, keyword=None, begin_date=None, end_date=None):
         raise Http404('endpoint not properly formatted')
 
     time_convert_str = "%Y%m%d"
-    begin_date = datetime.strptime(begin_date, time_convert_str)
+    begin_date = datetime.datetime.strptime(begin_date, time_convert_str)
 
-    end_date = datetime.strptime(end_date, time_convert_str)
+    end_date = datetime.datetime.strptime(end_date, time_convert_str)
     articles = Article.objects.filter(keyword__word=keyword,
             date__gte=begin_date,
             date__lte=end_date)
 
     response = HttpResponse(content_type='text/tsv')
-    reponse['Content-Disposition'] = 'attachment; filename="linedata.tsv"'
+    response['Content-Disposition'] = 'attachment; filename="linedata.tsv"'
 
     writer = csv.writer(response, delimiter='\t')
     header = ['date', 'headline', 'url', 'source']
-    header.append(sources)
     writer.writerow(header)
     for article in articles:
-        writer.writerow(article.date.strftime(time_convert_str),
+        row = [article.date.strftime(time_convert_str),
                 article.headline,
-                article.source.name,
-                article.url)
+                article.url,
+                article.source.name]
+        writer.writerow([s.encode("utf-8") for s in row])
 
     return response
 
