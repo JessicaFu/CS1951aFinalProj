@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, JsonResponse
+
+from collections import defaultdict
 import datetime
 import csv
 
@@ -27,7 +29,9 @@ def source(request, source_id=None):
     })
     return render(request, 'source.html', context)
 
-def timeline(request, keyword=None, begin_date=None, end_date=None):
+
+
+def timeline(request, keyword=None, begin_date=None, end_date=None, type=None):
     if not (request and begin_date and end_date):
         raise Http404('endpoint not properly formatted')
 
@@ -39,18 +43,37 @@ def timeline(request, keyword=None, begin_date=None, end_date=None):
             date__gte=begin_date,
             date__lte=end_date)
 
-    response = HttpResponse(content_type='text/tsv')
-    response['Content-Disposition'] = 'attachment; filename="linedata.tsv"'
+    if type == "tsv":
+        response = HttpResponse(content_type='text/tsv')
+        response['Content-Disposition'] = 'attachment; filename="linedata.tsv"'
 
-    writer = csv.writer(response, delimiter='\t')
-    header = ['date', 'headline', 'url', 'source']
-    writer.writerow(header)
-    for article in articles:
-        row = [article.date.strftime(time_convert_str),
-                article.headline,
-                article.url,
-                article.source.name]
-        writer.writerow([s.encode("utf-8") for s in row])
+        writer = csv.writer(response, delimiter='\t')
+        header = ['date', 'headline', 'url', 'source']
+        writer.writerow(header)
+        for article in articles:
+            row = [article.date.strftime(time_convert_str),
+                    article.headline,
+                    article.url,
+                    article.source.name]
+            writer.writerow([s.encode("utf-8") for s in row])
 
-    return response
+        return response
+    else:
+        arts = [{'headline' : article.headline,
+                     'url' : article.url,
+                     'date' : article.date.strftime(time_convert_str),
+                     'source' : article.source.name} for article in articles]
+        
+        sources = {src.name : 0 for src in Source.objects.all()}
+        d3_data = defaultdict(lambda: sources)
+        for article in articles:
+            d3_data[article.date.strftime(time_convert_str)][article.source.name] += 1
+
+        res_dict = {
+            'articles' : arts,
+            'd3' : d3_data
+        } 
+
+        response = JsonResponse(res_dict)
+        return response
 
