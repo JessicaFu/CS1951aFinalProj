@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from django.http import Http404
+from django.http import Http404, HttpResponse
 
 from models import *
 # Create your views here.
@@ -24,3 +24,12 @@ def source(request, source_id=None):
         'articles' : articles
     })
     return render(request, 'source.html', context)
+
+
+def timeline(request, search_params=None):
+    if search_params is None:
+        raise Http404('source not found')
+    # TODO get articles from db, filter by params
+    # TODO count articles per granularity
+    # TODO build tsv
+    return HttpResponse(search_params) 
