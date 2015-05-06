@@ -31,6 +31,16 @@ body {
 <script>
 
 function visual(keyword, start, end) {
+	
+
+	url = "http://52.5.82.206/timeline/" + keyword + "/" + start + "/" + end
+	
+	startVisual(url);
+
+
+
+
+	/*
 	$.ajax({
 		url: "http://52.5.82.206/timeline/" + keyword + "/" + start + "/" + end
 	}).done(function(data){
@@ -40,6 +50,7 @@ function visual(keyword, start, end) {
 		startVisual(d3Data);	
 
 	});
+	*/
 }
 
 visual("earthquake", "20150320", "20150720");
@@ -50,7 +61,7 @@ visual("earthquake", "20150320", "20150720");
 
 <script>
 
-function startVisual(inputData) {
+function startVisual(path) {
 
 var margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -85,7 +96,10 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json(inputData, function(error, data) {
+d3.json(path, function(error, data) {
+	
+	console.log(data);
+
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
   data.forEach(function(d) {
