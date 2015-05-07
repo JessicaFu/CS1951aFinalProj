@@ -153,7 +153,7 @@ function startVisual(path, start, end){
 
         city.append("text")
             .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-            .attr("transform", function(d, i) { return "translate(" + (x(d.value.date) - 45) + "," + (i * 20) + ")"; })
+            .attr("transform", function(d, i) { return "translate(" + (x(d.value.date) - 55) + "," + (i * 20) + ")"; })
             .attr("x", 3)
             .attr("dy", ".35em")
             .attr("font-size", "10pt")
