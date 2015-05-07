@@ -24,11 +24,31 @@ body {
   stroke-width: 1.5px;
 }
 
+
 </style>
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+
+<p> TESTING. BENS PARAGRPAH TAGGG </p>
+
+
+
+
+<form id="searchForm">
+  <input type="input" id="start"/>
+  <input type="input" id="end"/>
+  <input type="input" id="keyword"/>
+  <input type="submit" value="Submit">
+</form>
+
 <script>
+
+$("#searchForm").submit(function(event) {
+  event.preventDefault();
+  visual($('#keyword').val(),$('#start').val() , $('#end').val());
+}
+
 
 function visual(keyword, start, end) {
 	
@@ -94,30 +114,6 @@ d3.json(path, function(error, rData) {
 
 	var data = rData["d3"];
 	
-	//var x = data["d3"];
-
-	//var sources = data["sources"];
-
-	// x: key is datestring
-	//    value is object, w/ key:sourcename, value: count
-	
-	/*
-	var dataArrayThing = [];
-	for (i = start; i <= end; i++) {
-		
-		// date = i
-		
-
-		if (i in x) {
-
-		}
-		toAppend = {};
-		toAppend["date"] = i;
-		for (i = 0; i <= len(sources); i++) {
-		
-		}		
-	}
-	*/
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
   data.forEach(function(d) {
