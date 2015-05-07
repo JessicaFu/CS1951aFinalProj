@@ -16,9 +16,9 @@ class Source(models.Model):
 class Article(models.Model):
     source = models.ForeignKey(Source)
     date = models.DateTimeField(default=timezone.now)
-    url = models.CharField(max_length=255)
+    url = models.CharField(unique=True, max_length=255)
     text = models.TextField()
-    headline = models.CharField(unique=True, max_length=255)
+    headline = models.CharField(max_length=255)
 
 class Keyword(models.Model):
     article = models.ForeignKey(Article)

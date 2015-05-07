@@ -64,14 +64,28 @@ def timeline(request, keyword=None, begin_date=None, end_date=None, type=None):
                      'date' : article.date.strftime(time_convert_str),
                      'source' : article.source.name} for article in articles]
         
-        sources = {src.name : 0 for src in Source.objects.all()}
-        d3_data = defaultdict(lambda: sources)
+        sources = Source.objects.all()
+        
+        d3_data = defaultdict(lambda: {src.name : 0 for src in sources})
+
+        date_delta = end_date - begin_date
+        for i in xrange(date_delta.days + 1):
+            d3_data[(begin_date + datetime.timedelta(days=i)).strftime(time_convert_str)][sources[0].name] = 0
+
         for article in articles:
             d3_data[article.date.strftime(time_convert_str)][article.source.name] += 1
 
+        d3_data_list = []
+        for key, value in d3_data.iteritems():
+            value['date'] = key
+            d3_data_list.append(value)
+
+        d3_data_list.sort(key=lambda x: x['date'])
+
         res_dict = {
+            'sources' : [src.name for src in sources],
             'articles' : arts,
-            'd3' : d3_data
+            'd3' : d3_data_list
         } 
 
         response = JsonResponse(res_dict)

@@ -2,7 +2,8 @@ from __future__ import division
 import sys, os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
 sys.path.append('/home/ubuntu/CS1951aFinalProj/')
-
+import django
+django.setup()
 from django.db import models
 from news.models import *
 
@@ -40,16 +41,12 @@ def search(text):
 	words = get_words(text)
 	
 	articles = Article.objects.all()
-	count = 0 #TESTING
 	for art in articles: 
-		
-		#if count > 10:
-		#	break	
-		id = art.id
-		name = art.headline.encode('utf-8')
-		idf = get_idf(id, words)
-		weights.append((id, name, idf))
-		count += 1	
+		if len(art.text) >0:
+			name = art.headline.encode('utf-8')
+			idf = get_idf(id, words)
+			weights.append((id, name, idf))
+			
 	
 def get_words(text):	
 	words = text.split()
@@ -84,16 +81,26 @@ def create_inverted_index(article):
 
 	text = article.headline.encode('utf-8')
 	words = get_words(text)
-	total_count += len(text)
+	total_count += len(words)
 	for word in words:
 		put_in_index(word, id, 2)
 
 	text = article.text.encode('utf-8') 
 	words = get_words(text)
-	total_count += len(text)
+	total_count += len(words)
 	for word in words:
 		put_in_index(word, id, 1)
 	
+	keywords = Keyword.objects.filter(article__id=id)
+	text = ""
+	for key in keywords:
+		text += key.word+ " "
+
+	words = get_words(text)
+	total_count += len(words)
+	for word in words:
+		put_in_index(word, id, 5)
+
 	word_count[id] = total_count
 
 def index():
@@ -101,13 +108,10 @@ def index():
 	global total_num_docs
 	total_num_docs = 0
 
-	count = 0 #TESTING 
 	for art in articles: 
-		total_num_docs +=1
-		#if count > 10:
-		#	break	
-		create_inverted_index(art)
-		count += 1	
+		if len(art.text) >0:
+			create_inverted_index(art)
+			
 def main():
 	global inverted_index 
 	inverted_index = {}
@@ -120,19 +124,11 @@ def main():
 	global weights
 	weights = []
 
+	#TODO fix duplicate article entries
 	index();
-	#TESTING
-	"""
-	with open('search_data.csv', 'w') as csvfile:
-		csv_writer = csv.writer(csvfile)
-		for key in inverted_index:
-			csv_writer.writerow([key,inverted_index[key]])
-	"""
-
 	text = "nepal survivors"
 	search(text);
 	weights = sorted(weights,key=lambda x: x[2], reverse = True)
-
 
 	with open('search_data.csv', 'w') as csvfile:
 		csv_writer = csv.writer(csvfile)
