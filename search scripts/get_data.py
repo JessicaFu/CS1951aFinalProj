@@ -8,11 +8,12 @@ from news.models import *
 import datetime
 import operator
 import csv
+from nltk.corpus import stopwords
 
 ##########################################################################
 ################# Retrieve Article metadata ##############################
 ##########################################################################
-index = {}
+inverted_index = {}
 
 def get_inverted_index(article):
 	print art.headline
@@ -20,8 +21,14 @@ def get_inverted_index(article):
 
 	index = art.id
 	name = art.source.name
-	name.split(" ")
-	if 
+	words = name.split(" ")
+	stop_words = stopwords.words('english')
+	
+	for word in words:
+		if not word in stop_words:
+			if not index in inverted_index:
+				inverted_index[index] = [];
+			inverted_index[index].append(index)
 
 def main():
 	
