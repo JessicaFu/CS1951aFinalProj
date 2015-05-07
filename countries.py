@@ -144,6 +144,7 @@ print '-------------------------'
 print source_city
 print '-------------------------'
 print source_country
+<<<<<<< HEAD
 
 ######################################################################
 #################### Write CSV Files #################################
@@ -184,5 +185,7 @@ source_counts.write('name,count\n')
 for source in source_names.keys():
     count = source_names[source]
     source_counts.write(source+','+str(count)+'\n')
+=======
+>>>>>>> 2e565a8586cb925bbc4203fee33f632df439bfac
 
 print 'DONE'
