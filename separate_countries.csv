@@ -1,0 +1,832 @@
+lat,lon,name,count,source
+38.963745,35.243322,turkey,2,The Onion
+32.427908,53.688046,iran,1,The Onion
+31.046051,34.851612,israel,1,The Onion
+33.223191,43.679291,iraq,1,The Onion
+34.802075,38.996815,syria,2,The Onion
+26.3351,17.228331,libya,1,The Onion
+21.521757,-77.781167,cuba,1,The Onion
+26.820553,30.802498,egypt,1,The Onion
+21.512583,55.923255,oman,7,The Onion
+17.570692,-3.996166,mali,2,The Onion
+33.854721,35.862285,lebanon,1,The Onion
+23.885942,45.079162,saudi arabia,1,The Onion
+37.09024,-95.712891,united states,5,The Onion
+30.585164,36.238414,jordan,1,The Onion
+35.86166,104.195397,china,1,The Onion
+9.945587,-9.696645,guinea,1,The Onion
+-0.023559,37.906193,kenya,1,The Onion
+15.552727,48.516388,yemen,2,The Onion
+36.204824,138.252924,japan,44,Huffington Post
+13.443182,-15.310139,gambia,1,Huffington Post
+40.143105,47.576927,azerbaijan,4,Huffington Post
+40.339852,127.510093,north korea,20,Huffington Post
+11.825138,42.590275,djibouti,1,Huffington Post
+12.565679,104.990963,cambodia,2,Huffington Post
+47.162494,19.503304,hungary,14,Huffington Post
+23.69781,120.960515,taiwan,5,Huffington Post
+38.861034,71.276093,tajikistan,2,Huffington Post
+13.193887,-59.543198,barbados,2,Huffington Post
+55.169438,23.881275,lithuania,1,Huffington Post
+46.862496,103.846656,mongolia,7,Huffington Post
+55.378051,-3.435973,united kingdom,18,Huffington Post
+33.886917,9.537499,tunisia,3,Huffington Post
+-1.940278,29.873888,rwanda,12,Huffington Post
+6.428055,-9.429499,liberia,11,Huffington Post
+-38.416097,-63.616672,argentina,12,Huffington Post
+60.472024,8.468946,norway,10,Huffington Post
+8.460555,-11.779889,sierra leone,4,Huffington Post
+7.946527,-1.023194,ghana,9,Huffington Post
+-25.274398,133.775136,australia,53,Huffington Post
+21.521757,-77.781167,cuba,29,Huffington Post
+15.783471,-90.230759,guatemala,5,Huffington Post
+-19.015438,29.154857,zimbabwe,2,Huffington Post
+50.503887,4.469936,belgium,14,Huffington Post
+18.971187,-72.285215,haiti,5,Huffington Post
+48.019573,66.923684,kazakhstan,3,Huffington Post
+21.00789,-10.940835,mauritania,1,Huffington Post
+41.20438,74.766098,kyrgyzstan,3,Huffington Post
+52.132633,5.291266,netherlands,19,Huffington Post
+39.399872,-8.224454,portugal,8,Huffington Post
+56.26392,9.501785,denmark,7,Huffington Post
+12.879721,121.774017,philippines,20,Huffington Post
+14.497401,-14.452362,senegal,9,Huffington Post
+47.411631,28.369885,moldova,2,Huffington Post
+56.879635,24.603189,latvia,1,Huffington Post
+-22.95764,18.49041,namibia,1,Huffington Post
+46.818188,8.227512,switzerland,18,Huffington Post
+42.733883,25.48583,bulgaria,4,Huffington Post
+18.109581,-77.297508,jamaica,1,Huffington Post
+41.153332,20.168331,albania,1,Huffington Post
+15.199999,-86.241905,honduras,2,Huffington Post
+33.854721,35.862285,lebanon,10,Huffington Post
+4.210484,101.975766,malaysia,13,Huffington Post
+-18.665695,35.529562,mozambique,1,Huffington Post
+39.074208,21.824312,greece,37,Huffington Post
+12.865416,-85.207229,nicaragua,5,Huffington Post
+17.607789,8.081666,niger,44,Huffington Post
+-14.235004,-51.92528,brazil,27,Huffington Post
+33.93911,67.709953,afghanistan,33,Huffington Post
+25.354826,51.183884,qatar,5,Huffington Post
+38.969719,59.556278,turkmenistan,1,Huffington Post
+12.862807,30.217636,sudan,5,Huffington Post
+9.945587,-9.696645,guinea,8,Huffington Post
+8.537981,-80.782127,panama,2,Huffington Post
+28.394857,84.124008,nepal,86,Huffington Post
+6.611111,20.939444,central african republic,3,Huffington Post
+49.815273,6.129583,luxembourg,3,Huffington Post
+5.152149,46.199616,somalia,14,Huffington Post
+64.963051,-19.020835,iceland,3,Huffington Post
+6.42375,-66.58973,venezuela,7,Huffington Post
+4.535277,114.727669,brunei,1,Huffington Post
+32.427908,53.688046,iran,104,Huffington Post
+23.424076,53.847818,united arab emirates,17,Huffington Post
+4.860416,-58.93018,guyana,2,Huffington Post
+7.873054,80.771797,sri lanka,1,Huffington Post
+35.86166,104.195397,china,102,Huffington Post
+40.069099,45.038189,armenia,15,Huffington Post
+15.870032,100.992541,thailand,10,Huffington Post
+33.223191,43.679291,iraq,46,Huffington Post
+48.379433,31.16558,ukraine,26,Huffington Post
+26.3351,17.228331,libya,25,Huffington Post
+21.512583,55.923255,oman,181,Huffington Post
+61.92411,25.748151,finland,2,Huffington Post
+41.608635,21.745275,macedonia,3,Huffington Post
+61.52401,105.318756,russia,60,Huffington Post
+7.131474,171.184478,marshall islands,5,Huffington Post
+58.595272,25.013607,estonia,1,Huffington Post
+34.802075,38.996815,syria,65,Huffington Post
+49.214439,-2.13125,jersey,14,Huffington Post
+30.375321,69.345116,pakistan,56,Huffington Post
+45.943161,24.96676,romania,8,Huffington Post
+49.817492,15.472962,czech republic,5,Huffington Post
+21.913965,95.956223,myanmar,10,Huffington Post
+26.820553,30.802498,egypt,22,Huffington Post
+-6.314993,143.95555,papua new guinea,2,Huffington Post
+37.09024,-95.712891,united states,150,Huffington Post
+47.516231,14.550072,austria,19,Huffington Post
+71.706936,-42.604303,greenland,5,Huffington Post
+7.425554,150.550812,micronesia,2,Huffington Post
+4.570868,-74.297333,colombia,16,Huffington Post
+-3.370417,-168.734039,kiribati,1,Huffington Post
+-40.900557,174.885971,new zealand,10,Huffington Post
+38.963745,35.243322,turkey,41,Huffington Post
+23.885942,45.079162,saudi arabia,36,Huffington Post
+17.189877,-88.49765,belize,1,Huffington Post
+23.684994,90.356331,bangladesh,11,Huffington Post
+-32.522779,-55.765835,uruguay,8,Huffington Post
+46.227638,2.213749,france,71,Huffington Post
+48.669026,19.699024,slovakia,5,Huffington Post
+-9.189967,-75.015152,peru,11,Huffington Post
+19.85627,102.495496,laos,1,Huffington Post
+35.907757,127.766922,south korea,29,Huffington Post
+-16.290154,-63.588653,bolivia,1,Huffington Post
+-13.254308,34.301525,malawi,3,Huffington Post
+-1.831239,-78.183406,ecuador,2,Huffington Post
+31.046051,34.851612,israel,80,Huffington Post
+53.41291,-8.24389,ireland,14,Huffington Post
+28.033886,1.659626,algeria,1,Huffington Post
+44.016521,21.005859,serbia,6,Huffington Post
+18.220833,-66.590149,puerto rico,4,Huffington Post
+30.585164,36.238414,jordan,14,Huffington Post
+-35.675147,-71.542969,chile,13,Huffington Post
+9.081999,8.675277,nigeria,44,Huffington Post
+40.463667,-3.74922,spain,25,Huffington Post
+42.315407,43.356892,georgia,8,Huffington Post
+31.791702,-7.09262,morocco,4,Huffington Post
+60.128161,18.643501,sweden,15,Huffington Post
+17.570692,-3.996166,mali,45,Huffington Post
+15.552727,48.516388,yemen,47,Huffington Post
+22.396428,114.109497,hong kong,8,Huffington Post
+-6.369028,34.888822,tanzania,6,Huffington Post
+25.930414,50.637772,bahrain,5,Huffington Post
+15.454166,18.732207,chad,20,Huffington Post
+23.634501,-102.552784,mexico,33,Huffington Post
+20.593684,78.96288,india,79,Huffington Post
+-29.609988,28.233608,lesotho,1,Huffington Post
+-75.250973,-0.071389,antarctica,3,Huffington Post
+53.709807,27.953389,belarus,9,Huffington Post
+1.373333,32.290275,uganda,7,Huffington Post
+-3.373056,29.918886,burundi,10,Huffington Post
+-0.023559,37.906193,kenya,14,Huffington Post
+41.87194,12.56738,italy,54,Huffington Post
+-30.559482,22.937506,south africa,20,Huffington Post
+35.937496,14.375416,malta,4,Huffington Post
+9.145,40.489673,ethiopia,12,Huffington Post
+-15.376706,166.959158,vanuatu,1,Huffington Post
+7.369722,12.354722,cameroon,13,Huffington Post
+9.30769,2.315834,benin,1,Huffington Post
+56.130366,-106.346771,canada,30,Huffington Post
+31.354676,34.308825,gaza strip,1,Huffington Post
+1.352083,103.819836,singapore,9,Huffington Post
+31.952162,35.233154,palestinian territories,1,Huffington Post
+43.750298,7.412841,monaco,1,Huffington Post
+9.748917,-83.753428,costa rica,1,Huffington Post
+46.151241,14.995463,slovenia,1,Huffington Post
+51.165691,10.451526,germany,70,Huffington Post
+41.902916,12.453389,vatican city,5,Huffington Post
+15.179384,39.782334,eritrea,9,Huffington Post
+3.202778,73.22068,maldives,2,Huffington Post
+41.377491,64.585262,uzbekistan,1,Huffington Post
+13.794185,-88.89653,el salvador,5,Huffington Post
+51.919438,19.145136,poland,12,Huffington Post
+-0.789275,113.921327,indonesia,25,Huffington Post
+14.058324,108.277199,vietnam,17,Huffington Post
+29.31166,47.481766,kuwait,6,Huffington Post
+45.943161,24.96676,romania,1,CNN
+22.198745,113.543873,macau,1,CNN
+23.634501,-102.552784,mexico,3,CNN
+33.886917,9.537499,tunisia,1,CNN
+37.09024,-95.712891,united states,5,CNN
+4.210484,101.975766,malaysia,1,CNN
+38.963745,35.243322,turkey,2,CNN
+25.354826,51.183884,qatar,1,CNN
+41.87194,12.56738,italy,1,CNN
+29.31166,47.481766,kuwait,1,CNN
+8.537981,-80.782127,panama,1,CNN
+28.394857,84.124008,nepal,1,CNN
+-15.376706,166.959158,vanuatu,1,CNN
+35.907757,127.766922,south korea,1,CNN
+-14.235004,-51.92528,brazil,1,CNN
+32.427908,53.688046,iran,1,CNN
+64.963051,-19.020835,iceland,1,CNN
+51.165691,10.451526,germany,1,CNN
+40.069099,45.038189,armenia,1,CNN
+33.223191,43.679291,iraq,1,CNN
+42.315407,43.356892,georgia,2,CNN
+26.3351,17.228331,libya,1,CNN
+21.512583,55.923255,oman,6,CNN
+17.570692,-3.996166,mali,2,CNN
+46.818188,8.227512,switzerland,1,CNN
+34.802075,38.996815,syria,3,CNN
+49.214439,-2.13125,jersey,1,CNN
+41.377491,64.585262,uzbekistan,1,Herald Sun
+36.204824,138.252924,japan,15,Herald Sun
+55.378051,-3.435973,united kingdom,7,Herald Sun
+26.820553,30.802498,egypt,7,Herald Sun
+-1.940278,29.873888,rwanda,1,Herald Sun
+-38.416097,-63.616672,argentina,2,Herald Sun
+60.472024,8.468946,norway,2,Herald Sun
+7.946527,-1.023194,ghana,4,Herald Sun
+-25.274398,133.775136,australia,388,Herald Sun
+21.521757,-77.781167,cuba,2,Herald Sun
+-19.015438,29.154857,zimbabwe,1,Herald Sun
+50.503887,4.469936,belgium,4,Herald Sun
+18.971187,-72.285215,haiti,1,Herald Sun
+12.238333,-1.561593,burkina faso,1,Herald Sun
+40.339852,127.510093,north korea,1,Herald Sun
+52.132633,5.291266,netherlands,5,Herald Sun
+56.26392,9.501785,denmark,7,Herald Sun
+12.879721,121.774017,philippines,8,Herald Sun
+7.873054,80.771797,sri lanka,2,Herald Sun
+42.733883,25.48583,bulgaria,1,Herald Sun
+18.109581,-77.297508,jamaica,1,Herald Sun
+44.016521,21.005859,serbia,2,Herald Sun
+4.210484,101.975766,malaysia,7,Herald Sun
+-10.447525,105.690449,christmas island,1,Herald Sun
+39.074208,21.824312,greece,2,Herald Sun
+17.607789,8.081666,niger,15,Herald Sun
+56.130366,-106.346771,canada,4,Herald Sun
+33.93911,67.709953,afghanistan,3,Herald Sun
+25.354826,51.183884,qatar,5,Herald Sun
+38.969719,59.556278,turkmenistan,1,Herald Sun
+12.862807,30.217636,sudan,1,Herald Sun
+9.945587,-9.696645,guinea,5,Herald Sun
+8.537981,-80.782127,panama,1,Herald Sun
+28.394857,84.124008,nepal,14,Herald Sun
+49.815273,6.129583,luxembourg,1,Herald Sun
+5.152149,46.199616,somalia,1,Herald Sun
+-0.522778,166.931503,nauru,2,Herald Sun
+6.42375,-66.58973,venezuela,1,Herald Sun
+32.427908,53.688046,iran,10,Herald Sun
+23.424076,53.847818,united arab emirates,3,Herald Sun
+46.818188,8.227512,switzerland,1,Herald Sun
+35.86166,104.195397,china,26,Herald Sun
+40.069099,45.038189,armenia,1,Herald Sun
+15.870032,100.992541,thailand,2,Herald Sun
+33.223191,43.679291,iraq,4,Herald Sun
+23.684994,90.356331,bangladesh,2,Herald Sun
+48.379433,31.16558,ukraine,1,Herald Sun
+21.512583,55.923255,oman,142,Herald Sun
+61.92411,25.748151,finland,2,Herald Sun
+-20.348404,57.552152,mauritius,2,Herald Sun
+34.802075,38.996815,syria,7,Herald Sun
+49.214439,-2.13125,jersey,10,Herald Sun
+30.375321,69.345116,pakistan,2,Herald Sun
+45.943161,24.96676,romania,2,Herald Sun
+33.886917,9.537499,tunisia,2,Herald Sun
+37.09024,-95.712891,united states,14,Herald Sun
+47.516231,14.550072,austria,4,Herald Sun
+4.570868,-74.297333,colombia,1,Herald Sun
+-40.900557,174.885971,new zealand,45,Herald Sun
+-16.578193,179.414413,fiji,2,Herald Sun
+38.963745,35.243322,turkey,15,Herald Sun
+23.885942,45.079162,saudi arabia,3,Herald Sun
+15.454166,18.732207,chad,10,Herald Sun
+-32.522779,-55.765835,uruguay,1,Herald Sun
+46.227638,2.213749,france,28,Herald Sun
+-9.189967,-75.015152,peru,2,Herald Sun
+19.85627,102.495496,laos,1,Herald Sun
+9.081999,8.675277,nigeria,15,Herald Sun
+-16.290154,-63.588653,bolivia,1,Herald Sun
+31.046051,34.851612,israel,4,Herald Sun
+53.41291,-8.24389,ireland,6,Herald Sun
+8.619543,0.824782,togo,1,Herald Sun
+30.585164,36.238414,jordan,9,Herald Sun
+-35.675147,-71.542969,chile,1,Herald Sun
+35.907757,127.766922,south korea,3,Herald Sun
+40.463667,-3.74922,spain,2,Herald Sun
+42.315407,43.356892,georgia,5,Herald Sun
+60.128161,18.643501,sweden,2,Herald Sun
+17.570692,-3.996166,mali,10,Herald Sun
+22.396428,114.109497,hong kong,10,Herald Sun
+61.52401,105.318756,russia,11,Herald Sun
+25.930414,50.637772,bahrain,3,Herald Sun
+22.198745,113.543873,macau,1,Herald Sun
+23.634501,-102.552784,mexico,6,Herald Sun
+20.593684,78.96288,india,22,Herald Sun
+-20.904305,165.618042,new caledonia,4,Herald Sun
+1.373333,32.290275,uganda,1,Herald Sun
+-3.373056,29.918886,burundi,1,Herald Sun
+-0.023559,37.906193,kenya,2,Herald Sun
+41.87194,12.56738,italy,6,Herald Sun
+-30.559482,22.937506,south africa,7,Herald Sun
+12.565679,104.990963,cambodia,4,Herald Sun
+9.145,40.489673,ethiopia,1,Herald Sun
+32.321384,-64.75737,bermuda,1,Herald Sun
+-15.376706,166.959158,vanuatu,1,Herald Sun
+7.369722,12.354722,cameroon,2,Herald Sun
+9.30769,2.315834,benin,1,Herald Sun
+-14.235004,-51.92528,brazil,21,Herald Sun
+1.352083,103.819836,singapore,10,Herald Sun
+64.963051,-19.020835,iceland,1,Herald Sun
+46.151241,14.995463,slovenia,1,Herald Sun
+51.165691,10.451526,germany,3,Herald Sun
+-21.178986,-175.198242,tonga,2,Herald Sun
+3.202778,73.22068,maldives,2,Herald Sun
+-6.369028,34.888822,tanzania,1,Herald Sun
+-0.789275,113.921327,indonesia,51,Herald Sun
+14.058324,108.277199,vietnam,7,Herald Sun
+43.750298,7.412841,monaco,1,Herald Sun
+-13.759029,-172.104629,samoa,1,Al Jazeera
+42.602636,20.902977,kosovo,2,Al Jazeera
+13.443182,-15.310139,gambia,3,Al Jazeera
+40.143105,47.576927,azerbaijan,2,Al Jazeera
+40.339852,127.510093,north korea,13,Al Jazeera
+11.825138,42.590275,djibouti,5,Al Jazeera
+35.937496,14.375416,malta,3,Al Jazeera
+36.204824,138.252924,japan,26,Al Jazeera
+23.69781,120.960515,taiwan,4,Al Jazeera
+38.861034,71.276093,tajikistan,1,Al Jazeera
+13.193887,-59.543198,barbados,1,Al Jazeera
+27.514162,90.433601,bhutan,1,Al Jazeera
+55.169438,23.881275,lithuania,3,Al Jazeera
+55.378051,-3.435973,united kingdom,22,Al Jazeera
+33.886917,9.537499,tunisia,5,Al Jazeera
+-1.940278,29.873888,rwanda,10,Al Jazeera
+18.220833,-66.590149,puerto rico,3,Al Jazeera
+-38.416097,-63.616672,argentina,10,Al Jazeera
+60.472024,8.468946,norway,9,Al Jazeera
+8.460555,-11.779889,sierra leone,6,Al Jazeera
+25.930414,50.637772,bahrain,11,Al Jazeera
+-25.274398,133.775136,australia,23,Al Jazeera
+21.521757,-77.781167,cuba,34,Al Jazeera
+15.783471,-90.230759,guatemala,4,Al Jazeera
+-19.015438,29.154857,zimbabwe,7,Al Jazeera
+50.503887,4.469936,belgium,4,Al Jazeera
+18.971187,-72.285215,haiti,6,Al Jazeera
+48.019573,66.923684,kazakhstan,5,Al Jazeera
+12.238333,-1.561593,burkina faso,3,Al Jazeera
+6.428055,-9.429499,liberia,9,Al Jazeera
+52.132633,5.291266,netherlands,7,Al Jazeera
+56.26392,9.501785,denmark,8,Al Jazeera
+12.879721,121.774017,philippines,9,Al Jazeera
+14.497401,-14.452362,senegal,5,Al Jazeera
+47.411631,28.369885,moldova,4,Al Jazeera
+56.879635,24.603189,latvia,7,Al Jazeera
+-22.95764,18.49041,namibia,2,Al Jazeera
+43.915886,17.679076,bosnia and herzegovina,1,Al Jazeera
+15.454166,18.732207,chad,6,Al Jazeera
+46.818188,8.227512,switzerland,5,Al Jazeera
+42.733883,25.48583,bulgaria,3,Al Jazeera
+18.109581,-77.297508,jamaica,1,Al Jazeera
+41.153332,20.168331,albania,2,Al Jazeera
+15.199999,-86.241905,honduras,5,Al Jazeera
+33.854721,35.862285,lebanon,18,Al Jazeera
+4.210484,101.975766,malaysia,7,Al Jazeera
+39.074208,21.824312,greece,24,Al Jazeera
+12.865416,-85.207229,nicaragua,5,Al Jazeera
+56.130366,-106.346771,canada,30,Al Jazeera
+33.93911,67.709953,afghanistan,30,Al Jazeera
+25.354826,51.183884,qatar,9,Al Jazeera
+38.969719,59.556278,turkmenistan,1,Al Jazeera
+12.862807,30.217636,sudan,17,Al Jazeera
+29.31166,47.481766,kuwait,6,Al Jazeera
+8.537981,-80.782127,panama,4,Al Jazeera
+28.394857,84.124008,nepal,21,Al Jazeera
+6.611111,20.939444,central african republic,4,Al Jazeera
+49.815273,6.129583,luxembourg,5,Al Jazeera
+5.152149,46.199616,somalia,21,Al Jazeera
+64.963051,-19.020835,iceland,3,Al Jazeera
+45.1,15.2,croatia,5,Al Jazeera
+6.42375,-66.58973,venezuela,12,Al Jazeera
+32.427908,53.688046,iran,104,Al Jazeera
+23.424076,53.847818,united arab emirates,9,Al Jazeera
+7.873054,80.771797,sri lanka,4,Al Jazeera
+35.86166,104.195397,china,53,Al Jazeera
+40.069099,45.038189,armenia,13,Al Jazeera
+15.870032,100.992541,thailand,6,Al Jazeera
+33.223191,43.679291,iraq,88,Al Jazeera
+23.684994,90.356331,bangladesh,11,Al Jazeera
+48.379433,31.16558,ukraine,31,Al Jazeera
+26.3351,17.228331,libya,32,Al Jazeera
+21.512583,55.923255,oman,161,Al Jazeera
+61.92411,25.748151,finland,2,Al Jazeera
+41.608635,21.745275,macedonia,3,Al Jazeera
+61.52401,105.318756,russia,63,Al Jazeera
+-20.348404,57.552152,mauritius,1,Al Jazeera
+7.131474,171.184478,marshall islands,2,Al Jazeera
+34.802075,38.996815,syria,64,Al Jazeera
+18.735693,-70.162651,dominican republic,1,Al Jazeera
+49.214439,-2.13125,jersey,20,Al Jazeera
+21.913965,95.956223,burma,1,Al Jazeera
+30.375321,69.345116,pakistan,33,Al Jazeera
+45.943161,24.96676,romania,4,Al Jazeera
+49.817492,15.472962,czech republic,4,Al Jazeera
+21.913965,95.956223,myanmar,5,Al Jazeera
+26.820553,30.802498,egypt,33,Al Jazeera
+13.444304,144.793731,guam,1,Al Jazeera
+37.09024,-95.712891,united states,257,Al Jazeera
+47.516231,14.550072,austria,6,Al Jazeera
+71.706936,-42.604303,greenland,2,Al Jazeera
+47.162494,19.503304,hungary,5,Al Jazeera
+4.570868,-74.297333,colombia,9,Al Jazeera
+-11.202692,17.873887,angola,1,Al Jazeera
+17.607789,8.081666,niger,26,Al Jazeera
+-16.578193,179.414413,fiji,1,Al Jazeera
+38.963745,35.243322,turkey,40,Al Jazeera
+23.885942,45.079162,saudi arabia,41,Al Jazeera
+39.399872,-8.224454,portugal,6,Al Jazeera
+21.00789,-10.940835,mauritania,3,Al Jazeera
+-32.522779,-55.765835,uruguay,1,Al Jazeera
+46.227638,2.213749,france,59,Al Jazeera
+48.669026,19.699024,slovakia,2,Al Jazeera
+-9.189967,-75.015152,peru,8,Al Jazeera
+19.85627,102.495496,laos,3,Al Jazeera
+35.907757,127.766922,south korea,14,Al Jazeera
+-16.290154,-63.588653,bolivia,5,Al Jazeera
+-13.254308,34.301525,malawi,1,Al Jazeera
+-1.831239,-78.183406,ecuador,6,Al Jazeera
+31.046051,34.851612,israel,55,Al Jazeera
+53.41291,-8.24389,ireland,3,Al Jazeera
+28.033886,1.659626,algeria,4,Al Jazeera
+44.016521,21.005859,serbia,4,Al Jazeera
+31.354676,34.308825,gaza strip,6,Al Jazeera
+8.619543,0.824782,togo,3,Al Jazeera
+30.585164,36.238414,jordan,23,Al Jazeera
+-35.675147,-71.542969,chile,15,Al Jazeera
+14.641528,-61.024174,martinique,1,Al Jazeera
+9.081999,8.675277,nigeria,24,Al Jazeera
+40.463667,-3.74922,spain,15,Al Jazeera
+42.315407,43.356892,georgia,16,Al Jazeera
+31.791702,-7.09262,morocco,2,Al Jazeera
+60.128161,18.643501,sweden,6,Al Jazeera
+-0.803689,11.609444,gabon,3,Al Jazeera
+17.570692,-3.996166,mali,74,Al Jazeera
+15.552727,48.516388,yemen,42,Al Jazeera
+22.396428,114.109497,hong kong,11,Al Jazeera
+51.919438,19.145136,poland,10,Al Jazeera
+7.946527,-1.023194,ghana,2,Al Jazeera
+58.595272,25.013607,estonia,3,Al Jazeera
+23.634501,-102.552784,mexico,46,Al Jazeera
+20.593684,78.96288,india,69,Al Jazeera
+-3.373056,29.918886,burundi,8,Al Jazeera
+53.709807,27.953389,belarus,7,Al Jazeera
+1.373333,32.290275,uganda,10,Al Jazeera
+-23.442503,-58.443832,paraguay,3,Al Jazeera
+-0.023559,37.906193,kenya,10,Al Jazeera
+41.87194,12.56738,italy,26,Al Jazeera
+-30.559482,22.937506,south africa,24,Al Jazeera
+12.565679,104.990963,cambodia,4,Al Jazeera
+9.145,40.489673,ethiopia,14,Al Jazeera
+32.321384,-64.75737,bermuda,1,Al Jazeera
+-15.376706,166.959158,vanuatu,2,Al Jazeera
+7.369722,12.354722,cameroon,3,Al Jazeera
+9.30769,2.315834,benin,1,Al Jazeera
+-14.235004,-51.92528,brazil,18,Al Jazeera
+1.352083,103.819836,singapore,4,Al Jazeera
+31.952162,35.233154,palestinian territories,7,Al Jazeera
+43.750298,7.412841,monaco,1,Al Jazeera
+46.151241,14.995463,slovenia,1,Al Jazeera
+51.165691,10.451526,germany,48,Al Jazeera
+41.902916,12.453389,vatican city,1,Al Jazeera
+15.414999,-61.370976,dominica,1,Al Jazeera
+3.919305,-56.027783,suriname,1,Al Jazeera
+15.179384,39.782334,eritrea,6,Al Jazeera
+13.794185,-88.89653,el salvador,10,Al Jazeera
+-6.369028,34.888822,tanzania,6,Al Jazeera
+-0.789275,113.921327,indonesia,9,Al Jazeera
+16.002082,-24.013197,cape verde,2,Al Jazeera
+14.058324,108.277199,vietnam,18,Al Jazeera
+9.945587,-9.696645,guinea,5,Al Jazeera
+40.339852,127.510093,north korea,1,BBC
+36.204824,138.252924,japan,22,BBC
+27.514162,90.433601,bhutan,2,BBC
+55.378051,-3.435973,united kingdom,2,BBC
+26.820553,30.802498,egypt,3,BBC
+-1.940278,29.873888,rwanda,1,BBC
+18.220833,-66.590149,puerto rico,1,BBC
+-38.416097,-63.616672,argentina,4,BBC
+60.472024,8.468946,norway,1,BBC
+8.460555,-11.779889,sierra leone,1,BBC
+7.946527,-1.023194,ghana,4,BBC
+53.709807,27.953389,belarus,1,BBC
+21.521757,-77.781167,cuba,3,BBC
+54.236107,-4.548056,isle of man,2,BBC
+50.503887,4.469936,belgium,9,BBC
+18.971187,-72.285215,haiti,1,BBC
+48.019573,66.923684,kazakhstan,5,BBC
+12.238333,-1.561593,burkina faso,1,BBC
+6.428055,-9.429499,liberia,2,BBC
+52.132633,5.291266,netherlands,5,BBC
+56.26392,9.501785,denmark,1,BBC
+12.879721,121.774017,philippines,7,BBC
+56.879635,24.603189,latvia,2,BBC
+45.1,15.2,croatia,1,BBC
+15.454166,18.732207,chad,1,BBC
+46.818188,8.227512,switzerland,3,BBC
+71.706936,-42.604303,greenland,1,BBC
+15.199999,-86.241905,honduras,2,BBC
+33.854721,35.862285,lebanon,3,BBC
+4.210484,101.975766,malaysia,7,BBC
+39.074208,21.824312,greece,4,BBC
+12.865416,-85.207229,nicaragua,1,BBC
+17.607789,8.081666,niger,10,BBC
+-14.235004,-51.92528,brazil,10,BBC
+33.93911,67.709953,afghanistan,6,BBC
+25.354826,51.183884,qatar,1,BBC
+8.537981,-80.782127,panama,4,BBC
+28.394857,84.124008,nepal,25,BBC
+6.611111,20.939444,central african republic,1,BBC
+49.815273,6.129583,luxembourg,2,BBC
+-26.522503,31.465866,swaziland,1,BBC
+-22.95764,18.49041,namibia,2,BBC
+6.42375,-66.58973,venezuela,1,BBC
+4.535277,114.727669,brunei,4,BBC
+32.427908,53.688046,iran,6,BBC
+23.424076,53.847818,united arab emirates,1,BBC
+-18.766947,46.869107,madagascar,1,BBC
+7.873054,80.771797,sri lanka,1,BBC
+35.86166,104.195397,china,26,BBC
+15.870032,100.992541,thailand,3,BBC
+33.223191,43.679291,iraq,4,BBC
+23.684994,90.356331,bangladesh,3,BBC
+48.379433,31.16558,ukraine,5,BBC
+26.3351,17.228331,libya,4,BBC
+21.512583,55.923255,oman,37,BBC
+61.92411,25.748151,finland,5,BBC
+61.52401,105.318756,russia,19,BBC
+7.131474,171.184478,marshall islands,2,BBC
+34.802075,38.996815,syria,5,BBC
+49.214439,-2.13125,jersey,3,BBC
+30.375321,69.345116,pakistan,4,BBC
+45.943161,24.96676,romania,5,BBC
+-4.679574,55.491977,seychelles,1,BBC
+49.817492,15.472962,czech republic,1,BBC
+21.913965,95.956223,myanmar,2,BBC
+33.886917,9.537499,tunisia,2,BBC
+37.09024,-95.712891,united states,20,BBC
+47.516231,14.550072,austria,5,BBC
+47.162494,19.503304,hungary,2,BBC
+4.570868,-74.297333,colombia,3,BBC
+-40.900557,174.885971,new zealand,16,BBC
+38.963745,35.243322,turkey,3,BBC
+23.885942,45.079162,saudi arabia,4,BBC
+22.198745,113.543873,macau,1,BBC
+46.227638,2.213749,france,34,BBC
+48.669026,19.699024,slovakia,1,BBC
+-9.189967,-75.015152,peru,7,BBC
+19.85627,102.495496,laos,1,BBC
+9.081999,8.675277,nigeria,9,BBC
+-1.831239,-78.183406,ecuador,5,BBC
+31.046051,34.851612,israel,7,BBC
+53.41291,-8.24389,ireland,9,BBC
+8.619543,0.824782,togo,1,BBC
+-35.675147,-71.542969,chile,11,BBC
+35.907757,127.766922,south korea,2,BBC
+40.463667,-3.74922,spain,3,BBC
+42.315407,43.356892,georgia,1,BBC
+31.791702,-7.09262,morocco,1,BBC
+17.570692,-3.996166,mali,15,BBC
+15.552727,48.516388,yemen,4,BBC
+22.396428,114.109497,hong kong,3,BBC
+51.919438,19.145136,poland,1,BBC
+39.399872,-8.224454,portugal,4,BBC
+23.634501,-102.552784,mexico,8,BBC
+20.593684,78.96288,india,31,BBC
+-3.373056,29.918886,burundi,1,BBC
+-75.250973,-0.071389,antarctica,3,BBC
+-25.274398,133.775136,australia,37,BBC
+1.373333,32.290275,uganda,1,BBC
+-23.442503,-58.443832,paraguay,1,BBC
+-0.023559,37.906193,kenya,1,BBC
+-22.328474,24.684866,botswana,1,BBC
+41.87194,12.56738,italy,8,BBC
+-30.559482,22.937506,south africa,8,BBC
+35.937496,14.375416,malta,2,BBC
+9.145,40.489673,ethiopia,1,BBC
+7.369722,12.354722,cameroon,2,BBC
+56.130366,-106.346771,canada,15,BBC
+1.352083,103.819836,singapore,10,BBC
+64.963051,-19.020835,iceland,3,BBC
+51.165691,10.451526,germany,25,BBC
+3.202778,73.22068,maldives,1,BBC
+-6.369028,34.888822,tanzania,2,BBC
+-0.789275,113.921327,indonesia,12,BBC
+14.058324,108.277199,vietnam,5,BBC
+36.204824,138.252924,japan,21,The Washington Post
+13.443182,-15.310139,gambia,1,The Washington Post
+40.143105,47.576927,azerbaijan,1,The Washington Post
+40.339852,127.510093,north korea,9,The Washington Post
+14.497401,-14.452362,senegal,6,The Washington Post
+12.565679,104.990963,cambodia,2,The Washington Post
+47.162494,19.503304,hungary,5,The Washington Post
+23.69781,120.960515,taiwan,2,The Washington Post
+35.126413,33.429859,cyprus,1,The Washington Post
+27.514162,90.433601,bhutan,1,The Washington Post
+55.169438,23.881275,lithuania,3,The Washington Post
+46.862496,103.846656,mongolia,2,The Washington Post
+42.546245,1.601554,andorra,1,The Washington Post
+33.886917,9.537499,tunisia,8,The Washington Post
+-1.940278,29.873888,rwanda,8,The Washington Post
+18.220833,-66.590149,puerto rico,3,The Washington Post
+-38.416097,-63.616672,argentina,6,The Washington Post
+60.472024,8.468946,norway,3,The Washington Post
+8.460555,-11.779889,sierra leone,1,The Washington Post
+7.946527,-1.023194,ghana,2,The Washington Post
+-25.274398,133.775136,australia,9,The Washington Post
+21.521757,-77.781167,cuba,15,The Washington Post
+-13.133897,27.849332,zambia,1,The Washington Post
+-19.015438,29.154857,zimbabwe,4,The Washington Post
+50.503887,4.469936,belgium,5,The Washington Post
+18.971187,-72.285215,haiti,5,The Washington Post
+48.019573,66.923684,kazakhstan,4,The Washington Post
+12.238333,-1.561593,burkina faso,1,The Washington Post
+21.00789,-10.940835,mauritania,2,The Washington Post
+52.132633,5.291266,netherlands,3,The Washington Post
+39.399872,-8.224454,portugal,1,The Washington Post
+56.26392,9.501785,denmark,1,The Washington Post
+12.879721,121.774017,philippines,8,The Washington Post
+11.825138,42.590275,djibouti,9,The Washington Post
+47.411631,28.369885,moldova,1,The Washington Post
+56.879635,24.603189,latvia,1,The Washington Post
+-22.95764,18.49041,namibia,1,The Washington Post
+15.454166,18.732207,chad,10,The Washington Post
+46.818188,8.227512,switzerland,2,The Washington Post
+42.733883,25.48583,bulgaria,2,The Washington Post
+18.109581,-77.297508,jamaica,3,The Washington Post
+41.153332,20.168331,albania,1,The Washington Post
+33.854721,35.862285,lebanon,12,The Washington Post
+4.210484,101.975766,malaysia,6,The Washington Post
+-18.665695,35.529562,mozambique,2,The Washington Post
+39.074208,21.824312,greece,13,The Washington Post
+12.865416,-85.207229,nicaragua,1,The Washington Post
+17.607789,8.081666,niger,25,The Washington Post
+56.130366,-106.346771,canada,11,The Washington Post
+33.93911,67.709953,afghanistan,30,The Washington Post
+25.354826,51.183884,qatar,15,The Washington Post
+38.969719,59.556278,turkmenistan,1,The Washington Post
+1.650801,10.267895,equatorial guinea,2,The Washington Post
+12.862807,30.217636,sudan,12,The Washington Post
+9.945587,-9.696645,guinea,4,The Washington Post
+8.537981,-80.782127,panama,2,The Washington Post
+28.394857,84.124008,nepal,34,The Washington Post
+6.611111,20.939444,central african republic,4,The Washington Post
+49.815273,6.129583,luxembourg,1,The Washington Post
+5.152149,46.199616,somalia,23,The Washington Post
+45.1,15.2,croatia,1,The Washington Post
+6.428055,-9.429499,liberia,5,The Washington Post
+6.42375,-66.58973,venezuela,4,The Washington Post
+4.535277,114.727669,brunei,2,The Washington Post
+32.427908,53.688046,iran,52,The Washington Post
+23.424076,53.847818,united arab emirates,4,The Washington Post
+7.873054,80.771797,sri lanka,11,The Washington Post
+35.86166,104.195397,china,38,The Washington Post
+40.069099,45.038189,armenia,6,The Washington Post
+15.870032,100.992541,thailand,9,The Washington Post
+33.223191,43.679291,iraq,32,The Washington Post
+48.379433,31.16558,ukraine,17,The Washington Post
+26.3351,17.228331,libya,23,The Washington Post
+21.512583,55.923255,oman,88,The Washington Post
+61.92411,25.748151,finland,2,The Washington Post
+41.608635,21.745275,macedonia,2,The Washington Post
+7.131474,171.184478,marshall islands,5,The Washington Post
+34.802075,38.996815,syria,48,The Washington Post
+49.214439,-2.13125,jersey,4,The Washington Post
+30.375321,69.345116,pakistan,30,The Washington Post
+45.943161,24.96676,romania,3,The Washington Post
+49.817492,15.472962,czech republic,2,The Washington Post
+21.913965,95.956223,myanmar,5,The Washington Post
+26.820553,30.802498,egypt,9,The Washington Post
+37.09024,-95.712891,united states,95,The Washington Post
+47.516231,14.550072,austria,5,The Washington Post
+4.570868,-74.297333,colombia,4,The Washington Post
+-40.900557,174.885971,new zealand,6,The Washington Post
+38.963745,35.243322,turkey,22,The Washington Post
+55.378051,-3.435973,united kingdom,11,The Washington Post
+23.885942,45.079162,saudi arabia,35,The Washington Post
+23.684994,90.356331,bangladesh,12,The Washington Post
+-32.522779,-55.765835,uruguay,4,The Washington Post
+46.227638,2.213749,france,34,The Washington Post
+48.669026,19.699024,slovakia,1,The Washington Post
+-9.189967,-75.015152,peru,1,The Washington Post
+19.85627,102.495496,laos,3,The Washington Post
+9.081999,8.675277,nigeria,23,The Washington Post
+-13.254308,34.301525,malawi,4,The Washington Post
+-1.831239,-78.183406,ecuador,1,The Washington Post
+31.046051,34.851612,israel,30,The Washington Post
+53.41291,-8.24389,ireland,3,The Washington Post
+28.033886,1.659626,algeria,8,The Washington Post
+44.016521,21.005859,serbia,1,The Washington Post
+-6.369028,34.888822,tanzania,3,The Washington Post
+31.354676,34.308825,gaza strip,2,The Washington Post
+38.861034,71.276093,tajikistan,1,The Washington Post
+8.619543,0.824782,togo,1,The Washington Post
+30.585164,36.238414,jordan,8,The Washington Post
+-35.675147,-71.542969,chile,3,The Washington Post
+35.907757,127.766922,south korea,13,The Washington Post
+40.463667,-3.74922,spain,6,The Washington Post
+31.791702,-7.09262,morocco,3,The Washington Post
+60.128161,18.643501,sweden,8,The Washington Post
+17.570692,-3.996166,mali,45,The Washington Post
+15.552727,48.516388,yemen,43,The Washington Post
+22.396428,114.109497,hong kong,3,The Washington Post
+61.52401,105.318756,russia,34,The Washington Post
+18.335765,-64.896335,u.s. virgin islands,1,The Washington Post
+25.930414,50.637772,bahrain,1,The Washington Post
+58.595272,25.013607,estonia,3,The Washington Post
+23.634501,-102.552784,mexico,11,The Washington Post
+20.593684,78.96288,india,31,The Washington Post
+53.709807,27.953389,belarus,2,The Washington Post
+1.373333,32.290275,uganda,6,The Washington Post
+-3.373056,29.918886,burundi,6,The Washington Post
+-0.023559,37.906193,kenya,19,The Washington Post
+41.87194,12.56738,italy,22,The Washington Post
+24.215527,-12.885834,western sahara,1,The Washington Post
+-30.559482,22.937506,south africa,9,The Washington Post
+35.937496,14.375416,malta,3,The Washington Post
+9.145,40.489673,ethiopia,6,The Washington Post
+7.369722,12.354722,cameroon,5,The Washington Post
+9.30769,2.315834,benin,1,The Washington Post
+-14.235004,-51.92528,brazil,14,The Washington Post
+1.352083,103.819836,singapore,8,The Washington Post
+64.963051,-19.020835,iceland,3,The Washington Post
+51.165691,10.451526,germany,26,The Washington Post
+15.179384,39.782334,eritrea,6,The Washington Post
+41.377491,64.585262,uzbekistan,1,The Washington Post
+51.919438,19.145136,poland,12,The Washington Post
+-0.789275,113.921327,indonesia,8,The Washington Post
+14.058324,108.277199,vietnam,8,The Washington Post
+36.204824,138.252924,japan,38,The Chronicle
+35.126413,33.429859,cyprus,2,The Chronicle
+-21.236736,-159.777671,cook islands,1,The Chronicle
+55.378051,-3.435973,united kingdom,4,The Chronicle
+18.220833,-66.590149,puerto rico,1,The Chronicle
+-38.416097,-63.616672,argentina,7,The Chronicle
+60.472024,8.468946,norway,3,The Chronicle
+7.946527,-1.023194,ghana,2,The Chronicle
+-25.274398,133.775136,australia,624,The Chronicle
+21.521757,-77.781167,cuba,3,The Chronicle
+-19.015438,29.154857,zimbabwe,1,The Chronicle
+50.503887,4.469936,belgium,4,The Chronicle
+18.971187,-72.285215,haiti,2,The Chronicle
+52.132633,5.291266,netherlands,2,The Chronicle
+56.26392,9.501785,denmark,4,The Chronicle
+12.879721,121.774017,philippines,5,The Chronicle
+7.873054,80.771797,sri lanka,1,The Chronicle
+42.733883,25.48583,bulgaria,1,The Chronicle
+18.109581,-77.297508,jamaica,1,The Chronicle
+41.153332,20.168331,albania,3,The Chronicle
+-11.202692,17.873887,angola,1,The Chronicle
+4.210484,101.975766,malaysia,7,The Chronicle
+39.074208,21.824312,greece,10,The Chronicle
+12.865416,-85.207229,nicaragua,2,The Chronicle
+17.607789,8.081666,niger,4,The Chronicle
+-14.235004,-51.92528,brazil,13,The Chronicle
+33.93911,67.709953,afghanistan,3,The Chronicle
+9.945587,-9.696645,guinea,13,The Chronicle
+8.537981,-80.782127,panama,1,The Chronicle
+28.394857,84.124008,nepal,23,The Chronicle
+6.42375,-66.58973,venezuela,2,The Chronicle
+32.427908,53.688046,iran,10,The Chronicle
+23.424076,53.847818,united arab emirates,1,The Chronicle
+17.570692,-3.996166,mali,15,The Chronicle
+46.818188,8.227512,switzerland,2,The Chronicle
+35.86166,104.195397,china,33,The Chronicle
+40.069099,45.038189,armenia,3,The Chronicle
+15.870032,100.992541,thailand,3,The Chronicle
+33.223191,43.679291,iraq,6,The Chronicle
+48.379433,31.16558,ukraine,4,The Chronicle
+21.512583,55.923255,oman,154,The Chronicle
+61.92411,25.748151,finland,2,The Chronicle
+34.802075,38.996815,syria,2,The Chronicle
+18.735693,-70.162651,dominican republic,2,The Chronicle
+49.214439,-2.13125,jersey,11,The Chronicle
+21.913965,95.956223,burma,1,The Chronicle
+45.943161,24.96676,romania,2,The Chronicle
+-4.679574,55.491977,seychelles,1,The Chronicle
+26.820553,30.802498,egypt,10,The Chronicle
+13.444304,144.793731,guam,1,The Chronicle
+-6.314993,143.95555,papua new guinea,6,The Chronicle
+37.09024,-95.712891,united states,18,The Chronicle
+47.516231,14.550072,austria,4,The Chronicle
+4.570868,-74.297333,colombia,1,The Chronicle
+-13.759029,-172.104629,samoa,3,The Chronicle
+-40.900557,174.885971,new zealand,89,The Chronicle
+-16.578193,179.414413,fiji,11,The Chronicle
+38.963745,35.243322,turkey,20,The Chronicle
+23.885942,45.079162,saudi arabia,1,The Chronicle
+23.684994,90.356331,bangladesh,3,The Chronicle
+46.227638,2.213749,france,27,The Chronicle
+-9.189967,-75.015152,peru,7,The Chronicle
+35.907757,127.766922,south korea,4,The Chronicle
+-13.254308,34.301525,malawi,4,The Chronicle
+31.046051,34.851612,israel,2,The Chronicle
+53.41291,-8.24389,ireland,3,The Chronicle
+30.585164,36.238414,jordan,12,The Chronicle
+-35.675147,-71.542969,chile,6,The Chronicle
+9.081999,8.675277,nigeria,4,The Chronicle
+40.463667,-3.74922,spain,5,The Chronicle
+42.315407,43.356892,georgia,4,The Chronicle
+31.791702,-7.09262,morocco,2,The Chronicle
+60.128161,18.643501,sweden,2,The Chronicle
+4.860416,-58.93018,guyana,2,The Chronicle
+12.262776,-61.604171,grenada,2,The Chronicle
+15.552727,48.516388,yemen,1,The Chronicle
+22.396428,114.109497,hong kong,4,The Chronicle
+61.52401,105.318756,russia,20,The Chronicle
+15.454166,18.732207,chad,1,The Chronicle
+23.634501,-102.552784,mexico,10,The Chronicle
+20.593684,78.96288,india,31,The Chronicle
+-20.904305,165.618042,new caledonia,1,The Chronicle
+-75.250973,-0.071389,antarctica,3,The Chronicle
+-23.442503,-58.443832,paraguay,4,The Chronicle
+-0.023559,37.906193,kenya,1,The Chronicle
+41.87194,12.56738,italy,6,The Chronicle
+-30.559482,22.937506,south africa,8,The Chronicle
+35.937496,14.375416,malta,2,The Chronicle
+32.321384,-64.75737,bermuda,1,The Chronicle
+-15.376706,166.959158,vanuatu,4,The Chronicle
+9.30769,2.315834,benin,1,The Chronicle
+56.130366,-106.346771,canada,13,The Chronicle
+1.352083,103.819836,singapore,6,The Chronicle
+64.963051,-19.020835,iceland,2,The Chronicle
+51.165691,10.451526,germany,15,The Chronicle
+15.414999,-61.370976,dominica,2,The Chronicle
+-21.178986,-175.198242,tonga,3,The Chronicle
+3.202778,73.22068,maldives,1,The Chronicle
+13.794185,-88.89653,el salvador,2,The Chronicle
+51.919438,19.145136,poland,3,The Chronicle
+-0.789275,113.921327,indonesia,27,The Chronicle
+14.058324,108.277199,vietnam,14,The Chronicle
+49.465691,-2.585278,guernsey,2,The Chronicle

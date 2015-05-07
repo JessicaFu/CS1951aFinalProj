@@ -1,0 +1,1235 @@
+lat,lon,name,city,source
+4.174718,73.5101438,male,1,The Onion
+34.008818,-81.0372695,columbia,1,The Onion
+43.1932336,-80.3842807,paris,1,The Onion
+42.3604823,-71.0595678,boston,2,The Onion
+41.4877262,-81.677522,cleveland,1,The Onion
+38.8951148,-77.0363716,washington,2,The Onion
+34.8512316,-82.3985105,greenville,1,The Onion
+39.6417629,-77.7199932,hagerstown,1,The Onion
+49.8493165,-99.9573544,brandon,1,The Onion
+15.160632,120.5864028,angeles,1,The Onion
+39.2810502,-76.567903,baltimore,1,The Onion
+-26.6595434,150.1839141,miles,1,The Onion
+42.9894583,-81.2460912,london,1,The Onion
+43.5113941,16.439737,split,1,The Onion
+49.1323438,-123.0056851,delta,1,The Onion
+33.7877945,-117.8531119,orange,1,The Onion
+35.614517,-88.813947,jackson,1,The Onion
+40.3364587,-75.9288612,reading,2,The Onion
+34.1987,-79.7677001,florence,1,The Onion
+42.8864468,-78.8783689,buffalo,1,The Onion
+43.7009504,7.2684054,nice,1,The Onion
+43.074761,-89.3837613,madison,5,Huffington Post
+39.1014564,-84.5138592,cincinnati,1,Huffington Post
+21.304547,-157.8556764,honolulu,1,Huffington Post
+-35.2820708,149.1286673,canberra,2,Huffington Post
+52.6367811,-1.1312289,leicester,2,Huffington Post
+32.0835407,-81.0998342,savannah,1,Huffington Post
+30.0860459,-94.1018461,beaumont,1,Huffington Post
+-3.3585234,29.3682312,bujumbura,6,Huffington Post
+11.5936909,43.1471141,djibouti,1,Huffington Post
+42.9894583,-81.2460912,london,24,Huffington Post
+54.5205722,-128.6060566,terrace,2,Huffington Post
+-11.6931255,43.2543044,moroni,5,Huffington Post
+41.4672589,12.9035737,latina,1,Huffington Post
+6.5428919,21.9871043,bria,1,Huffington Post
+37.270973,-79.9414313,roanoke,1,Huffington Post
+27.0997775,-82.4542633,venice,3,Huffington Post
+43.1932336,-80.3842807,paris,31,Huffington Post
+-38.3829031,142.4882935,warrnambool,1,Huffington Post
+42.1155716,-80.0807007,erie,1,Huffington Post
+27.9658533,-82.8001026,clearwater,1,Huffington Post
+39.7391536,-104.9847034,denver,2,Huffington Post
+-27.4689806,153.023503,brisbane,1,Huffington Post
+37.227928,-77.4019268,petersburg,1,Huffington Post
+46.136922,-60.1917192,sydney,7,Huffington Post
+33.7877945,-117.8531119,orange,12,Huffington Post
+44.0366034,10.1409467,massa,1,Huffington Post
+-12.4596697,130.8406196,darwin,4,Huffington Post
+-34.8985937,-56.1628267,montevideo,5,Huffington Post
+36.0391456,-114.9819235,henderson,1,Huffington Post
+44.2634161,-88.4166964,appleton,1,Huffington Post
+51.3405087,12.3746816,leipzig,1,Huffington Post
+-20.1252961,-40.3064477,serra,1,Huffington Post
+38.111051,13.335745,palermo,2,Huffington Post
+34.4301914,70.4601355,jalalabad,1,Huffington Post
+31.5621916,74.3228517,lahore,4,Huffington Post
+47.4983377,19.0404712,budapest,1,Huffington Post
+39.9272322,32.8519769,ankara,10,Huffington Post
+14.6930042,-17.447026,dakar,5,Huffington Post
+-37.7876214,175.2813186,hamilton,5,Huffington Post
+46.1759065,21.3187686,arad,2,Huffington Post
+25.4740943,80.3315801,banda,3,Huffington Post
+41.1485925,-8.6110201,porto,10,Huffington Post
+40.8000554,-96.6674005,lincoln,7,Huffington Post
+36.8468146,-76.2852183,norfolk,1,Huffington Post
+-12.9816356,-38.4820771,salvador,3,Huffington Post
+25.7742658,-80.1936589,miami,9,Huffington Post
+28.5421175,-81.3790462,orlando,2,Huffington Post
+-27.6424132,153.1131037,logan,1,Huffington Post
+52.4080477,-1.5113334,coventry,1,Huffington Post
+-26.6595434,150.1839141,miles,57,Huffington Post
+25.2683592,55.2963956,dubai,8,Huffington Post
+26.7164127,88.4309916,siliguri,3,Huffington Post
+34.1420882,-118.25057,glendale,1,Huffington Post
+33.5206824,-86.8024326,birmingham,1,Huffington Post
+-12.0465478,-77.1445069,callao,1,Huffington Post
+27.816415,-80.4706078,sebastian,1,Huffington Post
+-1.2832532,36.8172449,nairobi,5,Huffington Post
+34.0123846,71.5787458,peshawar,3,Huffington Post
+-10.1885563,-48.3369421,palmas,1,Huffington Post
+9.2831553,12.4580348,yola,2,Huffington Post
+-3.3669557,36.6915518,arusha,6,Huffington Post
+40.4167047,-3.7035825,madrid,6,Huffington Post
+54.9063791,-1.375053,sunderland,1,Huffington Post
+46.5218269,6.6327025,lausanne,3,Huffington Post
+41.4877262,-81.677522,cleveland,1,Huffington Post
+-51.6934032,-57.8548065,stanley,2,Huffington Post
+40.868154,-73.425676,huntington,1,Huffington Post
+-30.897333,-55.5473981,rivera,4,Huffington Post
+50.8322608,12.9252977,chemnitz,2,Huffington Post
+50.4480951,-104.6158181,regina,7,Huffington Post
+35.614517,-88.813947,jackson,8,Huffington Post
+-29.8541667,31.05,durban,4,Huffington Post
+41.8756208,-87.6243706,chicago,9,Huffington Post
+34.0922335,-117.435048,fontana,1,Huffington Post
+-26.2227778,27.89,soweto,1,Huffington Post
+49.6112768,6.129799,luxembourg,2,Huffington Post
+37.9357576,-122.3477486,richmond,2,Huffington Post
+-0.4665968,39.6332917,garissa,5,Huffington Post
+43.3185536,11.3316533,siena,2,Huffington Post
+40.3364587,-75.9288612,reading,29,Huffington Post
+32.574055,-116.6270241,tecate,1,Huffington Post
+59.3307611,18.0613098,stockholm,4,Huffington Post
+49.2577886,4.031926,reims,2,Huffington Post
+35.79154,-78.7811169,cary,3,Huffington Post
+38.0160543,12.5437475,trapani,1,Huffington Post
+38.9716689,-95.2352501,lawrence,7,Huffington Post
+24.6915,78.421,lalitpur,5,Huffington Post
+36.1949274,-86.7417714,nashville,1,Huffington Post
+33.2148412,-97.1330683,denton,1,Huffington Post
+50.5704252,-111.8924659,brooks,2,Huffington Post
+39.962398,-76.727392,york,106,Huffington Post
+4.5401135,-75.6673295,armenia,4,Huffington Post
+37.871571,-122.2728222,berkeley,2,Huffington Post
+-42.8824593,147.3273244,hobart,5,Huffington Post
+19.2451909,-103.720828,colima,1,Huffington Post
+47.2495798,-122.4398746,tacoma,5,Huffington Post
+27.9094665,-82.7873244,largo,1,Huffington Post
+47.3906174,0.6893001,tours,2,Huffington Post
+43.2948059,5.3708155,marseille,3,Huffington Post
+-28.8640919,153.0482959,casino,2,Huffington Post
+43.262966,-2.9349516,bilbao,1,Huffington Post
+15.160632,120.5864028,angeles,20,Huffington Post
+39.5349169,-119.7526936,sparks,2,Huffington Post
+51.2800275,1.0802533,canterbury,1,Huffington Post
+43.6678736,-116.6894156,caldwell,1,Huffington Post
+30.2674473,-97.7425618,austin,1,Huffington Post
+39.2810502,-76.567903,baltimore,8,Huffington Post
+50.7256471,-3.5266611,exeter,1,Huffington Post
+25.6792695,-80.3172743,kendall,1,Huffington Post
+42.3750997,-71.1056157,cambridge,3,Huffington Post
+45.8104264,9.0856219,como,1,Huffington Post
+33.0267486,73.5999837,dina,2,Huffington Post
+-27.8178165,-50.321715,lages,1,Huffington Post
+44.3787033,-79.7030516,barrie,1,Huffington Post
+38.8951148,-77.0363716,washington,118,Huffington Post
+12.4345376,-86.8773498,leon,3,Huffington Post
+33.9595974,-83.376678,athens,11,Huffington Post
+21.1218598,-101.6825081,león,2,Huffington Post
+6.452,3.414,lagos,1,Huffington Post
+-12.0459739,-77.0306154,lima,4,Huffington Post
+34.1987,-79.7677001,florence,4,Huffington Post
+-8.6527095,115.2192683,denpasar,2,Huffington Post
+34.0633443,-117.6508876,ontario,1,Huffington Post
+38.4992518,43.3966821,van,23,Huffington Post
+48.584614,7.7507127,strasbourg,1,Huffington Post
+-32.895154,-68.84099,mendoza,2,Huffington Post
+32.735687,-97.1080656,arlington,1,Huffington Post
+39.952335,-75.163789,philadelphia,11,Huffington Post
+39.5295269,-119.813779,reno,1,Huffington Post
+25.6773375,-100.2596645,guadalupe,2,Huffington Post
+34.5068601,-82.6506264,anderson,7,Huffington Post
+33.9400143,-118.1325688,downey,1,Huffington Post
+11.1828042,-60.7372545,scarborough,3,Huffington Post
+37.6057005,61.8460675,mary,13,Huffington Post
+53.4791466,-2.2447445,manchester,2,Huffington Post
+6.8025766,-58.1628612,georgetown,3,Huffington Post
+53.4054719,-2.9805393,liverpool,1,Huffington Post
+3.4615545,8.5510895,luba,1,Huffington Post
+40.4416941,-79.9900861,pittsburgh,2,Huffington Post
+40.6938609,-89.5891008,peoria,1,Huffington Post
+45.0156285,-74.728533,cornwall,1,Huffington Post
+33.6780129,-117.8005716,irvine,2,Huffington Post
+44.6458441,10.9255625,modena,2,Huffington Post
+55.7429399,-97.8517808,thompson,2,Huffington Post
+52.5170397,13.3888548,berlin,25,Huffington Post
+-14.4656649,132.2631058,katherine,4,Huffington Post
+-46.09848,168.94392,gore,1,Huffington Post
+15.7804771,38.4536063,keren,1,Huffington Post
+53.5503414,10.000654,hamburg,1,Huffington Post
+37.5028972,15.0870338,catania,3,Huffington Post
+53.1908873,-2.8908955,chester,2,Huffington Post
+43.6529206,-79.3849008,toronto,9,Huffington Post
+7.0909924,171.3816354,majuro,1,Huffington Post
+-27.0960846,-48.9135325,brusque,1,Huffington Post
+33.6946934,73.0629505,islamabad,6,Huffington Post
+-42.4822736,-73.7641818,castro,14,Huffington Post
+26.1702082,-98.0522376,donna,4,Huffington Post
+34.149434,-118.0017084,monrovia,3,Huffington Post
+34.2783355,-119.2931743,ventura,5,Huffington Post
+-32.9581132,-60.6590224,rosario,2,Huffington Post
+-23.8438495,151.2568723,gladstone,1,Huffington Post
+4.174718,73.5101438,male,17,Huffington Post
+-25.7249999,28.1847222,pretoria,1,Huffington Post
+35.2270869,-80.8431268,charlotte,6,Huffington Post
+36.8354258,-76.2982742,portsmouth,1,Huffington Post
+35.9940329,-78.898619,durham,1,Huffington Post
+42.3604823,-71.0595678,boston,12,Huffington Post
+44.9772995,-93.2654692,minneapolis,2,Huffington Post
+-41.2870685,174.7810335,wellington,5,Huffington Post
+11.6538962,78.16099,salem,6,Huffington Post
+47.5992959,-122.3288811,seattle,6,Huffington Post
+43.6610277,-70.2548596,portland,5,Huffington Post
+41.2381017,-85.8530544,warsaw,7,Huffington Post
+-4.3217055,15.3125974,kinshasa,1,Huffington Post
+28.0836269,-80.6081089,melbourne,2,Huffington Post
+-23.960833,-46.333889,santos,2,Huffington Post
+51.6783151,7.810083,hamm,1,Huffington Post
+37.1828918,-3.6028135,granada,5,Huffington Post
+59.9132694,10.7391111,oslo,1,Huffington Post
+45.0709201,7.6859719,torino,1,Huffington Post
+44.4936714,11.3430347,bologna,2,Huffington Post
+49.8493165,-99.9573544,brandon,1,Huffington Post
+33.7557699,-117.98318,westminster,4,Huffington Post
+-26.2049999,28.0497222,johannesburg,4,Huffington Post
+43.8356637,-79.0905386,pickering,1,Huffington Post
+49.2499987,-123.1333301,vancouver,2,Huffington Post
+43.5113941,16.439737,split,12,Huffington Post
+14.5906074,120.9799013,manila,7,Huffington Post
+-12.9732959,40.5221115,pemba,1,Huffington Post
+-34.9286341,138.5998876,adelaide,1,Huffington Post
+42.1014831,-72.589811,springfield,1,Huffington Post
+43.7009504,7.2684054,nice,17,Huffington Post
+55.9483399,-3.1932723,edinburgh,1,Huffington Post
+-33.4379537,-70.650404,santiago,4,Huffington Post
+39.7683795,-86.1580447,indianapolis,3,Huffington Post
+34.008818,-81.0372695,columbia,6,Huffington Post
+40.6639916,-74.2107006,elizabeth,18,Huffington Post
+33.4483772,-112.0740374,phoenix,12,Huffington Post
+1.2969957,103.8552954,singapore,2,Huffington Post
+38.5815719,-121.4943996,sacramento,3,Huffington Post
+41.5833658,-87.500043,hammond,1,Huffington Post
+45.7575958,4.8323239,lyon,1,Huffington Post
+51.2084734,-2.6517961,wells,6,Huffington Post
+-4.6222804,55.4527969,victoria,6,Huffington Post
+14.9323321,-23.5078723,praia,5,Huffington Post
+-2.166874,-79.8432254,durán,1,Huffington Post
+-46.60012,168.33801,bluff,1,Huffington Post
+19.5515319,-71.0774108,mao,4,Huffington Post
+10.5018234,-66.9121054,caracas,4,Huffington Post
+23.7282161,90.4098792,dhaka,1,Huffington Post
+-23.3570444,119.7331247,newman,1,Huffington Post
+40.3014316,-90.0633625,havana,9,Huffington Post
+60.1666277,24.9435079,helsinki,2,Huffington Post
+30.6943566,-88.0430541,mobile,17,Huffington Post
+-6.1809269,106.8284591,jakarta,7,Huffington Post
+37.6922361,-97.3375448,wichita,1,Huffington Post
+-38.1054104,147.0646345,sale,10,Huffington Post
+10.1424373,-64.6789015,barcelona,7,Huffington Post
+-25.7813596,-56.4477224,villarrica,1,Huffington Post
+52.0959423,5.1104136,utrecht,2,Huffington Post
+-41.2710849,173.2836756,nelson,5,Huffington Post
+48.6928048,6.1838123,nancy,3,Huffington Post
+-3.3554739,37.3426044,moshi,1,Huffington Post
+12.6500083,-8.0000014,bamako,5,Huffington Post
+42.8864468,-78.8783689,buffalo,4,Huffington Post
+-39.6429882,176.8448108,hastings,3,Huffington Post
+42.291707,-85.5872286,kalamazoo,1,CNN
+43.074761,-89.3837613,madison,1,CNN
+42.3604823,-71.0595678,boston,1,CNN
+38.8951148,-77.0363716,washington,7,CNN
+47.3091961,-122.2193937,auburn,1,CNN
+-27.6424132,153.1131037,logan,1,CNN
+33.5206824,-86.8024326,birmingham,1,CNN
+47.2495798,-122.4398746,tacoma,1,CNN
+47.5992959,-122.3288811,seattle,1,CNN
+41.8756208,-87.6243706,chicago,1,CNN
+39.952335,-75.163789,philadelphia,1,CNN
+32.3668052,-86.2999689,montgomery,1,CNN
+43.5113941,16.439737,split,1,CNN
+38.029306,-78.4766781,charlottesville,1,CNN
+51.1526995,-100.0421877,dauphin,1,CNN
+37.6057005,61.8460675,mary,1,CNN
+-41.2710849,173.2836756,nelson,1,CNN
+34.008818,-81.0372695,columbia,1,CNN
+40.6639916,-74.2107006,elizabeth,1,CNN
+38.9716689,-95.2352501,lawrence,1,CNN
+36.1949274,-86.7417714,nashville,1,CNN
+51.2084734,-2.6517961,wells,2,CNN
+39.962398,-76.727392,york,5,CNN
+4.5401135,-75.6673295,armenia,1,CNN
+49.1323438,-123.0056851,delta,1,CNN
+33.7490987,-84.3901849,atlanta,3,CNN
+25.7742658,-80.1936589,miami,1,CNN
+-28.8640919,153.0482959,casino,1,CNN
+15.160632,120.5864028,angeles,1,CNN
+-26.6595434,150.1839141,miles,3,CNN
+32.7801052,-96.8000082,dallas,1,CNN
+42.9894583,-81.2460912,london,1,CNN
+39.2810502,-76.567903,baltimore,1,CNN
+49.1850834,-122.8446549,surrey,1,Herald Sun
+-37.8254509,147.6304752,bairnsdale,2,Herald Sun
+37.0298687,-76.3452218,hampton,13,Herald Sun
+39.1014564,-84.5138592,cincinnati,1,Herald Sun
+21.304547,-157.8556764,honolulu,3,Herald Sun
+-35.2820708,149.1286673,canberra,19,Herald Sun
+-38.3829031,142.4882935,warrnambool,4,Herald Sun
+-27.4689806,153.023503,brisbane,54,Herald Sun
+-27.7627777,29.923889,newcastle,10,Herald Sun
+43.074761,-89.3837613,madison,1,Herald Sun
+47.3091961,-122.2193937,auburn,2,Herald Sun
+49.05,-122.3,abbotsford,2,Herald Sun
+31.3112936,-92.4451371,alexandria,2,Herald Sun
+47.3906174,0.6893001,tours,10,Herald Sun
+54.5205722,-128.6060566,terrace,9,Herald Sun
+-33.0381092,137.5801318,whyalla,1,Herald Sun
+43.0349931,-87.922497,milwaukee,1,Herald Sun
+32.3668052,-86.2999689,montgomery,2,Herald Sun
+-19.256934,146.8239533,townsville,2,Herald Sun
+-41.4338399,147.1373499,launceston,2,Herald Sun
+27.0997775,-82.4542633,venice,1,Herald Sun
+50.4545055,3.9531146,mons,1,Herald Sun
+54.596868,-5.930087,belfast,1,Herald Sun
+39.6528654,-78.7625185,cumberland,1,Herald Sun
+-36.8852418,174.7732069,auckland,1,Herald Sun
+43.1932336,-80.3842807,paris,17,Herald Sun
+25.7742658,-80.1936589,miami,3,Herald Sun
+36.9008783,30.6937117,antalya,1,Herald Sun
+43.1257311,5.9304919,toulon,2,Herald Sun
+43.8356637,-79.0905386,pickering,1,Herald Sun
+-31.9527121,115.8604796,perth,35,Herald Sun
+46.136922,-60.1917192,sydney,107,Herald Sun
+55.7429399,-97.8517808,thompson,8,Herald Sun
+33.9533546,-117.3961623,riverside,1,Herald Sun
+-12.4596697,130.8406196,darwin,8,Herald Sun
+47.6135661,-122.202118,bellevue,1,Herald Sun
+49.4093608,8.6948125,heidelberg,3,Herald Sun
+36.0391456,-114.9819235,henderson,2,Herald Sun
+30.0860459,-94.1018461,beaumont,3,Herald Sun
+36.1545486,-95.9906783,tulsa,1,Herald Sun
+29.1399633,-98.905306,devine,1,Herald Sun
+41.7605849,-88.3200715,aurora,1,Herald Sun
+33.8980532,-118.1712034,paramount,2,Herald Sun
+25.2683592,55.2963956,dubai,1,Herald Sun
+-23.3570444,119.7331247,newman,7,Herald Sun
+-37.7876214,175.2813186,hamilton,6,Herald Sun
+-23.5251854,148.1584661,emerald,5,Herald Sun
+51.7521553,-1.2582135,oxford,7,Herald Sun
+25.4740943,80.3315801,banda,1,Herald Sun
+37.6057005,61.8460675,mary,20,Herald Sun
+25.4687224,-80.4775569,homestead,2,Herald Sun
+40.8000554,-96.6674005,lincoln,2,Herald Sun
+36.8468146,-76.2852183,norfolk,1,Herald Sun
+-32.8333333,151.3561111,cessnock,4,Herald Sun
+-15.4723817,145.2526122,cooktown,1,Herald Sun
+47.3215807,5.0414699,dijon,1,Herald Sun
+56.1181242,-3.9360012,stirling,2,Herald Sun
+53.6825669,-1.5000466,wakefield,1,Herald Sun
+-23.4409987,144.251862,longreach,1,Herald Sun
+54.2232521,-4.6951862,peel,1,Herald Sun
+52.4080477,-1.5113334,coventry,1,Herald Sun
+-26.6595434,150.1839141,miles,7,Herald Sun
+51.5882332,-2.9974967,newport,2,Herald Sun
+26.1702082,-98.0522376,donna,1,Herald Sun
+53.4791466,-2.2447445,manchester,5,Herald Sun
+27.816415,-80.4706078,sebastian,3,Herald Sun
+43.4515189,-80.4926144,kitchener,3,Herald Sun
+-20.7051873,140.5058305,cloncurry,1,Herald Sun
+46.7709694,23.5912274,cluj-napoca,1,Herald Sun
+40.4167047,-3.7035825,madrid,3,Herald Sun
+-27.22517,153.1056073,redcliffe,1,Herald Sun
+-35.0212993,117.8839055,albany,8,Herald Sun
+-16.9243043,145.7832994,cairns,2,Herald Sun
+41.0534302,-73.5387341,stamford,2,Herald Sun
+-42.4822736,-73.7641818,castro,2,Herald Sun
+41.4877262,-81.677522,cleveland,5,Herald Sun
+-51.6934032,-57.8548065,stanley,5,Herald Sun
+43.6610277,-70.2548596,portland,3,Herald Sun
+-26.8053732,153.1328533,caloundra,1,Herald Sun
+-30.897333,-55.5473981,rivera,1,Herald Sun
+54.900404,-2.9311426,carlisle,1,Herald Sun
+50.4480951,-104.6158181,regina,1,Herald Sun
+35.614517,-88.813947,jackson,6,Herald Sun
+-29.8541667,31.05,durban,1,Herald Sun
+-35.3538856,149.2323111,queanbeyan,1,Herald Sun
+33.9623032,-118.3527104,inglewood,1,Herald Sun
+-14.0690032,-75.7370612,ica,3,Herald Sun
+49.6112768,6.129799,luxembourg,1,Herald Sun
+37.9357576,-122.3477486,richmond,18,Herald Sun
+40.3364587,-75.9288612,reading,11,Herald Sun
+53.1908873,-2.8908955,chester,1,Herald Sun
+50.7152124,-1.9832693,poole,3,Herald Sun
+40.3103659,-3.735003,getafe,1,Herald Sun
+10.0645894,-2.5059503,wa,24,Herald Sun
+38.9716689,-95.2352501,lawrence,6,Herald Sun
+7.9620654,-11.7366499,bo,3,Herald Sun
+40.2170575,-74.7429463,trenton,1,Herald Sun
+50.5704252,-111.8924659,brooks,2,Herald Sun
+51.8987643,-8.4712125,cork,1,Herald Sun
+-36.0802823,146.9169858,albury,3,Herald Sun
+-36.7588767,144.2825931,bendigo,4,Herald Sun
+39.962398,-76.727392,york,21,Herald Sun
+45.8104264,9.0856219,como,3,Herald Sun
+37.871571,-122.2728222,berkeley,1,Herald Sun
+-42.8824593,147.3273244,hobart,3,Herald Sun
+38.4992518,43.3966821,van,9,Herald Sun
+40.6916081,-75.2099866,easton,2,Herald Sun
+51.5377786,7.2196765,herne,1,Herald Sun
+43.4655526,-80.5217698,waterloo,1,Herald Sun
+40.8506962,14.2463172,napoli,3,Herald Sun
+-28.8640919,153.0482959,casino,3,Herald Sun
+-28.5470523,150.3075193,goondiwindi,1,Herald Sun
+28.0836269,-80.6081089,melbourne,155,Herald Sun
+39.5349169,-119.7526936,sparks,6,Herald Sun
+51.2800275,1.0802533,canterbury,5,Herald Sun
+-36.7148099,142.2018105,horsham,3,Herald Sun
+11.0564638,-12.3950499,pita,1,Herald Sun
+30.2674473,-97.7425618,austin,4,Herald Sun
+-27.5648552,151.9542619,toowoomba,1,Herald Sun
+32.5344409,-117.0393788,tijuana,1,Herald Sun
+25.6792695,-80.3172743,kendall,4,Herald Sun
+25.3800664,68.3750066,hyderabad,2,Herald Sun
+42.3750997,-71.1056157,cambridge,7,Herald Sun
+42.1014831,-72.589811,springfield,1,Herald Sun
+44.6492936,-63.5760291,halifax,1,Herald Sun
+38.8951148,-77.0363716,washington,1,Herald Sun
+42.0372487,-88.2811895,elgin,1,Herald Sun
+12.4345376,-86.8773498,leon,3,Herald Sun
+51.3813864,-2.3596963,bath,7,Herald Sun
+-32.2869076,115.7464877,rockingham,2,Herald Sun
+43.3714566,-80.981799,stratford,1,Herald Sun
+38.3606736,-75.5993692,salisbury,2,Herald Sun
+52.3710089,4.9001115,amsterdam,1,Herald Sun
+-12.0459739,-77.0306154,lima,4,Herald Sun
+39.2810502,-76.567903,baltimore,3,Herald Sun
+51.7345403,0.4723823,chelmsford,1,Herald Sun
+34.0633443,-117.6508876,ontario,1,Herald Sun
+-38.1496881,144.3615609,geelong,12,Herald Sun
+-32.895154,-68.84099,mendoza,1,Herald Sun
+32.735687,-97.1080656,arlington,2,Herald Sun
+38.2493581,-122.0399663,fairfield,1,Herald Sun
+34.5068601,-82.6506264,anderson,2,Herald Sun
+-38.6609674,178.0150687,gisborne,1,Herald Sun
+33.9400143,-118.1325688,downey,2,Herald Sun
+45.4210328,-75.6900219,ottawa,1,Herald Sun
+40.9167654,-74.171811,paterson,3,Herald Sun
+-28.2166899,152.0274742,warwick,3,Herald Sun
+11.1828042,-60.7372545,scarborough,2,Herald Sun
+-21.5669549,165.4968115,bourail,1,Herald Sun
+-32.5299472,115.7190078,mandurah,1,Herald Sun
+53.4054719,-2.9805393,liverpool,2,Herald Sun
+11.3309075,77.7273314,erode,1,Herald Sun
+45.1126249,-72.6173667,sutton,1,Herald Sun
+37.8830001,41.1309008,batman,1,Herald Sun
+33.7877945,-117.8531119,orange,7,Herald Sun
+40.3014316,-90.0633625,havana,1,Herald Sun
+-26.6547164,153.0917833,maroochydore,1,Herald Sun
+39.9448436,-75.1198694,camden,1,Herald Sun
+33.7490987,-84.3901849,atlanta,2,Herald Sun
+-26.1903375,152.6635864,gympie,3,Herald Sun
+17.7327144,83.2844142,visakhapatnam,1,Herald Sun
+35.1980672,-111.6512725,flagstaff,1,Herald Sun
+51.98466,5.91167,arnhem,1,Herald Sun
+43.8659171,-79.3439194,markham,2,Herald Sun
+-33.3403542,115.6336365,bunbury,1,Herald Sun
+42.9894583,-81.2460912,london,14,Herald Sun
+38.1940297,15.554114,messina,1,Herald Sun
+-28.8066667,153.2858333,lismore,2,Herald Sun
+30.6943566,-88.0430541,mobile,19,Herald Sun
+-36.3810742,145.3993177,shepparton,1,Herald Sun
+-23.8438495,151.2568723,gladstone,2,Herald Sun
+4.174718,73.5101438,male,10,Herald Sun
+-37.5622632,143.8607215,ballarat,8,Herald Sun
+35.2270869,-80.8431268,charlotte,11,Herald Sun
+-34.7523871,149.7198009,goulburn,1,Herald Sun
+38.0608444,-97.9297743,hutchinson,3,Herald Sun
+-21.1415238,149.1867614,mackay,2,Herald Sun
+42.3604823,-71.0595678,boston,4,Herald Sun
+53.7589938,-2.7051618,preston,3,Herald Sun
+41.9270987,-73.99611,kingston,2,Herald Sun
+39.5295269,-119.813779,reno,1,Herald Sun
+-41.2870685,174.7810335,wellington,4,Herald Sun
+-33.4250175,151.3417318,gosford,1,Herald Sun
+11.6538962,78.16099,salem,1,Herald Sun
+10.1424373,-64.6789015,barcelona,5,Herald Sun
+-7.7171155,109.0128708,cilacap,13,Herald Sun
+-25.5460201,152.7007731,maryborough,2,Herald Sun
+47.5992959,-122.3288811,seattle,1,Herald Sun
+42.3032758,-83.0285111,windsor,4,Herald Sun
+-34.9286341,138.5998876,adelaide,38,Herald Sun
+15.160632,120.5864028,angeles,4,Herald Sun
+43.1572851,-77.6152141,rochester,1,Herald Sun
+44.2876446,-78.3272997,peterborough,1,Herald Sun
+32.7801052,-96.8000082,dallas,2,Herald Sun
+-28.8634654,153.5619701,ballina,1,Herald Sun
+48.6928048,6.1838123,nancy,2,Herald Sun
+-7.7871982,110.3764518,yogyakarta,2,Herald Sun
+49.8493165,-99.9573544,brandon,4,Herald Sun
+33.7557699,-117.98318,westminster,4,Herald Sun
+-27.6424132,153.1131037,logan,3,Herald Sun
+29.6910625,-95.2091006,pasadena,1,Herald Sun
+44.0366034,10.1409467,massa,1,Herald Sun
+43.5113941,16.439737,split,13,Herald Sun
+14.5906074,120.9799013,manila,1,Herald Sun
+-25.2925439,-49.2243472,colombo,1,Herald Sun
+43.7009504,7.2684054,nice,24,Herald Sun
+55.9483399,-3.1932723,edinburgh,1,Herald Sun
+39.7683795,-86.1580447,indianapolis,1,Herald Sun
+34.008818,-81.0372695,columbia,3,Herald Sun
+40.6639916,-74.2107006,elizabeth,11,Herald Sun
+33.4483772,-112.0740374,phoenix,2,Herald Sun
+1.2969957,103.8552954,singapore,9,Herald Sun
+38.5815719,-121.4943996,sacramento,1,Herald Sun
+52.9212617,-1.4761491,derby,5,Herald Sun
+33.8951959,-118.333907,hawthorne,3,Herald Sun
+51.2084734,-2.6517961,wells,2,Herald Sun
+-4.6222804,55.4527969,victoria,87,Herald Sun
+-24.8653253,152.3516785,bundaberg,1,Herald Sun
+-34.4242854,150.8938903,wollongong,1,Herald Sun
+4.8142912,-75.6946451,pereira,1,Herald Sun
+-28.7383113,24.763737,kimberley,2,Herald Sun
+34.055735,-117.1888961,redlands,2,Herald Sun
+45.8845378,22.9001417,deva,1,Herald Sun
+-34.1847265,142.1624972,mildura,1,Herald Sun
+-27.6160135,152.76087,ipswich,3,Herald Sun
+54.1775283,-6.337506,newry,1,Herald Sun
+-6.1809269,106.8284591,jakarta,15,Herald Sun
+41.8756208,-87.6243706,chicago,3,Herald Sun
+-38.1054104,147.0646345,sale,52,Herald Sun
+-32.7316683,151.5511123,maitland,5,Herald Sun
+38.0464066,-84.4970393,lexington,1,Herald Sun
+14.5568853,121.023532,makati,1,Herald Sun
+-41.2710849,173.2836756,nelson,5,Herald Sun
+-8.6527095,115.2192683,denpasar,4,Herald Sun
+-23.3782409,150.5131869,rockhampton,1,Herald Sun
+42.8864468,-78.8783689,buffalo,1,Herald Sun
+-39.6429882,176.8448108,hastings,2,Herald Sun
+37.0298687,-76.3452218,hampton,2,Al Jazeera
+30.4380832,-84.2809332,tallahassee,1,Al Jazeera
+39.5295269,-119.813779,reno,2,Al Jazeera
+25.3800664,68.3750066,hyderabad,1,Al Jazeera
+32.0835407,-81.0998342,savannah,1,Al Jazeera
+42.343926,-3.696977,burgos,3,Al Jazeera
+36.7282096,-76.5835703,suffolk,2,Al Jazeera
+-3.3585234,29.3682312,bujumbura,1,Al Jazeera
+-27.6424132,153.1131037,logan,1,Al Jazeera
+42.9894583,-81.2460912,london,26,Al Jazeera
+5.1838475,97.1462097,lhokseumawe,1,Al Jazeera
+43.0349931,-87.922497,milwaukee,3,Al Jazeera
+33.7490987,-84.3901849,atlanta,2,Al Jazeera
+52.1991732,-105.1260948,humboldt,1,Al Jazeera
+28.811648,-81.267953,sanford,1,Al Jazeera
+34.8512316,-82.3985105,greenville,1,Al Jazeera
+-35.2820708,149.1286673,canberra,1,Al Jazeera
+39.1856588,-78.1633342,winchester,1,Al Jazeera
+43.1932336,-80.3842807,paris,31,Al Jazeera
+42.1155716,-80.0807007,erie,1,Al Jazeera
+39.7391536,-104.9847034,denver,3,Al Jazeera
+42.7337712,-84.5553805,lansing,1,Al Jazeera
+36.9970414,35.3267707,adana,1,Al Jazeera
+37.227928,-77.4019268,petersburg,2,Al Jazeera
+45.1302591,-72.8007143,dunham,3,Al Jazeera
+33.7877945,-117.8531119,orange,10,Al Jazeera
+33.9533546,-117.3961623,riverside,2,Al Jazeera
+55.7429399,-97.8517808,thompson,1,Al Jazeera
+14.0931919,-87.2012631,tegucigalpa,1,Al Jazeera
+-20.1252961,-40.3064477,serra,1,Al Jazeera
+36.1545486,-95.9906783,tulsa,1,Al Jazeera
+45.8131883,15.9769769,zagreb,2,Al Jazeera
+25.2683592,55.2963956,dubai,1,Al Jazeera
+39.9272322,32.8519769,ankara,8,Al Jazeera
+-37.7876214,175.2813186,hamilton,4,Al Jazeera
+-23.5251854,148.1584661,emerald,1,Al Jazeera
+51.7521553,-1.2582135,oxford,3,Al Jazeera
+51.3813864,-2.3596963,bath,3,Al Jazeera
+47.5992959,-122.3288811,seattle,4,Al Jazeera
+43.0481221,-76.1474244,syracuse,5,Al Jazeera
+41.1485925,-8.6110201,porto,2,Al Jazeera
+40.8000554,-96.6674005,lincoln,6,Al Jazeera
+36.8468146,-76.2852183,norfolk,1,Al Jazeera
+0.3162223,32.5821691,kampala,1,Al Jazeera
+25.7742658,-80.1936589,miami,6,Al Jazeera
+28.5421175,-81.3790462,orlando,2,Al Jazeera
+11.5936909,43.1471141,djibouti,3,Al Jazeera
+50.7152124,-1.9832693,poole,1,Al Jazeera
+-26.6595434,150.1839141,miles,41,Al Jazeera
+26.1702082,-98.0522376,donna,4,Al Jazeera
+33.5206824,-86.8024326,birmingham,2,Al Jazeera
+40.0639616,-80.7209149,wheeling,1,Al Jazeera
+63.7535819,-68.5028019,iqaluit,1,Al Jazeera
+54.5205722,-128.6060566,terrace,1,Al Jazeera
+13.9400831,121.1570043,lipa,1,Al Jazeera
+34.0123846,71.5787458,peshawar,4,Al Jazeera
+-3.3669557,36.6915518,arusha,1,Al Jazeera
+24.8596497,-99.5684911,linares,1,Al Jazeera
+40.4167047,-3.7035825,madrid,3,Al Jazeera
+10.3231887,9.8412732,bauchi,1,Al Jazeera
+36.4270004,-121.3275522,soledad,1,Al Jazeera
+54.9063791,-1.375053,sunderland,1,Al Jazeera
+46.5218269,6.6327025,lausanne,1,Al Jazeera
+42.3316454,-83.0466755,detroit,7,Al Jazeera
+41.4877262,-81.677522,cleveland,5,Al Jazeera
+-51.6934032,-57.8548065,stanley,8,Al Jazeera
+19.1991671,-96.1377781,veracruz,1,Al Jazeera
+0.5384433,123.0594971,gorontalo,1,Al Jazeera
+5.1176118,7.3460791,aba,1,Al Jazeera
+43.074761,-89.3837613,madison,1,Al Jazeera
+37.8043808,-122.2708166,oakland,2,Al Jazeera
+35.614517,-88.813947,jackson,3,Al Jazeera
+10.0645894,-2.5059503,wa,1,Al Jazeera
+41.8756208,-87.6243706,chicago,24,Al Jazeera
+39.7589478,-84.1916069,dayton,1,Al Jazeera
+43.7159277,10.401906,pisa,2,Al Jazeera
+49.6112768,6.129799,luxembourg,4,Al Jazeera
+40.735657,-74.1723667,newark,2,Al Jazeera
+-0.4665968,39.6332917,garissa,3,Al Jazeera
+44.8011669,-68.7710786,bangor,2,Al Jazeera
+59.4372156,24.7453688,tallinn,1,Al Jazeera
+14.4529546,-87.6364117,comayagua,1,Al Jazeera
+31.5621916,74.3228517,lahore,1,Al Jazeera
+30.819294,75.1746226,moga,1,Al Jazeera
+40.3364587,-75.9288612,reading,25,Al Jazeera
+55.861147,-4.2499891,glasgow,1,Al Jazeera
+32.574055,-116.6270241,tecate,1,Al Jazeera
+43.858599,18.4295028,sarajevo,4,Al Jazeera
+36.1949274,-86.7417714,nashville,3,Al Jazeera
+51.0493286,13.7381437,dresden,3,Al Jazeera
+-0.2201687,-78.5120913,quito,1,Al Jazeera
+-29.8541667,31.05,durban,5,Al Jazeera
+38.9716689,-95.2352501,lawrence,4,Al Jazeera
+27.3364347,-82.5306527,sarasota,2,Al Jazeera
+24.6915,78.421,lalitpur,1,Al Jazeera
+4.3619767,18.582808,bangui,1,Al Jazeera
+7.9620654,-11.7366499,bo,3,Al Jazeera
+27.0997775,-82.4542633,venice,1,Al Jazeera
+50.5704252,-111.8924659,brooks,3,Al Jazeera
+51.8987643,-8.4712125,cork,2,Al Jazeera
+39.962398,-76.727392,york,165,Al Jazeera
+4.5401135,-75.6673295,armenia,7,Al Jazeera
+37.871571,-122.2728222,berkeley,4,Al Jazeera
+47.2495798,-122.4398746,tacoma,1,Al Jazeera
+47.3906174,0.6893001,tours,2,Al Jazeera
+35.3713431,-119.0219428,bakersfield,1,Al Jazeera
+40.868154,-73.425676,huntington,1,Al Jazeera
+40.8506962,14.2463172,napoli,1,Al Jazeera
+-15.8427465,-70.0237203,puno,12,Al Jazeera
+-17.6475047,-71.339815,ilo,1,Al Jazeera
+-28.8640919,153.0482959,casino,1,Al Jazeera
+53.3492787,-6.2611661,dublin,1,Al Jazeera
+34.1819538,-118.3079649,burbank,1,Al Jazeera
+-1.2832532,36.8172449,nairobi,2,Al Jazeera
+15.160632,120.5864028,angeles,27,Al Jazeera
+39.5349169,-119.7526936,sparks,1,Al Jazeera
+55.9483399,-3.1932723,edinburgh,1,Al Jazeera
+35.772096,-78.6386145,raleigh,1,Al Jazeera
+11.0564638,-12.3950499,pita,4,Al Jazeera
+38.3498221,-81.6326301,charleston,2,Al Jazeera
+30.2674473,-97.7425618,austin,2,Al Jazeera
+39.2810502,-76.567903,baltimore,53,Al Jazeera
+42.291707,-85.5872286,kalamazoo,1,Al Jazeera
+42.3750997,-71.1056157,cambridge,3,Al Jazeera
+37.9577016,-121.2907796,stockton,1,Al Jazeera
+51.3405087,12.3746816,leipzig,2,Al Jazeera
+38.8951148,-77.0363716,washington,112,Al Jazeera
+12.4345376,-86.8773498,leon,3,Al Jazeera
+39.952335,-75.163789,philadelphia,4,Al Jazeera
+35.9940329,-78.898619,durham,1,Al Jazeera
+39.9448436,-75.1198694,camden,2,Al Jazeera
+-12.0459739,-77.0306154,lima,2,Al Jazeera
+34.1987,-79.7677001,florence,2,Al Jazeera
+60.394973,5.3269603,bergen,1,Al Jazeera
+38.4992518,43.3966821,van,19,Al Jazeera
+47.4983377,19.0404712,budapest,1,Al Jazeera
+32.735687,-97.1080656,arlington,2,Al Jazeera
+-20.5381768,-47.4009795,franca,1,Al Jazeera
+33.9595974,-83.376678,athens,5,Al Jazeera
+25.6773375,-100.2596645,guadalupe,3,Al Jazeera
+34.5068601,-82.6506264,anderson,6,Al Jazeera
+40.2338438,-111.6585337,provo,1,Al Jazeera
+-41.2710849,173.2836756,nelson,6,Al Jazeera
+20.9669312,-89.623747,mérida,4,Al Jazeera
+37.6057005,61.8460675,mary,17,Al Jazeera
+-32.9581132,-60.6590224,rosario,1,Al Jazeera
+6.8025766,-58.1628612,georgetown,1,Al Jazeera
+-25.6656553,27.2414481,rustenburg,1,Al Jazeera
+11.3309075,77.7273314,erode,6,Al Jazeera
+45.3271244,14.4413555,rijeka,3,Al Jazeera
+-0.9522437,100.362617,padang,1,Al Jazeera
+34.7304322,-86.5861159,huntsville,2,Al Jazeera
+37.3688301,-122.0363496,sunnyvale,1,Al Jazeera
+52.2591035,-7.1137442,waterford,1,Al Jazeera
+32.8140177,-96.9488945,irving,3,Al Jazeera
+-7.7171155,109.0128708,cilacap,1,Al Jazeera
+52.5170397,13.3888548,berlin,14,Al Jazeera
+-14.4656649,132.2631058,katherine,3,Al Jazeera
+-4.0505196,39.6671689,mombasa,2,Al Jazeera
+21.304547,-157.8556764,honolulu,1,Al Jazeera
+49.1323438,-123.0056851,delta,4,Al Jazeera
+37.5028972,15.0870338,catania,2,Al Jazeera
+51.2082896,3.2260109,brugge,1,Al Jazeera
+41.5056574,-5.7448039,zamora,1,Al Jazeera
+27.9475216,-82.4584279,tampa,2,Al Jazeera
+6.2440609,-75.5735959,medellín,1,Al Jazeera
+-23.3570444,119.7331247,newman,1,Al Jazeera
+43.6529206,-79.3849008,toronto,3,Al Jazeera
+47.3091961,-122.2193937,auburn,1,Al Jazeera
+-12.9816356,-38.4820771,salvador,12,Al Jazeera
+33.6946934,73.0629505,islamabad,2,Al Jazeera
+51.4072078,21.1517282,radom,2,Al Jazeera
+-42.4822736,-73.7641818,castro,10,Al Jazeera
+37.6390972,-120.9968782,modesto,1,Al Jazeera
+53.4791466,-2.2447445,manchester,1,Al Jazeera
+10.1424373,-64.6789015,barcelona,1,Al Jazeera
+4.174718,73.5101438,male,26,Al Jazeera
+48.0981813,-66.1007026,carleton,1,Al Jazeera
+-15.7862543,35.0035694,blantyre,1,Al Jazeera
+35.2270869,-80.8431268,charlotte,2,Al Jazeera
+51.3573015,7.4610436,hagen,1,Al Jazeera
+42.3604823,-71.0595678,boston,14,Al Jazeera
+37.3887565,-5.9947066,sevilla,1,Al Jazeera
+44.9772995,-93.2654692,minneapolis,2,Al Jazeera
+0.4938635,29.4653322,beni,1,Al Jazeera
+11.6538962,78.16099,salem,1,Al Jazeera
+32.7666103,-96.599472,mesquite,1,Al Jazeera
+-32.9867318,-71.274032,limache,1,Al Jazeera
+52.4205588,10.7861682,wolfsburg,1,Al Jazeera
+20.1430342,-75.2090079,guantánamo,13,Al Jazeera
+32.6337778,-114.8523555,morelos,1,Al Jazeera
+42.3032758,-83.0285111,windsor,2,Al Jazeera
+41.2381017,-85.8530544,warsaw,3,Al Jazeera
+17.688321,74.0041726,satara,1,Al Jazeera
+28.0836269,-80.6081089,melbourne,1,Al Jazeera
+-23.960833,-46.333889,santos,1,Al Jazeera
+51.6783151,7.810083,hamm,1,Al Jazeera
+43.1572851,-77.6152141,rochester,3,Al Jazeera
+10.5018234,-66.9121054,caracas,1,Al Jazeera
+32.7801052,-96.8000082,dallas,7,Al Jazeera
+59.9132694,10.7391111,oslo,7,Al Jazeera
+32.3668052,-86.2999689,montgomery,1,Al Jazeera
+33.7557699,-117.98318,westminster,1,Al Jazeera
+26.2235041,50.5822436,manama,2,Al Jazeera
+-26.2049999,28.0497222,johannesburg,2,Al Jazeera
+43.5113941,16.439737,split,17,Al Jazeera
+42.1014831,-72.589811,springfield,1,Al Jazeera
+43.7009504,7.2684054,nice,9,Al Jazeera
+34.6980406,-118.1367393,lancaster,1,Al Jazeera
+-33.4379537,-70.650404,santiago,2,Al Jazeera
+39.7683795,-86.1580447,indianapolis,1,Al Jazeera
+34.008818,-81.0372695,columbia,18,Al Jazeera
+40.6639916,-74.2107006,elizabeth,15,Al Jazeera
+33.4483772,-112.0740374,phoenix,7,Al Jazeera
+1.2969957,103.8552954,singapore,2,Al Jazeera
+6.452,3.414,lagos,2,Al Jazeera
+38.5815719,-121.4943996,sacramento,1,Al Jazeera
+41.5833658,-87.500043,hammond,1,Al Jazeera
+45.7973912,24.1519202,sibiu,1,Al Jazeera
+51.2084734,-2.6517961,wells,6,Al Jazeera
+-4.6222804,55.4527969,victoria,1,Al Jazeera
+40.4416941,-79.9900861,pittsburgh,2,Al Jazeera
+25.9140256,-97.4890856,brownsville,1,Al Jazeera
+29.5957696,-90.7195348,houma,1,Al Jazeera
+19.5515319,-71.0774108,mao,3,Al Jazeera
+23.7282161,90.4098792,dhaka,3,Al Jazeera
+45.1126249,-72.6173667,sutton,1,Al Jazeera
+40.3014316,-90.0633625,havana,3,Al Jazeera
+30.6943566,-88.0430541,mobile,17,Al Jazeera
+-6.1809269,106.8284591,jakarta,3,Al Jazeera
+37.6922361,-97.3375448,wichita,1,Al Jazeera
+-38.1054104,147.0646345,sale,8,Al Jazeera
+45.4210328,-75.6900219,ottawa,1,Al Jazeera
+-25.7813596,-56.4477224,villarrica,1,Al Jazeera
+53.1908873,-2.8908955,chester,3,Al Jazeera
+48.6928048,6.1838123,nancy,4,Al Jazeera
+-26.5717226,148.7876982,roma,2,Al Jazeera
+43.0171773,-83.7236024,flint,1,Al Jazeera
+35.0526641,-78.8783585,fayetteville,1,Al Jazeera
+-39.6429882,176.8448108,hastings,1,Al Jazeera
+-46.09848,168.94392,gore,4,Al Jazeera
+49.1850834,-122.8446549,surrey,3,BBC
+43.074761,-89.3837613,madison,2,BBC
+-35.2820708,149.1286673,canberra,2,BBC
+53.5451595,-113.4900729,edmonton,1,BBC
+52.2385239,-0.902493,northampton,2,BBC
+-3.3585234,29.3682312,bujumbura,1,BBC
+-27.6424132,153.1131037,logan,1,BBC
+42.9894583,-81.2460912,london,30,BBC
+54.5205722,-128.6060566,terrace,4,BBC
+52.0553813,-2.7151735,hereford,1,BBC
+53.5503414,10.000654,hamburg,1,BBC
+27.0997775,-82.4542633,venice,2,BBC
+54.596868,-5.930087,belfast,5,BBC
+43.1932336,-80.3842807,paris,12,BBC
+47.5429886,7.5969912,basel,1,BBC
+49.8833344,-97.1666742,winnipeg,1,BBC
+-31.9527121,115.8604796,perth,1,BBC
+37.227928,-77.4019268,petersburg,1,BBC
+46.136922,-60.1917192,sydney,4,BBC
+33.7877945,-117.8531119,orange,5,BBC
+-12.4596697,130.8406196,darwin,2,BBC
+45.8131883,15.9769769,zagreb,1,BBC
+41.7605849,-88.3200715,aurora,1,BBC
+40.8000554,-96.6674005,lincoln,2,BBC
+-27.7627777,29.923889,newcastle,1,BBC
+51.7521553,-1.2582135,oxford,3,BBC
+25.2683592,55.2963956,dubai,1,BBC
+45.4082793,-72.733063,granby,1,BBC
+25.7742658,-80.1936589,miami,1,BBC
+56.1181242,-3.9360012,stirling,3,BBC
+50.720157,-1.8747048,bournemouth,1,BBC
+-26.6595434,150.1839141,miles,12,BBC
+47.3906174,0.6893001,tours,1,BBC
+27.816415,-80.4706078,sebastian,2,BBC
+-3.3669557,36.6915518,arusha,1,BBC
+40.4167047,-3.7035825,madrid,1,BBC
+40.3664619,49.8353047,baku,1,BBC
+33.5206824,-86.8024326,birmingham,2,BBC
+25.5621,84.6755,ara,1,BBC
+43.6610277,-70.2548596,portland,1,BBC
+46.9753708,-123.8157218,aberdeen,2,BBC
+35.614517,-88.813947,jackson,3,BBC
+41.8756208,-87.6243706,chicago,3,BBC
+49.6112768,6.129799,luxembourg,2,BBC
+-36.9812831,-73.1595036,coronel,1,BBC
+40.3364587,-75.9288612,reading,8,BBC
+55.861147,-4.2499891,glasgow,4,BBC
+49.2577886,4.031926,reims,1,BBC
+35.79154,-78.7811169,cary,1,BBC
+-0.2201687,-78.5120913,quito,1,BBC
+54.2232521,-4.6951862,peel,1,BBC
+38.9716689,-95.2352501,lawrence,2,BBC
+53.3820287,-1.4657174,sheffield,4,BBC
+-7.2445967,112.7447936,surabaya,1,BBC
+50.5704252,-111.8924659,brooks,2,BBC
+51.8987643,-8.4712125,cork,1,BBC
+53.7974185,-1.5437941,leeds,5,BBC
+39.962398,-76.727392,york,19,BBC
+42.0347096,-93.6199485,ames,1,BBC
+28.0836269,-80.6081089,melbourne,3,BBC
+43.2948059,5.3708155,marseille,1,BBC
+-13.5212349,-71.9711244,cusco,1,BBC
+-28.8640919,153.0482959,casino,1,BBC
+53.3492787,-6.2611661,dublin,2,BBC
+15.160632,120.5864028,angeles,5,BBC
+43.6678736,-116.6894156,caldwell,1,BBC
+50.4545055,3.9531146,mons,2,BBC
+51.4556994,-2.5952657,bristol,1,BBC
+52.9212617,-1.4761491,derby,1,BBC
+30.2674473,-97.7425618,austin,1,BBC
+39.2810502,-76.567903,baltimore,17,BBC
+50.7256471,-3.5266611,exeter,3,BBC
+25.6792695,-80.3172743,kendall,2,BBC
+42.3750997,-71.1056157,cambridge,2,BBC
+52.1991732,-105.1260948,humboldt,1,BBC
+38.8951148,-77.0363716,washington,11,BBC
+12.4345376,-86.8773498,leon,1,BBC
+51.3813864,-2.3596963,bath,1,BBC
+43.3714566,-80.981799,stratford,1,BBC
+51.4835299,-3.1836873,cardiff,2,BBC
+34.1987,-79.7677001,florence,2,BBC
+60.394973,5.3269603,bergen,1,BBC
+34.0633443,-117.6508876,ontario,1,BBC
+38.4992518,43.3966821,van,6,BBC
+48.584614,7.7507127,strasbourg,1,BBC
+33.9595974,-83.376678,athens,2,BBC
+34.5068601,-82.6506264,anderson,2,BBC
+33.9400143,-118.1325688,downey,1,BBC
+40.9167654,-74.171811,paterson,2,BBC
+-28.2166899,152.0274742,warwick,1,BBC
+51.0455535,-114.061503,calgary,2,BBC
+20.9669312,-89.623747,mérida,1,BBC
+37.6057005,61.8460675,mary,6,BBC
+53.4791466,-2.2447445,manchester,1,BBC
+30.7177738,76.7532315,chandigarh,1,BBC
+53.4054719,-2.9805393,liverpool,3,BBC
+3.4615545,8.5510895,luba,2,BBC
+32.8140177,-96.9488945,irving,1,BBC
+45.0156285,-74.728533,cornwall,3,BBC
+52.5170397,13.3888548,berlin,7,BBC
+39.9448436,-75.1198694,camden,3,BBC
+49.1323438,-123.0056851,delta,4,BBC
+43.6529206,-79.3849008,toronto,1,BBC
+52.4080477,-1.5113334,coventry,5,BBC
+4.174718,73.5101438,male,13,BBC
+-25.7249999,28.1847222,pretoria,1,BBC
+42.3604823,-71.0595678,boston,1,BBC
+53.7589938,-2.7051618,preston,1,BBC
+10.1424373,-64.6789015,barcelona,1,BBC
+47.5992959,-122.3288811,seattle,2,BBC
+42.3032758,-83.0285111,windsor,1,BBC
+-35.0212993,117.8839055,albany,1,BBC
+-23.960833,-46.333889,santos,2,BBC
+32.7801052,-96.8000082,dallas,2,BBC
+-7.7871982,110.3764518,yogyakarta,2,BBC
+33.7557699,-117.98318,westminster,4,BBC
+-26.2049999,28.0497222,johannesburg,1,BBC
+43.5113941,16.439737,split,6,BBC
+14.5906074,120.9799013,manila,1,BBC
+43.7009504,7.2684054,nice,8,BBC
+55.9483399,-3.1932723,edinburgh,3,BBC
+-33.4379537,-70.650404,santiago,3,BBC
+34.008818,-81.0372695,columbia,2,BBC
+40.6639916,-74.2107006,elizabeth,4,BBC
+33.4483772,-112.0740374,phoenix,1,BBC
+1.2969957,103.8552954,singapore,4,BBC
+38.5815719,-121.4943996,sacramento,1,BBC
+51.2084734,-2.6517961,wells,3,BBC
+-4.6222804,55.4527969,victoria,7,BBC
+14.9323321,-23.5078723,praia,3,BBC
+-46.60012,168.33801,bluff,2,BBC
+-2.9898286,104.7594632,palembang,1,BBC
+-2.2010072,-79.8818938,guayaquil,1,BBC
+50.9035305,-1.4041996,southampton,1,BBC
+60.1666277,24.9435079,helsinki,1,BBC
+30.6943566,-88.0430541,mobile,5,BBC
+-6.1809269,106.8284591,jakarta,3,BBC
+43.5892854,-79.6441646,mississauga,1,BBC
+-38.1054104,147.0646345,sale,6,BBC
+45.4210328,-75.6900219,ottawa,1,BBC
+-25.7813596,-56.4477224,villarrica,2,BBC
+-41.2710849,173.2836756,nelson,2,BBC
+48.6928048,6.1838123,nancy,2,BBC
+-26.5717226,148.7876982,roma,1,BBC
+42.8864468,-78.8783689,buffalo,1,BBC
+-34.8612495,-57.9062315,ensenada,1,BBC
+63.7535819,-68.5028019,iqaluit,1,The Washington Post
+38.1940297,15.554114,messina,1,The Washington Post
+-35.2820708,149.1286673,canberra,1,The Washington Post
+-34.3576218,-58.7981574,escobar,1,The Washington Post
+43.074761,-89.3837613,madison,1,The Washington Post
+29.1399633,-98.905306,devine,1,The Washington Post
+-3.3585234,29.3682312,bujumbura,4,The Washington Post
+11.5936909,43.1471141,djibouti,9,The Washington Post
+42.9894583,-81.2460912,london,17,The Washington Post
+27.0997775,-82.4542633,venice,1,The Washington Post
+54.596868,-5.930087,belfast,1,The Washington Post
+43.1932336,-80.3842807,paris,10,The Washington Post
+39.7391536,-104.9847034,denver,1,The Washington Post
+52.3998399,0.2631161,ely,1,The Washington Post
+33.7877945,-117.8531119,orange,4,The Washington Post
+-25.4356497,-49.2541945,curitiba,1,The Washington Post
+33.9533546,-117.3961623,riverside,3,The Washington Post
+-12.4596697,130.8406196,darwin,1,The Washington Post
+-34.8985937,-56.1628267,montevideo,2,The Washington Post
+13.631655,79.4231899,tirupati,1,The Washington Post
+41.1485925,-8.6110201,porto,4,The Washington Post
+39.9272322,32.8519769,ankara,4,The Washington Post
+-37.7876214,175.2813186,hamilton,2,The Washington Post
+51.7521553,-1.2582135,oxford,3,The Washington Post
+51.3813864,-2.3596963,bath,5,The Washington Post
+38.111051,13.335745,palermo,1,The Washington Post
+25.7742658,-80.1936589,miami,4,The Washington Post
+28.5421175,-81.3790462,orlando,2,The Washington Post
+-26.6595434,150.1839141,miles,41,The Washington Post
+-34.639655,-58.7898357,moreno,2,The Washington Post
+26.1702082,-98.0522376,donna,1,The Washington Post
+-25.2925439,-49.2243472,colombo,1,The Washington Post
+-1.2832532,36.8172449,nairobi,9,The Washington Post
+34.0123846,71.5787458,peshawar,1,The Washington Post
+9.2831553,12.4580348,yola,1,The Washington Post
+-3.3669557,36.6915518,arusha,2,The Washington Post
+40.4167047,-3.7035825,madrid,2,The Washington Post
+34.008818,-81.0372695,columbia,1,The Washington Post
+35.614517,-88.813947,jackson,1,The Washington Post
+-26.2227778,27.89,soweto,1,The Washington Post
+43.7159277,10.401906,pisa,1,The Washington Post
+22.1498986,-80.4437413,cienfuegos,3,The Washington Post
+-0.4665968,39.6332917,garissa,5,The Washington Post
+40.3364587,-75.9288612,reading,5,The Washington Post
+59.3307611,18.0613098,stockholm,1,The Washington Post
+35.79154,-78.7811169,cary,3,The Washington Post
+-0.2201687,-78.5120913,quito,1,The Washington Post
+-29.8541667,31.05,durban,2,The Washington Post
+38.9716689,-95.2352501,lawrence,1,The Washington Post
+24.6915,78.421,lalitpur,1,The Washington Post
+-1.6665893,29.2256875,goma,1,The Washington Post
+34.0633443,-117.6508876,ontario,3,The Washington Post
+53.7974185,-1.5437941,leeds,5,The Washington Post
+39.962398,-76.727392,york,23,The Washington Post
+4.5401135,-75.6673295,armenia,3,The Washington Post
+47.3906174,0.6893001,tours,1,The Washington Post
+18.549274,-72.3393295,port-au-prince,1,The Washington Post
+43.2948059,5.3708155,marseille,4,The Washington Post
+53.3492787,-6.2611661,dublin,2,The Washington Post
+15.160632,120.5864028,angeles,5,The Washington Post
+12.1357464,-86.2745569,managua,1,The Washington Post
+30.2674473,-97.7425618,austin,1,The Washington Post
+42.3750997,-71.1056157,cambridge,1,The Washington Post
+37.9577016,-121.2907796,stockton,3,The Washington Post
+33.0267486,73.5999837,dina,1,The Washington Post
+18.6706453,105.669332,vinh,1,The Washington Post
+38.8951148,-77.0363716,washington,108,The Washington Post
+12.4345376,-86.8773498,leon,1,The Washington Post
+33.9595974,-83.376678,athens,1,The Washington Post
+6.452,3.414,lagos,2,The Washington Post
+37.8043808,-122.2708166,oakland,1,The Washington Post
+50.8772301,12.0796208,gera,1,The Washington Post
+38.4992518,43.3966821,van,5,The Washington Post
+21.015851,-101.2528698,guanajuato,2,The Washington Post
+32.735687,-97.1080656,arlington,1,The Washington Post
+39.952335,-75.163789,philadelphia,1,The Washington Post
+10.1704877,-68.0011214,valencia,1,The Washington Post
+11.1828042,-60.7372545,scarborough,1,The Washington Post
+37.6057005,61.8460675,mary,7,The Washington Post
+6.8025766,-58.1628612,georgetown,3,The Washington Post
+11.3309075,77.7273314,erode,2,The Washington Post
+-36.3150928,-57.6902209,dolores,1,The Washington Post
+-0.9522437,100.362617,padang,2,The Washington Post
+52.5170397,13.3888548,berlin,10,The Washington Post
+-14.4656649,132.2631058,katherine,1,The Washington Post
+-4.0505196,39.6671689,mombasa,1,The Washington Post
+37.5028972,15.0870338,catania,5,The Washington Post
+33.7490987,-84.3901849,atlanta,2,The Washington Post
+43.6529206,-79.3849008,toronto,1,The Washington Post
+14.5000371,-4.193018,mopti,1,The Washington Post
+33.6946934,73.0629505,islamabad,6,The Washington Post
+-42.4822736,-73.7641818,castro,5,The Washington Post
+44.3105322,-69.7793295,augusta,1,The Washington Post
+4.174718,73.5101438,male,8,The Washington Post
+-25.7249999,28.1847222,pretoria,1,The Washington Post
+46.4897869,-80.9892314,sudbury,1,The Washington Post
+35.2270869,-80.8431268,charlotte,1,The Washington Post
+42.3604823,-71.0595678,boston,10,The Washington Post
+41.9270987,-73.99611,kingston,1,The Washington Post
+44.9772995,-93.2654692,minneapolis,1,The Washington Post
+11.6538962,78.16099,salem,1,The Washington Post
+0.4938635,29.4653322,beni,1,The Washington Post
+47.5992959,-122.3288811,seattle,1,The Washington Post
+42.3032758,-83.0285111,windsor,1,The Washington Post
+41.2381017,-85.8530544,warsaw,4,The Washington Post
+-23.960833,-46.333889,santos,2,The Washington Post
+10.5018234,-66.9121054,caracas,2,The Washington Post
+32.7801052,-96.8000082,dallas,2,The Washington Post
+20.6769562,-103.3458071,guadalajara,1,The Washington Post
+-26.2049999,28.0497222,johannesburg,4,The Washington Post
+43.5113941,16.439737,split,3,The Washington Post
+14.5906074,120.9799013,manila,1,The Washington Post
+-12.9732959,40.5221115,pemba,4,The Washington Post
+43.7009504,7.2684054,nice,1,The Washington Post
+-33.4379537,-70.650404,santiago,3,The Washington Post
+33.8980532,-118.1712034,paramount,1,The Washington Post
+40.6639916,-74.2107006,elizabeth,5,The Washington Post
+33.4483772,-112.0740374,phoenix,4,The Washington Post
+1.2969957,103.8552954,singapore,3,The Washington Post
+51.2084734,-2.6517961,wells,1,The Washington Post
+-4.6222804,55.4527969,victoria,1,The Washington Post
+14.9323321,-23.5078723,praia,1,The Washington Post
+19.5515319,-71.0774108,mao,1,The Washington Post
+23.7282161,90.4098792,dhaka,2,The Washington Post
+40.3014316,-90.0633625,havana,7,The Washington Post
+60.1666277,24.9435079,helsinki,1,The Washington Post
+30.6943566,-88.0430541,mobile,10,The Washington Post
+-6.1809269,106.8284591,jakarta,1,The Washington Post
+-38.1054104,147.0646345,sale,2,The Washington Post
+10.1424373,-64.6789015,barcelona,5,The Washington Post
+14.5568853,121.023532,makati,1,The Washington Post
+-41.2710849,173.2836756,nelson,1,The Washington Post
+-8.6527095,115.2192683,denpasar,1,The Washington Post
+42.8864468,-78.8783689,buffalo,3,The Washington Post
+-34.8612495,-57.9062315,ensenada,1,The Washington Post
+49.1850834,-122.8446549,surrey,1,The Chronicle
+-35.2820708,149.1286673,canberra,8,The Chronicle
+52.6367811,-1.1312289,leicester,2,The Chronicle
+-27.4689806,153.023503,brisbane,175,The Chronicle
+29.1399633,-98.905306,devine,3,The Chronicle
+-27.6424132,153.1131037,logan,5,The Chronicle
+42.3750997,-71.1056157,cambridge,13,The Chronicle
+47.3906174,0.6893001,tours,12,The Chronicle
+22.5585986,72.9621513,anand,1,The Chronicle
+40.7989522,-81.3784445,canton,1,The Chronicle
+-34.2878405,146.0468933,griffith,7,The Chronicle
+-19.256934,146.8239533,townsville,16,The Chronicle
+-43.530955,172.6366455,christchurch,1,The Chronicle
+-22.3851003,143.0391229,winton,4,The Chronicle
+54.596868,-5.930087,belfast,1,The Chronicle
+-36.8852418,174.7732069,auckland,9,The Chronicle
+39.5349169,-119.7526936,sparks,5,The Chronicle
+-38.3829031,142.4882935,warrnambool,2,The Chronicle
+-37.6865464,176.1684472,tauranga,2,The Chronicle
+43.1316457,-80.7470783,woodstock,2,The Chronicle
+42.3604823,-71.0595678,boston,2,The Chronicle
+32.0835407,-81.0998342,savannah,1,The Chronicle
+-31.9527121,115.8604796,perth,9,The Chronicle
+46.136922,-60.1917192,sydney,89,The Chronicle
+45.1302591,-72.8007143,dunham,2,The Chronicle
+55.7429399,-97.8517808,thompson,6,The Chronicle
+33.9533546,-117.3961623,riverside,1,The Chronicle
+-12.4596697,130.8406196,darwin,4,The Chronicle
+47.6135661,-122.202118,bellevue,1,The Chronicle
+-26.181931,-58.1771174,formosa,1,The Chronicle
+36.0391456,-114.9819235,henderson,1,The Chronicle
+41.7605849,-88.3200715,aurora,3,The Chronicle
+37.5482697,-121.9885719,fremont,1,The Chronicle
+40.8000554,-96.6674005,lincoln,2,The Chronicle
+-23.3570444,119.7331247,newman,10,The Chronicle
+-37.7876214,175.2813186,hamilton,16,The Chronicle
+-27.7627777,29.923889,newcastle,10,The Chronicle
+51.3813864,-2.3596963,bath,3,The Chronicle
+25.4687224,-80.4775569,homestead,5,The Chronicle
+25.2683592,55.2963956,dubai,2,The Chronicle
+33.7877945,-117.8531119,orange,2,The Chronicle
+-26.3960331,146.2404986,charleville,10,The Chronicle
+-30.5133616,151.6666059,armidale,1,The Chronicle
+-23.4409987,144.251862,longreach,10,The Chronicle
+50.720157,-1.8747048,bournemouth,2,The Chronicle
+39.2810502,-76.567903,baltimore,1,The Chronicle
+-26.6595434,150.1839141,miles,30,The Chronicle
+51.5882332,-2.9974967,newport,2,The Chronicle
+26.1702082,-98.0522376,donna,7,The Chronicle
+21.1854467,72.8111141,surat,5,The Chronicle
+42.9894583,-81.2460912,london,26,The Chronicle
+43.4515189,-80.4926144,kitchener,7,The Chronicle
+52.652573,-7.2469004,kilkenny,1,The Chronicle
+-20.7051873,140.5058305,cloncurry,3,The Chronicle
+39.9272322,32.8519769,ankara,1,The Chronicle
+47.0414804,-122.891333,olympia,1,The Chronicle
+41.6348464,-84.9992683,angola,1,The Chronicle
+55.9483399,-3.1932723,edinburgh,2,The Chronicle
+-34.8741198,150.6004709,nowra,1,The Chronicle
+33.5206824,-86.8024326,birmingham,3,The Chronicle
+-27.22517,153.1056073,redcliffe,1,The Chronicle
+-16.9243043,145.7832994,cairns,9,The Chronicle
+41.4877262,-81.677522,cleveland,2,The Chronicle
+34.008818,-81.0372695,columbia,1,The Chronicle
+43.6610277,-70.2548596,portland,1,The Chronicle
+46.9753708,-123.8157218,aberdeen,2,The Chronicle
+33.7557699,-117.98318,westminster,3,The Chronicle
+35.614517,-88.813947,jackson,12,The Chronicle
+10.0645894,-2.5059503,wa,8,The Chronicle
+41.8756208,-87.6243706,chicago,6,The Chronicle
+37.9357576,-122.3477486,richmond,7,The Chronicle
+38.3606736,-75.5993692,salisbury,2,The Chronicle
+40.3364587,-75.9288612,reading,35,The Chronicle
+53.0162014,-2.1812607,stoke-on-trent,1,The Chronicle
+-0.9479102,-80.7218044,manta,2,The Chronicle
+54.2232521,-4.6951862,peel,3,The Chronicle
+38.9716689,-95.2352501,lawrence,10,The Chronicle
+53.3820287,-1.4657174,sheffield,9,The Chronicle
+-31.0917974,150.931072,tamworth,4,The Chronicle
+7.9620654,-11.7366499,bo,1,The Chronicle
+54.5205722,-128.6060566,terrace,2,The Chronicle
+51.8987643,-8.4712125,cork,1,The Chronicle
+39.962398,-76.727392,york,24,The Chronicle
+-28.0709343,145.6860056,cunnamulla,3,The Chronicle
+-42.8824593,147.3273244,hobart,2,The Chronicle
+-38.1496881,144.3615609,geelong,2,The Chronicle
+42.0347096,-93.6199485,ames,1,The Chronicle
+-25.2925439,-49.2243472,colombo,1,The Chronicle
+-41.0521924,145.9061292,burnie,1,The Chronicle
+61.218056,-149.9002806,anchorage,1,The Chronicle
+51.0621881,3.7102089,gent,2,The Chronicle
+-28.8640919,153.0482959,casino,18,The Chronicle
+-28.5470523,150.3075193,goondiwindi,9,The Chronicle
+34.1819538,-118.3079649,burbank,1,The Chronicle
+28.0836269,-80.6081089,melbourne,58,The Chronicle
+43.1932336,-80.3842807,paris,11,The Chronicle
+35.772096,-78.6386145,raleigh,3,The Chronicle
+-41.1797753,146.3608416,devonport,3,The Chronicle
+52.9212617,-1.4761491,derby,5,The Chronicle
+-27.5648552,151.9542619,toowoomba,316,The Chronicle
+51.8629188,-2.2466485,gloucester,2,The Chronicle
+25.6792695,-80.3172743,kendall,2,The Chronicle
+31.3112936,-92.4451371,alexandria,5,The Chronicle
+52.6612577,-8.6302084,limerick,1,The Chronicle
+38.8951148,-77.0363716,washington,2,The Chronicle
+12.4345376,-86.8773498,leon,1,The Chronicle
+-30.7462604,121.4729947,kalgoorlie,1,The Chronicle
+36.679138,-121.6403845,salinas,1,The Chronicle
+39.9448436,-75.1198694,camden,3,The Chronicle
+-17.9640268,122.2176092,broome,1,The Chronicle
+5.0901964,-1.83948,manso,1,The Chronicle
+52.3710089,4.9001115,amsterdam,3,The Chronicle
+37.8043808,-122.2708166,oakland,1,The Chronicle
+34.1987,-79.7677001,florence,4,The Chronicle
+15.160632,120.5864028,angeles,3,The Chronicle
+-31.912864,152.4608481,taree,3,The Chronicle
+38.4992518,43.3966821,van,17,The Chronicle
+-32.895154,-68.84099,mendoza,2,The Chronicle
+43.0171773,-83.7236024,flint,2,The Chronicle
+34.5068601,-82.6506264,anderson,7,The Chronicle
+33.9400143,-118.1325688,downey,1,The Chronicle
+-28.2166899,152.0274742,warwick,50,The Chronicle
+37.6057005,61.8460675,mary,23,The Chronicle
+6.8025766,-58.1628612,georgetown,2,The Chronicle
+33.9623032,-118.3527104,inglewood,5,The Chronicle
+-17.8531351,25.8614287,livingstone,2,The Chronicle
+34.055735,-117.1888961,redlands,2,The Chronicle
+37.8830001,41.1309008,batman,2,The Chronicle
+33.8209464,-118.0434066,cypress,1,The Chronicle
+45.0156285,-74.728533,cornwall,3,The Chronicle
+-27.6160135,152.76087,ipswich,36,The Chronicle
+52.5170397,13.3888548,berlin,1,The Chronicle
+-14.4656649,132.2631058,katherine,4,The Chronicle
+-46.09848,168.94392,gore,3,The Chronicle
+33.7490987,-84.3901849,atlanta,2,The Chronicle
+-26.1903375,152.6635864,gympie,9,The Chronicle
+-3.2165987,40.1165933,malindi,1,The Chronicle
+-28.8066667,153.2858333,lismore,17,The Chronicle
+-31.3972539,-58.0173305,concordia,1,The Chronicle
+-36.3810742,145.3993177,shepparton,2,The Chronicle
+-23.8438495,151.2568723,gladstone,28,The Chronicle
+4.174718,73.5101438,male,35,The Chronicle
+35.2270869,-80.8431268,charlotte,15,The Chronicle
+38.0608444,-97.9297743,hutchinson,5,The Chronicle
+-21.1415238,149.1867614,mackay,38,The Chronicle
+53.3492787,-6.2611661,dublin,2,The Chronicle
+53.7589938,-2.7051618,preston,9,The Chronicle
+41.9270987,-73.99611,kingston,3,The Chronicle
+44.9772995,-93.2654692,minneapolis,2,The Chronicle
+-41.2870685,174.7810335,wellington,6,The Chronicle
+11.6538962,78.16099,salem,1,The Chronicle
+52.1303794,-106.6605124,saskatoon,1,The Chronicle
+-7.7171155,109.0128708,cilacap,1,The Chronicle
+-25.5460201,152.7007731,maryborough,21,The Chronicle
+47.5992959,-122.3288811,seattle,1,The Chronicle
+42.3032758,-83.0285111,windsor,1,The Chronicle
+-34.9286341,138.5998876,adelaide,20,The Chronicle
+53.6288297,11.4148038,schwerin,1,The Chronicle
+32.7801052,-96.8000082,dallas,2,The Chronicle
+-28.8634654,153.5619701,ballina,7,The Chronicle
+-26.8053732,153.1328533,caloundra,23,The Chronicle
+49.8493165,-99.9573544,brandon,7,The Chronicle
+-41.4338399,147.1373499,launceston,2,The Chronicle
+-26.2049999,28.0497222,johannesburg,1,The Chronicle
+43.5113941,16.439737,split,21,The Chronicle
+14.5906074,120.9799013,manila,1,The Chronicle
+42.1014831,-72.589811,springfield,3,The Chronicle
+43.7009504,7.2684054,nice,54,The Chronicle
+-32.2478964,148.6026502,dubbo,5,The Chronicle
+33.8980532,-118.1712034,paramount,3,The Chronicle
+40.6639916,-74.2107006,elizabeth,19,The Chronicle
+33.4483772,-112.0740374,phoenix,3,The Chronicle
+1.2969957,103.8552954,singapore,5,The Chronicle
+-29.6912217,152.9337861,grafton,6,The Chronicle
+41.5833658,-87.500043,hammond,4,The Chronicle
+33.8951959,-118.333907,hawthorne,1,The Chronicle
+51.2084734,-2.6517961,wells,6,The Chronicle
+-4.6222804,55.4527969,victoria,29,The Chronicle
+49.1,-122.65,langley,1,The Chronicle
+-24.8653253,152.3516785,bundaberg,32,The Chronicle
+-46.60012,168.33801,bluff,2,The Chronicle
+-34.4242854,150.8938903,wollongong,3,The Chronicle
+-28.7383113,24.763737,kimberley,3,The Chronicle
+45.1126249,-72.6173667,sutton,6,The Chronicle
+30.6943566,-88.0430541,mobile,38,The Chronicle
+-6.1809269,106.8284591,jakarta,4,The Chronicle
+32.4464534,-99.7333478,abilene,2,The Chronicle
+39.414443,-77.4105783,frederick,3,The Chronicle
+-38.1054104,147.0646345,sale,43,The Chronicle
+-41.2710849,173.2836756,nelson,6,The Chronicle
+48.6928048,6.1838123,nancy,3,The Chronicle
+-26.5717226,148.7876982,roma,26,The Chronicle
+-26.6547164,153.0917833,maroochydore,14,The Chronicle
+-23.3782409,150.5131869,rockhampton,43,The Chronicle
+-39.6429882,176.8448108,hastings,4,The Chronicle
