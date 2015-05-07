@@ -35,7 +35,7 @@ function visual(keyword, start, end) {
 
 	url = "http://52.5.82.206/timeline/" + keyword + "/" + start + "/" + end
 	
-	startVisual(url);
+	startVisual(url, parseInt(start), parseInt(end));
 
 
 
@@ -55,7 +55,7 @@ function visual(keyword, start, end) {
 
 visual("earthquake", "20150320", "20150720");
 
-function startVisual(path) {
+function startVisual(path, start, end){
 
 var margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -90,10 +90,34 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json(path, function(error, data) {
-	
-	console.log(data);
+d3.json(path, function(error, rData) {
 
+	var data = rData["d3"];
+	
+	//var x = data["d3"];
+
+	//var sources = data["sources"];
+
+	// x: key is datestring
+	//    value is object, w/ key:sourcename, value: count
+	
+	/*
+	var dataArrayThing = [];
+	for (i = start; i <= end; i++) {
+		
+		// date = i
+		
+
+		if (i in x) {
+
+		}
+		toAppend = {};
+		toAppend["date"] = i;
+		for (i = 0; i <= len(sources); i++) {
+		
+		}		
+	}
+	*/
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
   data.forEach(function(d) {
