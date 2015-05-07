@@ -64,6 +64,8 @@ def get_words(text):
 	return proc_words
 
 def put_in_index(word, id, weight):
+	#TODO put in positional index instead!
+
 	if not word in inverted_index:
 		inverted_index[word] = [];
 		inverted_index[word] = {id: weight}
@@ -101,7 +103,6 @@ def index():
 
 	count = 0 #TESTING 
 	for art in articles: 
-		print str(art)
 		total_num_docs +=1
 		#if count > 10:
 		#	break	
