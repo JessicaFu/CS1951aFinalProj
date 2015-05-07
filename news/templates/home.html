@@ -55,11 +55,17 @@ function visual(keyword, start, end) {
 
 	url = "http://52.5.82.206/timeline/" + keyword + "/" + start + "/" + end
 	
+
 	startVisual(url, parseInt(start), parseInt(end));
+
+
 
 }
 
 function startVisual(path, start, end){
+
+
+d3.select("svg").remove();
 
 var margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
