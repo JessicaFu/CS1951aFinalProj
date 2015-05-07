@@ -47,7 +47,7 @@ body {
 $("#searchForm").submit(function(event) {
   event.preventDefault();
   visual($('#keyword').val(),$('#start').val() , $('#end').val());
-}
+});
 
 
 function visual(keyword, start, end) {
@@ -57,20 +57,6 @@ function visual(keyword, start, end) {
 	
 	startVisual(url, parseInt(start), parseInt(end));
 
-
-
-
-	/*
-	$.ajax({
-		url: "http://52.5.82.206/timeline/" + keyword + "/" + start + "/" + end
-	}).done(function(data){
-		
-		d3Data = data["d3"];
-		console.log(d3Data);
-		startVisual(d3Data);	
-
-	});
-	*/
 }
 
 visual("earthquake", "20150420", "20150510");
