@@ -80,28 +80,50 @@ print str(len(cities)) + ' cities'
 source_names = {}
 country_counts = {}
 city_counts = {}
+source_city = {'Huffington Post': {},
+               'Al Jazeera': {}, 
+               'BBC': {}, 
+               'The Chronicle': {}, 
+               'CNN': {}, 
+               'Herald Sun': {}, 
+               'The Onion': {}, 
+               'The Washington Post': {} }
+source_country = {'Huffington Post': {},
+                  'Al Jazeera': {}, 
+                  'BBC': {}, 
+                  'The Chronicle': {}, 
+                  'CNN': {}, 
+                  'Herald Sun': {}, 
+                  'The Onion': {}, 
+                  'The Washington Post': {} }
 
 articles = Article.objects.all()
-for art in articles: #i in xrange(1000):
-    txt = art.text.encode('utf-8') #articles[i].text
-    title = art.headline.encode('utf-8') #articles[i].headline
-    source = art.source.name.encode('utf-8') #articles[i].source.name
-    #print title
+for art in articles: 
+    txt = art.text.encode('utf-8') 
+    title = art.headline.encode('utf-8') 
+    source = art.source.name.encode('utf-8') 
+
     if not source in source_names:
     	source_names[source] = 0
     source_names[source] += 1
+    # Look through the article's text for country names
     for country in countries:
         if country in title.lower() or country in txt.lower():
             if not country in country_counts:
                 country_counts[country] = 0
             country_counts[country] += 1
+            if not country in source_country[source]:
+                source_country[source][country] = 0
+            source_country[source][country] += 1
+    # Repeat the process for cities
     for city in cities:
-        #for word in title.split(' '):        
-            #if city in title.lower()
         if city in title.lower().split() or city in txt.lower().split():
             if not city in city_counts:
                 city_counts[city] = 0
             city_counts[city] += 1
+            if not city in source_city[source]:
+                source_city[source][city] = 0
+            source_city[source][city] += 1
 
 sorted_countries = sorted(country_counts.items(), key=lambda x:x[1], reverse=True)
 sorted_cities = sorted(city_counts.items(), key=lambda x:x[1], reverse=True)
@@ -118,5 +140,9 @@ print '-------------------------'
 print sorted_countries
 print '-------------------------'
 print sorted_cities
+print '-------------------------'
+print source_city
+print '-------------------------'
+print source_country
 
 print 'DONE'
