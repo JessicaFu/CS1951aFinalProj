@@ -30,11 +30,6 @@ body {
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 
-<p> TESTING. BENS PARAGRPAH TAGGG </p>
-
-
-
-
 <form id="searchForm">
   <input type="input" id="keyword"/>
   <input type="input" id="start"/>
@@ -114,6 +109,9 @@ d3.json(path, function(error, rData) {
     return {
       name: name,
       values: data.map(function(d) {
+        console.log("before temperature");
+        console.log(name);
+        console.log(d[name]);
         return {date: d.date, temperature: +d[name]};
       })
     };
@@ -148,7 +146,10 @@ d3.json(path, function(error, rData) {
 
   city.append("path")
       .attr("class", "line")
-      .attr("d", function(d) { return line(d.values); })
+      .attr("d", function(d) { 
+        console.log("d.values is next:");
+        console.log(d.values);
+        return line(d.values); })
       .style("stroke", function(d) { return color(d.name); });
 
   city.append("text")
