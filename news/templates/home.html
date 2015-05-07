@@ -36,9 +36,9 @@ body {
 
 
 <form id="searchForm">
+  <input type="input" id="keyword"/>
   <input type="input" id="start"/>
   <input type="input" id="end"/>
-  <input type="input" id="keyword"/>
   <input type="submit" value="Submit">
 </form>
 
@@ -58,8 +58,6 @@ function visual(keyword, start, end) {
 	startVisual(url, parseInt(start), parseInt(end));
 
 }
-
-visual("earthquake", "20150420", "20150510");
 
 function startVisual(path, start, end){
 
