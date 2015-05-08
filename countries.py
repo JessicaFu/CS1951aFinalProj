@@ -108,6 +108,8 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
+        if country == 'oman':
+            country = ' oman '
         if country in title.lower() or country in txt.lower():
             if not country in country_counts:
                 country_counts[country] = 0
@@ -144,48 +146,62 @@ print '-------------------------'
 print source_city
 print '-------------------------'
 print source_country
-<<<<<<< HEAD
 
 ######################################################################
 #################### Write CSV Files #################################
 ######################################################################
 
-all_cities = open('all_cities.csv', 'w+')
-all_cities.write('lat,lon,name,count\n')
-for city in city_counts.keys():
-    (lat,lon) = city_coords[city]
-    count = city_counts[city]
-    all_cities.write(str(lat)+','+str(lon)+','+city+','+str(count)+'\n')
-
-all_countries = open('all_countries.csv', 'w+')
-all_countries.write('lat,lon,name,count\n')
-for country in country_counts.keys():
-    (lat,lon) = country_coords[country]
-    count = country_counts[country]
-    all_countries.write(str(lat)+','+str(lon)+','+country+','+str(count)+'\n')
-
-sep_cities = open('separate_cities.csv', 'w+')
-sep_cities.write('lat,lon,name,city,source\n')
+results = open('map_data.csv', 'w+')
+results.write('lat,lon,name,count,source\n')
 for source in source_city.keys():
     for city in (source_city[source]).keys():
-        (lat,lon) = city_coords[city]
         count = source_city[source][city]
-        sep_cities.write(str(lat)+','+str(lon)+','+city+','+str(count)+','+source+'\n') 
-
-sep_countries = open('separate_countries.csv', 'w+')
-sep_countries.write('lat,lon,name,count,source\n')
+        if city == 'york':
+            city = 'new york'
+        (lat,lon) = city_coords[city]
+        results.write(str(lat)+','+str(lon)+','+city+','+str(count)+','+source+'\n') 
 for source in source_country.keys():
     for country in (source_country[source]).keys():
         (lat,lon) = country_coords[country]
         count = source_country[source][country]
-        sep_countries.write(str(lat)+','+str(lon)+','+country+','+str(count)+','+source+'\n')
+        results.write(str(lat)+','+str(lon)+','+country+','+str(count)+','+source+'\n')
+
+# all_cities = open('all_cities.csv', 'w+')
+# all_cities.write('lat,lon,name,count\n')
+# for city in city_counts.keys():
+#     (lat,lon) = city_coords[city]
+#     count = city_counts[city]
+#     all_cities.write(str(lat)+','+str(lon)+','+city+','+str(count)+'\n')
+
+# all_countries = open('all_countries.csv', 'w+')
+# all_countries.write('lat,lon,name,count\n')
+# for country in country_counts.keys():
+#     (lat,lon) = country_coords[country]
+#     count = country_counts[country]
+#     all_countries.write(str(lat)+','+str(lon)+','+country+','+str(count)+'\n')
+
+# sep_cities = open('separate_cities.csv', 'w+')
+# sep_cities.write('lat,lon,name,city,source\n')
+# for source in source_city.keys():
+#     for city in (source_city[source]).keys():
+#         count = source_city[source][city]
+#         if city == 'york':
+#             city = 'new york'
+#         (lat,lon) = city_coords[city]
+#         sep_cities.write(str(lat)+','+str(lon)+','+city+','+str(count)+','+source+'\n') 
+
+# sep_countries = open('separate_countries.csv', 'w+')
+# sep_countries.write('lat,lon,name,count,source\n')
+# for source in source_country.keys():
+#     for country in (source_country[source]).keys():
+#         (lat,lon) = country_coords[country]
+#         count = source_country[source][country]
+#         sep_countries.write(str(lat)+','+str(lon)+','+country+','+str(count)+','+source+'\n')
 
 source_counts = open('source_counts.csv', 'w+')
 source_counts.write('name,count\n')
 for source in source_names.keys():
     count = source_names[source]
     source_counts.write(source+','+str(count)+'\n')
-=======
->>>>>>> 2e565a8586cb925bbc4203fee33f632df439bfac
 
 print 'DONE'
