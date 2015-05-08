@@ -10,6 +10,7 @@ import string
 import datetime
 import operator
 import math
+import csv
 from nltk.corpus import stopwords
 
 def get_sentiment_list():
@@ -44,7 +45,8 @@ def gen_sent():
 		id = art.id
 		name = art.headline.encode('utf-8')
 		text = name + " " + art.text.encode('utf-8')
-		sentiments.append((id, name, calc_sent(text)))
+		if len(text) > 0:
+			sentiments.append((id, name, calc_sent(text)))
 			
 def main():
 	global exclude 
@@ -60,7 +62,10 @@ def main():
 	get_sentiment_list()
 	gen_sent()
 	scores = sorted(sentiments,key=lambda x: x[2], reverse = True)
-	print scores
+	with open('sentiment.csv', 'w') as csvfile:
+		csv_writer = csv.writer(csvfile)
+		for score in scores:
+			csv_writer.writerow([score])
 
 if __name__ == "__main__":
     main()
