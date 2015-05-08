@@ -5,6 +5,7 @@ from django.http import Http404, HttpResponse, JsonResponse
 from collections import defaultdict
 import datetime
 import csv
+import numpy as np
 
 from models import *
 # Create your views here.
@@ -29,6 +30,13 @@ def source(request, source_id=None):
     })
     return render(request, 'source.html', context)
 
+def unix_time_millis(dt):
+    return unix_time(dt) 
+
+def unix_time(dt):
+    epoch = datetime.datetime.utcfromtimestamp(0)
+    delta = dt - epoch
+    return delta.total_seconds()
 
 
 def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
@@ -67,8 +75,24 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
                      'url' : article.url,
                      'date' : article.date.strftime(time_convert_str),
                      'source' : article.source.name} for article in articles]
-        
+        dates = [unix_time_millis(article.date) for article in articles]
+        date_mean = np.mean(dates)
+        date_dev = np.std(dates)
+
         sources = Source.objects.all()
+
+        string_mean = datetime.datetime.utcfromtimestamp(date_mean).strftime("%c")
+        means = []
+        means.append(("general", date_mean, date_dev, string_mean))
+
+        for src in [srcc.name for srcc in sources]: 
+            dates = [unix_time_millis(article.date) for article in articles if article.source.name == src]
+            if (len(dates) > 0):
+                date_mean = np.mean(dates)
+                date_dev = np.std(dates)
+                string_mean = datetime.datetime.utcfromtimestamp(date_mean).strftime("%c")
+                means.append((src, date_mean, date_dev, string_mean))
+            
         
         d3_data = defaultdict(lambda: {src.name : 0 for src in sources})
 
@@ -89,7 +113,8 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
         res_dict = {
             'sources' : [src.name for src in sources],
             'articles' : arts,
-            'd3' : d3_data_list
+            'd3' : d3_data_list,
+            'means' : means
         } 
 
         response = JsonResponse(res_dict)

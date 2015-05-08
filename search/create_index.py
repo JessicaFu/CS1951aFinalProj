@@ -43,9 +43,10 @@ def search(text):
 	articles = Article.objects.all()
 	for art in articles: 
 		if len(art.text) >0:
+			id = art.id
 			name = art.headline.encode('utf-8')
 			idf = get_tf_idf(id, words)
-			weights.append((id, name, idf))
+			weights.append((id, name, idf, art.text))
 			
 	
 def get_words(text):	
@@ -83,7 +84,7 @@ def create_inverted_index(article):
 	words = get_words(text)
 	total_count += len(words)
 	for word in words:
-		put_in_index(word, id, 2)
+		put_in_index(word, id, 8)
 
 	text = article.text.encode('utf-8') 
 	words = get_words(text)
@@ -99,7 +100,7 @@ def create_inverted_index(article):
 	words = get_words(text)
 	total_count += len(words)
 	for word in words:
-		put_in_index(word, id, 5)
+		put_in_index(word, id, 8)
 
 	word_count[id] = total_count
 
@@ -111,6 +112,7 @@ def get_index():
 	for art in articles: 
 		if len(art.text) >0:
 			create_inverted_index(art)
+			total_num_docs +=1
 
 	return inverted_index
 
@@ -129,7 +131,7 @@ def main():
 
 	#TODO fix duplicate article entries
 	get_index();
-	text = "nepal survivors"
+	text = "Nepal survivors"
 	search(text);
 	weights = sorted(weights,key=lambda x: x[2], reverse = True)
 

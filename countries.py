@@ -7,7 +7,7 @@ from news.models import *
 
 import datetime
 import operator
-
+import re
 ##########################################################################
 ################# Build a collection of cities/countries #################
 ##########################################################################
@@ -20,8 +20,8 @@ country_file.next()
 for line in country_file:
     elts = line.split('\t')
     country = elts[3].lower().strip('\n')
-    if country == 'oman':
-        country = ' oman '
+    #if country == 'oman':
+    #    country = ' oman '
     country_coords[country] = (float(elts[1]), float(elts[2]))
 
 # Set of countries set to be keys of dictionary
@@ -111,7 +111,8 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
-        if country.title() in title or country.title() in txt:
+        term = country.title() + '[^a-z]'
+        if (re.search(term, title) != None) or (re.search(term, txt) != None):
             samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
             if country in samples:
                 examples.write(title + ' ('+source+')\n')
@@ -123,7 +124,9 @@ for art in articles:
             source_country[source][country] += 1
     # Repeat the process for cities
     for city in cities:
-        if city.title() in title or city.title() in txt:
+        base = city.replace('(','').replace(')','')
+        term = base.title() + '[^a-z]'
+        if (re.search(term, title) != None) or (re.search(term, txt) != None):
             samples = ['baltimore','washington', 'york', 'wells', 'macau']
             if city in samples:
                 examples.write(title + ' ('+source+')\n')
@@ -158,7 +161,7 @@ print source_country
 #################### Write CSV Files #################################
 ######################################################################
 
-results = open('map_data4.csv', 'w+')
+results = open('map_data5.csv', 'w+')
 results.write('lat,lon,name,count,source\n')
 for source in source_city.keys():
     for city in (source_city[source]).keys():
