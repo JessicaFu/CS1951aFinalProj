@@ -111,7 +111,7 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
-        if country in title.lower() or country in txt.lower():
+        if country in title.lower().split() or country in txt.lower().split():
             samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
             if country in samples:
                 examples.write(title + ' ('+source+')\n')
@@ -158,7 +158,7 @@ print source_country
 #################### Write CSV Files #################################
 ######################################################################
 
-results = open('map_data.csv', 'w+')
+results = open('map_data4.csv', 'w+')
 results.write('lat,lon,name,count,source\n')
 for source in source_city.keys():
     for city in (source_city[source]).keys():
