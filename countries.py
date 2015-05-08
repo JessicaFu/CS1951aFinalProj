@@ -111,7 +111,7 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
-        if country in title.lower().split() or country in txt.lower().split():
+        if country.title() in title or country.title() in txt:
             samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
             if country in samples:
                 examples.write(title + ' ('+source+')\n')
@@ -123,7 +123,7 @@ for art in articles:
             source_country[source][country] += 1
     # Repeat the process for cities
     for city in cities:
-        if city in title.lower().split() or city in txt.lower().split():
+        if city.title() in title or city.title() in txt:
             samples = ['baltimore','washington', 'york', 'wells', 'macau']
             if city in samples:
                 examples.write(title + ' ('+source+')\n')
