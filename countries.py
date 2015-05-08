@@ -99,6 +99,7 @@ source_country = {'Huffington Post': {},
                   'The Onion': {}, 
                   'The Washington Post': {} }
 
+examples = open('examples.txt', 'w+')
 articles = Article.objects.all()
 for art in articles: 
     txt = art.text.encode('utf-8') 
@@ -111,6 +112,9 @@ for art in articles:
     # Look through the article's text for country names
     for country in countries:
         if country in title.lower() or country in txt.lower():
+            samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
+            if country in samples:
+                examples.write(title + ' ('+source+')\n')
             if not country in country_counts:
                 country_counts[country] = 0
             country_counts[country] += 1
@@ -120,6 +124,9 @@ for art in articles:
     # Repeat the process for cities
     for city in cities:
         if city in title.lower().split() or city in txt.lower().split():
+            samples = ['baltimore','washington', 'york', 'wells', 'macau']
+            if city in samples:
+                examples.write(title + ' ('+source+')\n')
             if not city in city_counts:
                 city_counts[city] = 0
             city_counts[city] += 1
