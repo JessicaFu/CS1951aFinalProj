@@ -18,8 +18,11 @@ country_file = open('countries.tsv')
 country_file.next()
 country_file.next()
 for line in country_file:
-	elts = line.split('\t')
-	country_coords[elts[3].lower().strip('\n')] = (float(elts[1]), float(elts[2]))
+    elts = line.split('\t')
+    country = elts[3].lower().strip('\n')
+    if country == 'oman':
+        country = ' oman '
+    country_coords[country] = (float(elts[1]), float(elts[2]))
 
 # Set of countries set to be keys of dictionary
 countries = country_coords.keys()
@@ -37,7 +40,6 @@ for line in city_file:
 # City set is the keys of this dictionary
 cities = city_coords.keys()
 cities.remove('')
-cities.remove('man')
 #for city in cities:
 #	print city
 print str(len(cities)) + ' cities'
@@ -108,8 +110,6 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
-        if country == 'oman':
-            country = ' oman '
         if country in title.lower() or country in txt.lower():
             if not country in country_counts:
                 country_counts[country] = 0

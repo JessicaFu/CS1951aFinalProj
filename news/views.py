@@ -31,17 +31,21 @@ def source(request, source_id=None):
 
 
 
-def timeline(request, keyword=None, begin_date=None, end_date=None, type=None):
+def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
     if not (request and begin_date and end_date):
         raise Http404('endpoint not properly formatted')
 
     time_convert_str = "%Y%m%d"
     begin_date = datetime.datetime.strptime(begin_date, time_convert_str)
-
     end_date = datetime.datetime.strptime(end_date, time_convert_str)
-    articles = Article.objects.filter(keyword__word=keyword,
+
+    articles = set()
+    for keyword in keywords.split():
+        art_set = Article.objects.filter(keyword__word=keyword,
             date__gte=begin_date,
             date__lte=end_date)
+        for art in art_set:
+            articles.add(art)
 
     if type == "tsv":
         response = HttpResponse(content_type='text/tsv')
