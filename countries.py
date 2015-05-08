@@ -99,7 +99,7 @@ source_country = {'Huffington Post': {},
                   'The Onion': {}, 
                   'The Washington Post': {} }
 
-examples = open('examples.txt', 'w+')
+#examples = open('examples.txt', 'w+')
 articles = Article.objects.all()
 for art in articles: 
     txt = art.text.encode('utf-8') 
@@ -111,11 +111,18 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
-        term = country.title() + '[^a-z]'
-        if (re.search(term, title) != None) or (re.search(term, txt) != None):
-            samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
-            if country in samples:
-                examples.write(title + ' ('+source+')\n')
+        #term = country.title() + '[^a-z]'
+        #if (re.search(term, title) != None): # or (re.search(term, txt) != None):
+        base = country.title()
+        endings = [' ',',','.']
+        found = False
+        for ending in endings:
+            if (base+ending) in title or (base+ending) in txt:
+                found = True
+        if found:
+            #samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
+            #if country in samples:
+            #    examples.write(title + ' ('+source+')\n')
             if not country in country_counts:
                 country_counts[country] = 0
             country_counts[country] += 1
@@ -124,12 +131,19 @@ for art in articles:
             source_country[source][country] += 1
     # Repeat the process for cities
     for city in cities:
-        base = city.replace('(','').replace(')','')
-        term = base.title() + '[^a-z]'
-        if (re.search(term, title) != None) or (re.search(term, txt) != None):
-            samples = ['baltimore','washington', 'york', 'wells', 'macau']
-            if city in samples:
-                examples.write(title + ' ('+source+')\n')
+        #base = city.replace('(','').replace(')','')
+        #term = base.title() + '[^a-z]'
+        #if (re.search(term, title) != None): # or (re.search(term, txt) != None):
+        base = city.title()
+        endings = [' ',',','.']
+        found = False
+        for ending in endings:
+            if (base+ending) in title or (base+ending) in txt:
+                found = True
+        if found:
+            #samples = ['baltimore','washington', 'york', 'wells', 'macau']
+            #if city in samples:
+            #    examples.write(title + ' ('+source+')\n')
             if not city in city_counts:
                 city_counts[city] = 0
             city_counts[city] += 1
