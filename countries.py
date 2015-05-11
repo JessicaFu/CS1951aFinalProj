@@ -7,7 +7,7 @@ from news.models import *
 
 import datetime
 import operator
-
+import re
 ##########################################################################
 ################# Build a collection of cities/countries #################
 ##########################################################################
@@ -20,8 +20,8 @@ country_file.next()
 for line in country_file:
     elts = line.split('\t')
     country = elts[3].lower().strip('\n')
-    if country == 'oman':
-        country = ' oman '
+    #if country == 'oman':
+    #    country = ' oman '
     country_coords[country] = (float(elts[1]), float(elts[2]))
 
 # Set of countries set to be keys of dictionary
@@ -99,7 +99,7 @@ source_country = {'Huffington Post': {},
                   'The Onion': {}, 
                   'The Washington Post': {} }
 
-examples = open('examples.txt', 'w+')
+#examples = open('examples.txt', 'w+')
 articles = Article.objects.all()
 for art in articles: 
     txt = art.text.encode('utf-8') 
@@ -111,10 +111,18 @@ for art in articles:
     source_names[source] += 1
     # Look through the article's text for country names
     for country in countries:
-        if country.title() in title or country.title() in txt:
-            samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
-            if country in samples:
-                examples.write(title + ' ('+source+')\n')
+        #term = country.title() + '[^a-z]'
+        #if (re.search(term, title) != None): # or (re.search(term, txt) != None):
+        base = country.title()
+        endings = [' ',',','.']
+        found = False
+        for ending in endings:
+            if (base+ending) in title or (base+ending) in txt:
+                found = True
+        if found:
+            #samples = ['nepal','iran','united states', 'mali', 'germany', 'nepal','australia']
+            #if country in samples:
+            #    examples.write(title + ' ('+source+')\n')
             if not country in country_counts:
                 country_counts[country] = 0
             country_counts[country] += 1
@@ -123,10 +131,19 @@ for art in articles:
             source_country[source][country] += 1
     # Repeat the process for cities
     for city in cities:
-        if city.title() in title or city.title() in txt:
-            samples = ['baltimore','washington', 'york', 'wells', 'macau']
-            if city in samples:
-                examples.write(title + ' ('+source+')\n')
+        #base = city.replace('(','').replace(')','')
+        #term = base.title() + '[^a-z]'
+        #if (re.search(term, title) != None): # or (re.search(term, txt) != None):
+        base = city.title()
+        endings = [' ',',','.']
+        found = False
+        for ending in endings:
+            if (base+ending) in title or (base+ending) in txt:
+                found = True
+        if found:
+            #samples = ['baltimore','washington', 'york', 'wells', 'macau']
+            #if city in samples:
+            #    examples.write(title + ' ('+source+')\n')
             if not city in city_counts:
                 city_counts[city] = 0
             city_counts[city] += 1
@@ -158,7 +175,7 @@ print source_country
 #################### Write CSV Files #################################
 ######################################################################
 
-results = open('map_data4.csv', 'w+')
+results = open('map_data5.csv', 'w+')
 results.write('lat,lon,name,count,source\n')
 for source in source_city.keys():
     for city in (source_city[source]).keys():

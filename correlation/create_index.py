@@ -47,12 +47,14 @@ def search(text):
 			idf = get_tf_idf(id, words)
 			weights.append((id, name, idf))
 			
-	
+def get_word_count_list():
+	return word_count
+
 def get_words(text):	
 	words = text.split()
 	proc_words = []
 	for word in words:
-		word = ''.join(ch for ch in word if ch not in exclude and ch.isalnum())
+		word = ''.join(ch for ch in word if ch.isalnum())
 		word = word.lower()
 		if not word in stop_words:
 			word = porter_stemmer.PorterStemmer().stem(word, 0,len(word)-1)
@@ -111,10 +113,10 @@ def get_index():
 	for art in articles: 
 		if len(art.text) >0:
 			create_inverted_index(art)
-
+			total_num_docs +=1
 	return inverted_index
 
-			
+	
 def main():
 	global inverted_index 
 	inverted_index = {}
@@ -129,15 +131,7 @@ def main():
 
 	#TODO fix duplicate article entries
 	get_index();
-	text = "nepal survivors"
-	search(text);
-	weights = sorted(weights,key=lambda x: x[2], reverse = True)
 
-	with open('search_data.csv', 'w') as csvfile:
-		csv_writer = csv.writer(csvfile)
-		csv_writer.writerow([text])
-		for weight in weights:
-			csv_writer.writerow([weight])
-
+	return (inverted_index, word_count, total_num_docs)
 if __name__ == "__main__":
     main()
