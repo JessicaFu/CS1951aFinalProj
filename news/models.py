@@ -5,8 +5,7 @@ sys.path.append('/home/ubuntu/CS1951aFinalProj/')
 from django.db import models, IntegrityError
 import datetime
 import django.utils.timezone as timezone
-import get_sentiment.py
-import create_index.py
+
 from paper_scraper import *
 # Create your models here.
 
@@ -126,13 +125,9 @@ def newspaper_article(source, article, keywords=[]):
    
     #unpacks article into article constructor
     try: 
-
-        sent_score = get_sentiment.sent_from_json(article):
-        art = Article(source=src, **article, sentiment_score = sent_score)
+        art = Article(source=src, **article)
         art.save()
         make_keywords(art, keywords)
-        create_index.add_to_index(art)
-        
     except IntegrityError:
         print 'not unique headline for ' + article['headline'] + ' skipping.'
 

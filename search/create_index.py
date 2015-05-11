@@ -67,8 +67,7 @@ def add_to_table(word, article, weight):
 		PosIndex(word = word, article = article, count = 1, weight = weight)	
 	else:
 		row.count += row.count
-
-	row.save
+		row.save
 
 
 def add_to_index(article):
@@ -105,64 +104,35 @@ def add_to_index(article):
 	for word in words:
 		add_to_table(word, article, 5)
 
-	article.count = total_count
+	article.word_count = total_count
 	article.save()
-
-"""
-def put_in_index(word, id, weight):
-	#TODO put in positional index instead!
-
-	if not word in inverted_index:
-		inverted_index[word] = [];
-		inverted_index[word] = {id: weight}
-	elif not id in inverted_index[word]:
-		inverted_index[word][id] = weight
-	else:
-		inverted_index[word][id] = inverted_index[word][id] + weight
-
-def create_inverted_index(article):
-	id = article.id
-
-	#TODO need to be able to quantify date metadata
-	#TODO need to quantify keyword data
-
-	total_count = 0
-
-	text = article.headline.encode('utf-8')
-	words = get_words(text)
-	total_count += len(words)
-	for word in words:
-		put_in_index(word, id, 8)
-
-	text = article.text.encode('utf-8') 
-	words = get_words(text)
-	total_count += len(words)
-	for word in words:
-		put_in_index(word, id, 1)
-	
-	keywords = Keyword.objects.filter(article__id=id)
-	text = ""
-	for key in keywords:
-		text += key.word+ " "
-
-	words = get_words(text)
-	total_count += len(words)
-	for word in words:
-		put_in_index(word, id, 8)
-
-	word_count[id] = total_count
-"""
 
 def get_index():
 	articles = Article.objects.all()
+	count = 0
 
 	for art in articles: 
 		if len(art.text) >0:
-			add_to_index(article)
+			add_to_index(art)
+			count+=1
+		if count >2:
+			break
+	
+
 
 def main():
 	#TODO fix duplicate article entries
 	get_index();
+
+	articles = Article.objects.all()
+	count = 0
+	for art in articles: 
+		if len(art.text) >0:
+			print art.id, art.headline, art.text, art.word_count, art.sentiment_score
+			count += 1
+		if count >2:
+			break
+	
 
 if __name__ == "__main__":
     main()
