@@ -79,3 +79,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#public method for single article sentiment generation
+def sent_from_json(art_json):
+	global exclude 
+	exclude = set(string.punctuation)
+	global stop_words
+	stop_words = stopwords.words('english')
+
+	name = art_json.headline.encode('utf-8')
+	text = name + " " + art_json.text.encode('utf-8')
+	if len(text) > 0:
+		return calc_sent(text)
+
+	return 0
+#newIndex.save()
+#article.count = 1
+#article.save()

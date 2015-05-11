@@ -54,12 +54,60 @@ def get_words(text):
 	for word in words:
 		word = ''.join(ch for ch in word if ch not in exclude and ch.isalnum())
 		word = word.lower()
-		if not word in stop_words:
-			word = porter_stemmer.PorterStemmer().stem(word, 0,len(word)-1)
-			if len(word) > 0 and word != "\n" and word != "\r":
-				proc_words.append(word)
+		#if not word in stop_words:
+		word = porter_stemmer.PorterStemmer().stem(word, 0,len(word)-1)
+		if len(word) > 0 and word != "\n" and word != "\r":
+			proc_words.append(word)
 	return proc_words
 
+def add_to_table(word, article, weight):
+	row = PosIndex.objects.filter(word = word, article = article, weight = weight)
+	if row != None:
+		PosIndex(word = word, article = article, count = 1, weight = weight)	
+	else:
+		row.count += row.count
+
+	row.save
+
+
+def add_to_index(article):
+	#TODO need to be able to quantify date metadata
+	global inverted_index 
+	inverted_index = {}
+	global exclude 
+	exclude = set(string.punctuation)
+	global word_count
+	word_count = {}
+
+
+	total_count = 0
+	id = article.id
+	text = article.headline.encode('utf-8')
+	words = get_words(text)
+	total_count += len(words)
+	for word in words:
+		add_to_table(word, article, 2)
+
+	text = article.text.encode('utf-8') 
+	words = get_words(text)
+	total_count += len(words)
+	for word in words:
+		add_to_table(word, article, 1)
+	
+	keywords = Keyword.objects.filter(article__id=id)
+	text = ""
+	for key in keywords:
+		text += key.word+ " "
+
+	words = get_words(text)
+	total_count += len(words)
+	for word in words:
+		add_to_table(word, article, 5)
+
+	article.count = total_count
+	article.save()
+
+"""
 def put_in_index(word, id, weight):
 	#TODO put in positional index instead!
 
@@ -102,42 +150,25 @@ def create_inverted_index(article):
 		put_in_index(word, id, 5)
 
 	word_count[id] = total_count
+"""
 
 def get_index():
 	articles = Article.objects.all()
-	global total_num_docs
-	total_num_docs = 0
 
 	for art in articles: 
 		if len(art.text) >0:
-			create_inverted_index(art)
+			add_to_index(article)
 
-	return inverted_index
 
-			
+#newIndex  = PosIndex(word = "the", article = article object , index = 1, weight = 2.0)	
+#newIndex.save()
+#article.count = 1
+#article.save()
 def main():
-	global inverted_index 
-	inverted_index = {}
-	global exclude 
-	exclude = set(string.punctuation)
-	global word_count
-	word_count = {}
-	global stop_words
-	stop_words = stopwords.words('english')
-	global weights
-	weights = []
-
 	#TODO fix duplicate article entries
-	get_index();
-	text = "nepal survivors"
-	search(text);
-	weights = sorted(weights,key=lambda x: x[2], reverse = True)
 
-	with open('search_data.csv', 'w') as csvfile:
-		csv_writer = csv.writer(csvfile)
-		csv_writer.writerow([text])
-		for weight in weights:
-			csv_writer.writerow([weight])
+	get_index();
 
 if __name__ == "__main__":
     main()
+
