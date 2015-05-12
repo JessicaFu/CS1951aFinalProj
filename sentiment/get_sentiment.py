@@ -2,7 +2,8 @@ from __future__ import division
 import sys, os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data_science_project.settings")
 sys.path.append('/home/ubuntu/CS1951aFinalProj/')
-
+import django
+django.setup()
 from django.db import models
 from news.models import *
 
@@ -18,7 +19,6 @@ def get_sentiment_list():
 	for line in afinnfile:
 		term, score  = line.split("\t")  # The file is tab-delimited. "\t" means "tab character"
 		sentiment_scores[term] = float(score)      # Convert the score to a float.
-	return sentiment_scores
 
 def get_words(text):	
 	exclude = set(string.punctuation)
@@ -42,21 +42,33 @@ def calc_sent(text):
 
 def get_sentiment(article):
 	global sentiment_scores
-	sentiment_scores = get_sentiment_list()
+	sentiment_scores = {}
+	get_sentiment_list()
 
 	if article == None:
 		articles = Article.objects.all()
 
 		for art in articles: 
 			if len(art.text) >0:
+				text_keywords = ""
+				keywords = Keyword.objects.filter(article__id=art.id)
+				for key in keywords:
+					text_keywords += key.word.encode('utf-8')+ " "
 				headline = art.headline.encode('utf-8')
-				text = headline + " " + art.text.encode('utf-8')
+				text = text_keywords + headline + " " + art.text.encode('utf-8') + " "
+				
+
 				if len(text) > 0:
 					art.sentiment_score = calc_sent(text)
 					art.save()
 	else:
+		text_keywords = ""
+		keywords = Keyword.objects.filter(article__id=article.id)
+		for key in keywords:
+			text_keywords+= key.word.encode('utf-8')+ " "
 		headline = article.headline.encode('utf-8')
-		text = headline + " " + article.text.encode('utf-8')
+		text = text_keywords + headline + " " + article.text.encode('utf-8')
+		
 		if len(text) > 0:
 			art.sentiment_score = calc_sent(text)
 			art.save()
@@ -65,19 +77,12 @@ def main():
 
 	get_sentiment(None)
 	articles = Article.objects.all()
-	count = 0
-	for art in articles: 
-		if len(art.text) >0:
-			print art.id, art.headline,art.word_count, art.sentiment_score
-			count += 1
-		if count >2:
-			break
 
 if __name__ == "__main__":
     main()
 
+######################## correlation function ###############################
 def get_article_sentiment(article):
 	headline = article.headline.encode('utf-8')
 	text = headline + " " + article.text.encode('utf-8')
-	if len(text) > 0:
-		return calc_sent(text)
+	return calc_sent(text)
