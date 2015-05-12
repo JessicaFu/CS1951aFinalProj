@@ -131,5 +131,49 @@ def search(query):
 			tf_idf = get_tf_idf(art, words)
 			ranking.append((art, tf_idf))
 	
-	ranking = sorted(ranking,key=lambda x: x[1])
-			
+	ranking = sorted(ranking,key=lambda x: x[1], reverse=True)
+	return ranking
+
+########################correlation functions###########################
+
+def top_words(article, percent):
+	ranked_words = []
+
+	keywords = Keyword.objects.filter(article__id=id)
+	text = ""
+	for key in keywords:
+		text += key.word+ " "
+	words = get_words(text)
+	for word in words:
+		tf_idf = get_tf_idf(article, [word])
+		ranked_words.append((word, tf_idf))
+
+	text = article.headline.encode('utf-8')
+	words = get_words(text)
+	for word in words:
+		tf_idf = get_tf_idf(article, [word])
+		ranked_words.append((word, tf_idf))
+
+	text = article.text.encode('utf-8')
+	words = get_words(text)
+	for word in words:
+		tf_idf = get_tf_idf(article, [word])
+		ranked_words.append((word, tf_idf))
+
+
+	ranked_words = sorted(top_words,key=lambda x: x[1], reverse = True)
+
+	top = int(len(sorted_list) * percent)
+	terms = []
+	for i in range(0, top):
+		word, weight = sorted_list[i]
+		terms.append(word)
+	
+	return terms
+
+
+
+
+
+
+

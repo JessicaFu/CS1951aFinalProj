@@ -53,115 +53,45 @@ def jaccard_similarity(n_common, n1, n2):
 	
 ###################################################################################################
 
-##### Find TF.IDF ############################################################################
-
-def get_tf_idf(id, word):
-	total_terms = word_count[id]
-	weight = 0
-
-	t_count = 0
-	d_count = 0
-	if word in inverted_index:
-		d_count = len(inverted_index[word])
-		if id in inverted_index[word]:
-			t_count = inverted_index[word][id]
-	else:
-		print word, id
-	tf = t_count/total_terms
-	idf = math.log(total_num_docs/d_count) 
-
-	return tf*idf
-
-def get_words(text):	
-	words = text.split()
-	proc_words = []
-	for word in words:
-		word = ''.join(ch for ch in word if ch.isalnum())
-		word = word.lower()
-		if not word in stop_words:
-			word = porter_stemmer.PorterStemmer().stem(word, 0,len(word)-1)
-			if len(word) > 0 and word != "\n" and word != "\r":
-				proc_words.append(word)
-	return proc_words
+def get_corr_list(article_x):
 	
-def get_list_tf_idf(article):
-	id = article.id
-	dict = {}
-
-	keywords = Keyword.objects.filter(article__id=id)
-	text = ""
-	for key in keywords:
-		text += key.word+ " "
-	words = get_words(text)
-	for word in words:
-		tf_idf = get_tf_idf(id, word)
-		dict[word] = tf_idf
-
-	text = article.headline.encode('utf-8')
-	words = get_words(text)
-	for word in words:
-		tf_idf = get_tf_idf(id, word)
-		dict[word] = tf_idf
-
-	text = article.text.encode('utf-8')
-	words = get_words(text)
-	for word in words:
-		tf_idf = get_tf_idf(id, word)
-		dict[word] = tf_idf
-	
-	
-	
-	sorted_list = sorted(dict.items(), key=operator.itemgetter(1), reverse = True)
-	#top 20% tf.idf
-	top = int(len(sorted_list) * 0.2)
-	terms = []
-	for i in range(0, top):
-		word, weight = sorted_list[i]
-		terms.append(word)
-	
-	return terms
-
-def get_corr_list(art_comp):
-	
-	terms_comp = Set(get_list_tf_idf(art_comp))
+	terms_x = Set(create_index.top_words(article_x, 0.2))
 
 	corr_list = []
 	articles = Article.objects.all()
 	for art in articles: 
 		if len(art.text) > 0:
-			art_terms = Set(get_list_tf_idf(art))
-			terms_union = terms_comp | art_terms
+			terms_y = Set(create_index.top_words(art, 0.2))
+			terms_union = terms_x | terms_y
 		
 			v_x = [] #this is the vector of art_comp
 			v_y = [] #vector for comparison article
 			for word in terms_union: # [boolean words vector, sentiment*0.2]
-				if word in terms_comp:
+				if word in terms_x:
 					v_x.append(1)
 				else:
 					v_x.append(0)
 			
-				if word in art_terms:
+				if word in terms_y:
 					v_y.append(1)
 				else:
 					v_y.append(0)
 		
-			sent_x = get_sentiment.get_art_sent(art_comp)
+			sent_x = get_sentiment.get_article_sentiment(article_x)
 			if sent_x != None:
 				v_x.append(sent_x*0.5)
 			else:
 				v_x.append(0)
 		
-			sent_y = get_sentiment.get_art_sent(art)
+			sent_y = get_sentiment.get_article_sentiment(art)
 			if sent_y != None:
 				v_y.append(sent_x*0.5)
 			else:
 				v_y.append(0)
-			
-			#TODO add in news sources as well in vector
 		
 			n = len(v_x)
 			sum_x, sum_y, sum_xx, sum_xy, sum_yy = 0,0,0,0,0
-			for i in range(0, len(v_x)):
+			for i in range(0, n):
 				sum_x += v_x[i]
 				sum_y += v_y[i]
 				sum_xx += v_x[i]*v_x[i]
@@ -175,27 +105,13 @@ def get_corr_list(art_comp):
 	return corr_list
 		
 def main():
-	print "starting"
+	article_x = Article.objects.get(id=22302) 
 
-	global inverted_index 
-	global sentiment_scores
-	global total_num_docs
-	sentiment_scores = get_sentiment.main()
-	global word_count
-	inverted_index, word_count, total_num_docs = create_index.main()
+	corr_list = get_corr_list(article_x)
 
-	global stop_words
-	stop_words = stopwords.words('english')
-	
-	print "actual start"
-	art_comp = Article.objects.get(id=22302) 
-
-	print art_comp, art_comp.id, art_comp.headline.encode('utf-8')
-
-	corr_list = get_corr_list(art_comp)
-	corr_list_sorted = sorted(corr_list,key=lambda x: x[2], reverse = True)
+	corr_list = sorted(corr_list,key=lambda x: x[2], reverse = True)
 	for i in range(0, 10):
-		print corr_list_sorted[i]
+		print corr_list[i]
 	
 if __name__ == "__main__":
     main()

@@ -75,3 +75,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def get_article_sentiment(article):
+	headline = article.headline.encode('utf-8')
+	text = headline + " " + article.text.encode('utf-8')
+	if len(text) > 0:
+		return calc_sent(text)

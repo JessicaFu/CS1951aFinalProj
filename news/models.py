@@ -49,8 +49,7 @@ class RedditKeyword(models.Model):
 class PosIndex(models.Model):
     word = models.CharField(max_length=64)
     article = models.ForeignKey(Article)
-    position_list= models.IntegerField()
-    weight = models.IntegerField()
+    count= models.IntegerField()
 
 class LastUpdate(models.Model):
     value = models.IntegerField()
