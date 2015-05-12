@@ -21,6 +21,8 @@ def get_sentiment_list():
 	return sentiment_scores
 
 def get_words(text):	
+	exclude = set(string.punctuation)
+	stop_words = stopwords.words('english')
 	words = text.split()
 	proc_words = []
 	for word in words:
@@ -38,61 +40,38 @@ def calc_sent(text):
 			sent += sentiment_scores[word]
 	return sent
 
-def get_art_sent(art):
-	id = art.id
-	name = art.headline.encode('utf-8')
-	text = name + " " + art.text.encode('utf-8')
-	if len(text) > 0:
-		return calc_sent(text)
-	
-	return None
-	
-def gen_sent():
-	articles = Article.objects.all()
-
-	count = 0 #TESTING 
-	for art in articles:
-		id = art.id
-		name = art.headline.encode('utf-8')
-		text = name + " " + art.text.encode('utf-8')
-		if len(text) > 0:
-			sentiments.append((id, name, calc_sent(text)))
-			
-def main():
-	global exclude 
-	exclude = set(string.punctuation)
-	global stop_words
-	stop_words = stopwords.words('english')
-
+def get_sentiment(article):
 	global sentiment_scores
-	sentiment_scores = {}
-	global sentiments
-	sentiments = []
+	sentiment_scores = get_sentiment_list()
 
-	get_sentiment_list()
-	gen_sent()
-	scores = sorted(sentiments,key=lambda x: x[2], reverse = True)
-	with open('sentiment.csv', 'w') as csvfile:
-		csv_writer = csv.writer(csvfile)
-		for score in scores:
-			csv_writer.writerow([score])
+	if article == None:
+		articles = Article.objects.all()
+
+		for art in articles: 
+			if len(art.text) >0:
+				headline = art.headline.encode('utf-8')
+				text = headline + " " + art.text.encode('utf-8')
+				if len(text) > 0:
+					art.sentiment_score = calc_sent(text)
+					art.save()
+	else:
+		headline = article.headline.encode('utf-8')
+		text = headline + " " + article.text.encode('utf-8')
+		if len(text) > 0:
+			art.sentiment_score = calc_sent(text)
+			art.save()
+
+def main():
+
+	get_sentiment(None)
+	articles = Article.objects.all()
+	count = 0
+	for art in articles: 
+		if len(art.text) >0:
+			print art.id, art.headline,art.word_count, art.sentiment_score
+			count += 1
+		if count >2:
+			break
 
 if __name__ == "__main__":
     main()
-
-#public method for single article sentiment generation
-def sent_from_json(art_json):
-	global exclude 
-	exclude = set(string.punctuation)
-	global stop_words
-	stop_words = stopwords.words('english')
-
-	name = art_json.headline.encode('utf-8')
-	text = name + " " + art_json.text.encode('utf-8')
-	if len(text) > 0:
-		return calc_sent(text)
-
-	return 0
-#newIndex.save()
-#article.count = 1
-#article.save()

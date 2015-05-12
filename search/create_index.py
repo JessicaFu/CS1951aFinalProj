@@ -15,41 +15,9 @@ import porter_stemmer
 import math
 from nltk.corpus import stopwords
 
-
-def get_tf_idf(id, words):
-	total_terms = word_count[id]
-	weight = 0
-
-	for word in words:
-		t_count = 0
-		d_count = 0
-		
-		if word in inverted_index:
-			d_count = len(inverted_index[word])
-			if id in inverted_index[word]:
-				t_count = inverted_index[word][id]
-
-		tf = t_count/total_terms
-		
-		idf = math.log(total_num_docs/d_count) 
-
-		weight += tf*idf
-
-	return weight
-
-def search(text):
-	words = get_words(text)
-	
-	articles = Article.objects.all()
-	for art in articles: 
-		if len(art.text) >0:
-			id = art.id
-			name = art.headline.encode('utf-8')
-			idf = get_tf_idf(id, words)
-			weights.append((id, name, idf, art.text))
-			
-	
+######################### create index #########################################
 def get_words(text):	
+	exclude = set(string.punctuation)
 	words = text.split()
 	proc_words = []
 	for word in words:
@@ -62,27 +30,19 @@ def get_words(text):
 	return proc_words
 
 def add_to_table(word, article, weight):
-	row = PosIndex.objects.filter(word = word, article = article, weight = weight)
+	row = PosIndex.objects.filter(word = word, article = article)
 	if row != None:
-		PosIndex(word = word, article = article, count = 1, weight = weight)	
+		newRow = PosIndex(word = word, article = article, count = weight)
+		newRow.save()
 	else:
-		row.count += row.count
-		row.save
+		row.count += weight
+		row.save()
 
 
 def add_to_index(article):
-	#TODO need to be able to quantify date metadata
-	global inverted_index 
-	inverted_index = {}
-	global exclude 
-	exclude = set(string.punctuation)
-	global word_count
-	word_count = {}
-
-
 	total_count = 0
 	id = article.id
-	text = article.headline.encode('utf-8')
+	text = article.headline.encode('utf-8') + article.date.strftime("%B %d")
 	words = get_words(text)
 	total_count += len(words)
 	for word in words:
@@ -107,28 +67,27 @@ def add_to_index(article):
 	article.word_count = total_count
 	article.save()
 
-def get_index():
-	articles = Article.objects.all()
-	count = 0
+def get_index(article):
+	if article == None:
+		articles = Article.objects.all()
 
-	for art in articles: 
-		if len(art.text) >0:
-			add_to_index(art)
-			count+=1
-		if count >2:
-			break
-	
-
+		for art in articles: 
+			if len(art.text) >0:
+				add_to_index(art)
+	else:
+		add_to_index(article)
 
 def main():
-	#TODO fix duplicate article entries
-	get_index();
+	PosIndex.objects.all().delete()
+	print PosIndex.objects.count()
+
+	get_index(None);
 
 	articles = Article.objects.all()
 	count = 0
 	for art in articles: 
 		if len(art.text) >0:
-			print art.id, art.headline, art.text, art.word_count, art.sentiment_score
+			print art.id, art.headline,art.word_count, art.sentiment_score
 			count += 1
 		if count >2:
 			break
@@ -137,3 +96,40 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+##########################search functions #################################
+def get_tf_idf(article, words):
+	total_terms = article.word_count
+	total_num_docs = Article.objects.count()
+	score = 0
+
+	for word in words:
+		t_count = 0
+		d_count = 0
+		
+		rows = PosIndex.objects.filter(word = word)
+
+		for row in rows:
+			d_count += 1
+			if row.article == article:
+				t_count = row.count
+
+		tf = t_count/total_terms
+		
+		idf = math.log(total_num_docs/d_count) 
+
+		score += tf*idf
+
+	return score
+
+def search(query):
+	words = get_words(query)
+	ranking = []
+	articles = Article.objects.all()
+	for art in articles: 
+		if len(art.text) >0:
+			tf_idf = get_tf_idf(art, words)
+			ranking.append((art, tf_idf))
+	
+	ranking = sorted(ranking,key=lambda x: x[1])
+			
