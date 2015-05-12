@@ -71,13 +71,9 @@ def get_index(article):
 	if article == None:
 		articles = Article.objects.all()
 		
-		temp = 1229
-		count = 0
 		for art in articles: 
-			print count
-			if len(art.text)>0 and count >= 1960 :
+			if len(art.text)>0:
 				add_to_index(art)
-			count +=1
 			
 	else:
 		add_to_index(article)
@@ -93,7 +89,7 @@ def get_tf_idf(article, words):
 		d_count = 0
 		
 		rows = PosIndex.objects.filter(word = word)
-
+		print word, rows
 		if rows != None:
 			for row in rows:
 				d_count += 1
@@ -127,7 +123,7 @@ def search(query):
 
 def top_words(article, percent):
 	ranked_words = []
-
+	
 	keywords = Keyword.objects.filter(article__id=article.id)
 	text = ""
 	for key in keywords:
@@ -136,7 +132,6 @@ def top_words(article, percent):
 	for word in words:
 		tf_idf = get_tf_idf(article, [word])
 		ranked_words.append((word, tf_idf))
-
 	text = article.headline.encode('utf-8')
 	words = get_words(text)
 	for word in words:
@@ -148,7 +143,6 @@ def top_words(article, percent):
 	for word in words:
 		tf_idf = get_tf_idf(article, [word])
 		ranked_words.append((word, tf_idf))	
-
 
 	ranked_words = sorted(top_words,key=lambda x: x[1], reverse = True)
 
@@ -162,7 +156,7 @@ def top_words(article, percent):
 
 ##############################main function###############################
 def main():
-
+	
 	print PosIndex.objects.count()
 
 	get_index(None);
@@ -180,6 +174,7 @@ def main():
 	ranking = search(query)
 	for rank in ranking:
 		print ranking[1], ranking[0].headline
+	
 
 if __name__ == "__main__":
     main()

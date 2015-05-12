@@ -76,7 +76,7 @@ def get_sentiment(article):
 def main():
 
 	get_sentiment(None)
-	articles = Article.objects.all()
+
 
 if __name__ == "__main__":
     main()

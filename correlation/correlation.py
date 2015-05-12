@@ -54,12 +54,16 @@ def jaccard_similarity(n_common, n1, n2):
 ###################################################################################################
 
 def get_corr_list(article_x):
-	
 	terms_x = Set(create_index.top_words(article_x, 0.2))
 
 	corr_list = []
 	articles = Article.objects.all()
+	count = 0
 	for art in articles: 
+		print count
+		if count > 5:
+			break;
+		count +=1
 		if len(art.text) > 0:
 			terms_y = Set(create_index.top_words(art, 0.2))
 			terms_union = terms_x | terms_y
@@ -103,9 +107,18 @@ def get_corr_list(article_x):
 			corr_list.append((art.id, art.headline.encode('utf-8'), corr_val))
 	
 	return corr_list
-		
+
+def get_related_articles(article):
+	corr_list = get_corr_list(article)
+
+	corr_list = sorted(corr_list,key=lambda x: x[2], reverse = True)
+	temp = []
+	for i in range(0, 50):
+		temp.append(corr_list[i][0])
+	return temp
+
 def main():
-	article_x = Article.objects.get(id=22302) 
+	article_x = Article.objects.get(id=11) 
 
 	corr_list = get_corr_list(article_x)
 
