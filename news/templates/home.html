@@ -160,11 +160,10 @@ function visual(keyword, start, end) {
 function showArticles(arts) {
     d3.select("#searchResults").html("");
 
-        $("#searchResults").append("<table class=\"table-striped\"><tr><th>Source</th><th>Article</th></tr>");
+        $("#searchResults").append("<table class=\"table-striped\" cellpadding=\"5\"><tr><th>Source</th><th>Article</th></tr>");
         for (var i = 0; i < arts.length; i++) {
-            $("#searchResults").append("<tr><td>" + arts[i]["source"] + "</td><td><a href=\"" + arts[i]["url"] +"\" target=\"_blank\">" + arts[i]["headline"] +"</a></td></tr>");
+            $(".table-striped").append("<tr><td>" + arts[i]["source"] + "</td><td><a href=\"" + arts[i]["url"] +"\" target=\"_blank\">" + arts[i]["headline"] +"</a></td></tr>");
         }
-        $("#searchResults").append("</table>");
 }
 
 function startVisual(path, start, end){
