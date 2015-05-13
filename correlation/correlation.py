@@ -113,7 +113,7 @@ def get_related_articles(article):
 
 	corr_list = sorted(corr_list,key=lambda x: x[2], reverse = True)
 	temp = []
-	for i in range(0, 50):
+	for i in xrange(1):
 		temp.append(corr_list[i][0])
 	return temp
 

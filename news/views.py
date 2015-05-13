@@ -8,6 +8,13 @@ import datetime
 import csv
 import numpy as np
 
+import sys
+sys.path.append('search/')
+sys.path.append('correlation/')
+
+import create_index as index
+import correlation as recommend
+
 from models import *
 # Create your views here.
 
@@ -39,27 +46,16 @@ def unix_time(dt):
     delta = dt - epoch
     return delta.total_seconds()
 
-def article_click(request, article_id=None):
-    if not article_id:
-        raise Http404('article_click could not be registered due to no article id')
-
-    searches = json.loads(request.session['clicks'])
-    searches.append(article_id)
-    request.session['clicks'] = json.dumps(searches)
-
 def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
     if not (request and begin_date and end_date):
         raise Http404('endpoint not properly formatted')
-
-    #session data
-    searches = json.loads(request.session['search'])
-    searches.append([keywords.split()])
-    request.session['search'] = json.dumps(searches)
 
     time_convert_str = "%Y%m%d"
     begin_date = datetime.datetime.strptime(begin_date, time_convert_str)
     end_date = datetime.datetime.strptime(end_date, time_convert_str)
 
+    #using original NLP keywords index since search index took too much time
+    #articles = index.search(keywords, begin_date, end_date)
     articles = set()
     for keyword in keywords.split():
         art_set = Article.objects.filter(keyword__word=keyword,
@@ -69,6 +65,7 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
             articles.add(art)
 
     if type == "tsv":
+        #no longer used, skip down to else clause for json that is returned   
         response = HttpResponse(content_type='text/tsv')
         response['Content-Disposition'] = 'attachment; filename="linedata.tsv"'
 
@@ -87,16 +84,18 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
         arts = [{'headline' : article.headline,
                      'url' : article.url,
                      'date' : article.date.strftime(time_convert_str),
-                     'source' : article.source.name} for article in articles]
+                     'source' : article.source.name,
+                } for article in articles]
         dates = [unix_time_millis(article.date) for article in articles]
         date_mean = np.mean(dates)
         date_dev = np.std(dates)
 
+        #gets the names of the sources
         sources = Source.objects.all()
 
         string_mean = datetime.datetime.utcfromtimestamp(date_mean).strftime("%c")
-        means = []
-        means.append(("general", date_mean, date_dev, string_mean))
+        means = {}
+        means["general"] =(date_mean, date_dev, string_mean)
 
         for src in [srcc.name for srcc in sources]: 
             dates = [unix_time_millis(article.date) for article in articles if article.source.name == src]
@@ -104,7 +103,7 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
                 date_mean = np.mean(dates)
                 date_dev = np.std(dates)
                 string_mean = datetime.datetime.utcfromtimestamp(date_mean).strftime("%c")
-                means.append((src, date_mean, date_dev, string_mean))
+                means[src] = ( date_mean, date_dev, string_mean)
             
         
         d3_data = defaultdict(lambda: {src.name : 0 for src in sources})
@@ -122,6 +121,7 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
             d3_data_list.append(value)
 
         d3_data_list.sort(key=lambda x: x['date'])
+        arts.sort(key=lambda x: x['date'])
 
         res_dict = {
             'sources' : [src.name for src in sources],
@@ -133,6 +133,3 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
         response = JsonResponse(res_dict)
         return response
 
-def heat_map(request):
-    context = RequestContext(request, {})
-    return render(request, 'heat_map.html', context)

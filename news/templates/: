@@ -9,7 +9,11 @@ path {
   fill: #fff7bc;
 }
 #checkboxes {
+  position: relative;
+  top: 0px;
+  left: 800px;
   border: 0.5px black solid;
+  display:inline;
 }
 
 h1 {
@@ -18,18 +22,14 @@ h1 {
 }
 
 .map {
-  width: 920px;
+  width: 900px;
   height: 960px;
-margin-left:-50px;
   border-style: solid;
 border-width: 40px 56px 40px 55px;
 -moz-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
 -webkit-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
 -o-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
 border-image: url(/static/scroll.png) 40 56 40 55 fill stretch;
-}
-.mr {
-    margin-right:10px;
 }
 
 </style>
@@ -101,37 +101,21 @@ border-image: url(/static/scroll.png) 40 56 40 55 fill stretch;
   <h1>Global Distribution of News</h1>
   <div id='checkboxes'>
     <h3> News Sources </h3>
-    <form action="" class="form-inline">
-    <div class="form-group mr">
-        <input id='Huffington Post' type="checkbox" onclick="updateOpacity(this)" color='rgb(141,160,203)'>Huffington Post<br></div>
-    <div class="form-group mr">
+    <form action="">
+        <input id='Huffington Post' type="checkbox" onclick="updateOpacity(this)" color='rgb(141,160,203)'>Huffington Post<br>
         <input id='Al Jazeera' type="checkbox" onclick="updateOpacity(this)">Al Jazeera<br>
-    </div>
-    <div class="form-group mr">
         <input id='BBC' type="checkbox" onclick="updateOpacity(this)">BBC<br>
-    </div>
-    <div class="form-group mr">
         <input id='The Chronicle' type="checkbox" onclick="updateOpacity(this)">The Chronicle<br>
-    </div>
-    <div class="form-group mr">
         <input id='CNN' type="checkbox" onclick="updateOpacity(this)">CNN<br>
-    </div>
-    <div class="form-group mr">
         <input id='Herald Sun' type="checkbox" onclick="updateOpacity(this)">Herald Sun<br>
-    </div>
-    <div class="form-group mr">
         <input id='The Onion' type="checkbox" onclick="updateOpacity(this)">The Onion<br>
-    </div>
-    <div class="form-group mr">
         <input id='The Washington Post' type="checkbox" onclick="updateOpacity(this)">The Washington Post<br>
-    </div>
     </form>
   </div>
 </div>
 
 <div id="about">
-<h1>About</h1>
-<iframe src="https://docs.google.com/document/d/1vvkXcyoNCOXZWNJuhF15YgV4yoPuCIGN5d81BbVCF1Q/pub?embedded=true" width="800px" height="600px"></iframe>
+<iframe src="https://docs.google.com/document/d/1vvkXcyoNCOXZWNJuhF15YgV4yoPuCIGN5d81BbVCF1Q/pub?embedded=true"></iframe>
 
 </div>
 
@@ -160,11 +144,33 @@ function visual(keyword, start, end) {
 function showArticles(arts) {
     d3.select("#searchResults").html("");
 
-        $("#searchResults").append("<table class=\"table-striped\"><tr><th>Source</th><th>Article</th></tr>");
+        $("#searchResults").append("<table class=\"table-striped\"><tr><th>Rank</th><th>Source</th><th>Article</th></tr>");
         for (var i = 0; i < arts.length; i++) {
-            $("#searchResults").append("<tr><td>" + arts[i]["source"] + "</td><td><a href=\"" + arts[i]["url"] +"\" target=\"_blank\">" + arts[i]["headline"] +"</a></td></tr>");
+            $("#searchResults").append("<tr><td>" + (i+1) + "</td><td>" + arts[i]["source"] + "</td><td><a href=\"" + arts[i]["url"] +"\" target=\"_blank\">" + arts[i]["headline"] +"</a></td></tr>");
         }
         $("#searchResults").append("</table>");
+}
+
+function recommend(url) {
+    //define path
+    //get
+    var path=""
+    d3.select("#recommend").html("")
+
+    d3.json(path, function(error, data) {
+        if (error) {
+            $("#recommend").html("Problem getting recommendations.");
+            return console.warn(error);
+        }
+
+        var arts = data["articles"];
+
+        $("#recommend").append("<table class=\"table-striped\"><tbody><tr><th>Rank</th><th>Source</th><th>Article</th></tr>")
+        for (var i = 0; i < arts.length; i++) {
+            $("#recommend").append("<tr><td>" + (i+1) + "</td><td>" + arts[i]["source"] + "</td><td><a href=\"" + arts[i]["url"] +"\" target=\"_blank\">" + arts[i]["headline"] +"</a></td></tr>");
+        }
+        $("#recommend").append("</tbody></table>")
+    });
 }
 
 function startVisual(path, start, end){
@@ -327,7 +333,7 @@ function updateOpacity(box) {
 
 var width = 800,
     height = 500;
-height = 860;
+height = 960;
 
 var colors = {
   'Huffington Post': 'rgb(141,160,203)',

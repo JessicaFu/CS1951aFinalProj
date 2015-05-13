@@ -71,11 +71,11 @@ def get_index(article):
 	if article == None:
 		articles = Article.objects.all()
 		
-		temp = 1229
+		
 		count = 0
 		for art in articles: 
 			print count
-			if len(art.text)>0 and count >= 1960 :
+			if len(art.text)>0 and count >= 2127:
 				add_to_index(art)
 			count +=1
 			
@@ -90,16 +90,12 @@ def get_tf_idf(article, words):
 
 	for word in words:
 		t_count = 0
-		d_count = 0
 		
 		rows = PosIndex.objects.filter(word = word)
+		d_count = rows.count()
+                t_count = rows.filter(article=article).count()
 
-		if rows != None:
-			for row in rows:
-				d_count += 1
-				if row.article == article:
-					t_count = row.count
-
+		if rows:
 			tf = t_count/total_terms
 		
 			idf = math.log(total_num_docs/d_count) 
@@ -108,10 +104,14 @@ def get_tf_idf(article, words):
 
 	return score
 
-def search(query):
+def search(query, begin_date, end_date):
 	words = get_words(query)
 	ranking = []
-	articles = Article.objects.all()
+        print words
+	articles = Article.objects.filter(
+            posindex__word=words[0],
+            date__gte=begin_date,
+            date__lte=end_date)
 	for art in articles: 
 		if len(art.text) >0:
 			tf_idf = get_tf_idf(art, words)
@@ -119,8 +119,11 @@ def search(query):
 	
 	ranking = sorted(ranking,key=lambda x: x[1], reverse=True)
 	temp = []
-	for i in range(0, 50):
-		temp.append(ranking[i][0])
+	for art, tf_idf in ranking:
+            if tf_idf > .1:
+	        temp.append(art)
+            else:
+                break
 	return temp
 
 ########################correlation functions###########################
@@ -163,21 +166,22 @@ def top_words(article, percent):
 ##############################main function###############################
 def main():
 
-	print PosIndex.objects.count()
+	#print PosIndex.objects.count()
 
-	get_index(None);
+	#get_index(None);
 
-	articles = Article.objects.all()
-	count = 0
-	for art in articles:
-		if count > 10:
-			break
-		if len(art.text) >0:
-			print art.id, art.headline,art.word_count, art.sentiment_score
-		count += 1
+#	articles = Article.objects.all()
+#	count = 0
+#	for art in articles:
+#		if count > 10:
+#			break
+#		if len(art.text) >0:
+#			print art.id, art.headline,art.word_count, art.sentiment_score
+#		count += 1
 
-	query = "napal survivors"
-	ranking = search(query)
+	query = "nepal survivors"
+	ranking = search(query, datetime.datetime.strptime('20150418','%Y%m%d'), 
+            datetime.datetime.now())
 	for rank in ranking:
 		print ranking[1], ranking[0].headline
 

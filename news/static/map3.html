@@ -1,7 +1,5 @@
-{% extends "base.html" %}
-
-{% block body_content %}
-<script src="http://d3js.org/topojson.v0.min.js"></script>
+<!DOCTYPE html>
+<meta charset="utf-8">
 <style>
 path {
   stroke: black;
@@ -9,6 +7,9 @@ path {
   fill: #fff7bc;
 }
 #checkboxes {
+  position: absolute;
+  top: 100px;
+  left: 1100px;
   border: 0.5px black solid;
 }
 
@@ -18,291 +19,35 @@ h1 {
 }
 
 .map {
-  width: 920px;
+  width: 960px;
   height: 960px;
-margin-left:-50px;
   border-style: solid;
 border-width: 40px 56px 40px 55px;
--moz-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
--webkit-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
--o-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
-border-image: url(/static/scroll.png) 40 56 40 55 fill stretch;
-}
-.mr {
-    margin-right:10px;
+-moz-border-image: url(scroll.png) 40 56 40 55 stretch;
+-webkit-border-image: url(scroll.png) 40 56 40 55 stretch;
+-o-border-image: url(scroll.png) 40 56 40 55 stretch;
+border-image: url(scroll.png) 40 56 40 55 fill stretch;
 }
 
 </style>
-<style>
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
-
-#default {
-    text-align:center;
-    line-height:500px;
-    font-size:20pt;
-    font-weight:bold;
-}
-
-#graph {
-    height:500px;
-}
-
-</style>
-
-<div id="inputForm" class="">
-<form id="searchForm" class="form-inline" style="margin:0 auto 10px auto; width:80%;display:block-inline;">
-    <div class="form-group" style="width:100%">
-  <label for="keyword" class="control-label">Keyword</label> 
-  <input type="text"  class="form-control input-lg" id="keyword" value="Nepal" placeholder="Nepal" style="width:100%" />
-</div>
-<div class="form-inline" style="margin:10px auto 0 auto;width:50%">
-    <div class="form-group" style="width:45%;margin-right:4%">
-    <label for="start" class="control-label">Begin Date</label>
-  <input type="text" class="form-control" id="start" placeholder="04/18/2015" value="04/18/2015" style=""/>
-</div>
-    <div class="form-group" style="width:45%;margin-left:4%;">
-    <label for="end" class="control-label">End Date</label>
-  <input type="text" class="form-control"  id="end" placeholder="05/10/2015" value="05/10/2015"/>
-</div>
-    <div style="width:30%;margin:20px auto 0 auto;">
-  <button id="sub"type="submit" class="btn btn-primary btn-lg" style="width:100%;border:1px solid black;">Go</button>
-</div>
-</div>
-</form>
-</div>
-
-<hr/>
-
-
-<div id="graph">
-    <div id="default">Please enter valid search terms and press Go!</div>
-</div>
-
-<div id="searchResults"></div>
-
-<div id="heatmap">
-
+<body>
   <h1>Global Distribution of News</h1>
   <div id='checkboxes'>
     <h3> News Sources </h3>
-    <form action="" class="form-inline">
-    <div class="form-group mr">
-        <input id='Huffington Post' type="checkbox" onclick="updateOpacity(this)" color='rgb(141,160,203)'>Huffington Post<br></div>
-    <div class="form-group mr">
+    <form action="">
+        <input id='Huffington Post' type="checkbox" onclick="updateOpacity(this)" color='rgb(141,160,203)'>Huffington Post<br>
         <input id='Al Jazeera' type="checkbox" onclick="updateOpacity(this)">Al Jazeera<br>
-    </div>
-    <div class="form-group mr">
         <input id='BBC' type="checkbox" onclick="updateOpacity(this)">BBC<br>
-    </div>
-    <div class="form-group mr">
         <input id='The Chronicle' type="checkbox" onclick="updateOpacity(this)">The Chronicle<br>
-    </div>
-    <div class="form-group mr">
         <input id='CNN' type="checkbox" onclick="updateOpacity(this)">CNN<br>
-    </div>
-    <div class="form-group mr">
         <input id='Herald Sun' type="checkbox" onclick="updateOpacity(this)">Herald Sun<br>
-    </div>
-    <div class="form-group mr">
         <input id='The Onion' type="checkbox" onclick="updateOpacity(this)">The Onion<br>
-    </div>
-    <div class="form-group mr">
         <input id='The Washington Post' type="checkbox" onclick="updateOpacity(this)">The Washington Post<br>
-    </div>
     </form>
   </div>
-</div>
-
-<div id="about">
-<h1>About</h1>
-<iframe src="https://docs.google.com/document/d/1vvkXcyoNCOXZWNJuhF15YgV4yoPuCIGN5d81BbVCF1Q/pub?embedded=true" width="800px" height="600px"></iframe>
-
-</div>
-
-
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
 <script>
-
-$("#searchForm").submit(function(event) {
-    var start = $('#start').val().split("/")
-    start = new Array(start[2], start[0], start[1]).join("");
-    var end = $('#end').val().split("/")
-    end = new Array(end[2], end[0], end[1]).join("");
-  event.preventDefault();
-  visual($('#keyword').val(),start , end);
-});
-
-
-function visual(keyword, start, end) {
-	
-
-	url = "http://52.5.82.206/timeline/" + keyword + "/" + start + "/" + end
-	
-
-	startVisual(url, parseInt(start), parseInt(end));
-}
-
-function showArticles(arts) {
-    d3.select("#searchResults").html("");
-
-        $("#searchResults").append("<table class=\"table-striped\"><tr><th>Source</th><th>Article</th></tr>");
-        for (var i = 0; i < arts.length; i++) {
-            $("#searchResults").append("<tr><td>" + arts[i]["source"] + "</td><td><a href=\"" + arts[i]["url"] +"\" target=\"_blank\">" + arts[i]["headline"] +"</a></td></tr>");
-        }
-        $("#searchResults").append("</table>");
-}
-
-function startVisual(path, start, end){
-
-      d3.select("#graph").select("svg").remove();
-
-      var margin = {top: 100, right: 80, bottom: 30, left: 50},
-          width = 800 - margin.left - margin.right,
-          height = 500 - margin.top - margin.bottom;
-
-      var parseDate = d3.time.format("%Y%m%d").parse;
-
-      var x = d3.time.scale()
-          .range([0, width]);
-
-      var y = d3.scale.linear()
-          .range([height, 0]);
-
-      var color = d3.scale.category10();
-
-      var xAxis = d3.svg.axis()
-          .scale(x)
-          .orient("bottom");
-
-      var yAxis = d3.svg.axis()
-          .scale(y)
-          .orient("left");
-
-      var line = d3.svg.line()
-          .interpolate("linear")
-          .x(function(d) { return x(d.date); })
-          .y(function(d) { return y(d.count); });
-
-      var svg = d3.select("#graph").append("svg")
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-      d3.json(path, function(error, rData) {
-        if(error) {
-            $(".form-group").addClass("has-error");
-            $("#default").css("display","inherit");
-            $("#searchResults").html("");
-            return console.warn(error);
-        } else {
-            $(".form-group").removeClass("has-error");
-            $("#default").css("display","none");
-            console.log($("#default").css("display"));
-        }
-        var means = rData["means"];
-      	var data = rData["d3"];
-        showArticles(rData["articles"]);
-        console.log(means);
-      	
-        color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
-
-        data.forEach(function(d) {
-          d.date = parseDate(d.date);
-        });
-
-        var cities = color.domain().map(function(name) {
-          return {
-            name: name,
-            values: data.map(function(d) {
-              console.log("before temperature");
-              console.log(name);
-              console.log(d[name]);
-              return {date: d.date, count: +d[name]};
-            })
-          };
-        });
-
-        x.domain(d3.extent(data, function(d) { return d.date; }));
-
-        y.domain([
-          d3.min(cities, function(c) { return d3.min(c.values, function(v) { return v.count; }); }),
-          d3.max(cities, function(c) { return d3.max(c.values, function(v) { return v.count; }); })
-        ]);
-
-        svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
-
-        svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-          .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("Occurrances");
-
-        var city = svg.selectAll(".city")
-            .data(cities)
-          .enter().append("g")
-            .attr("class", "city");
-
-        city.append("path")
-            .attr("class", "line")
-            .attr("d", function(d) { 
-              console.log("d.values is next:");
-              console.log(d.values);
-              return line(d.values); })
-            .style("stroke", function(d) { return color(d.name); });
-
-        var tooltip = d3.select("#graph")
-                        .append("div")
-                        .style("position", "absolute")
-                        .style("z-index", "10")
-                        .style("visibility", "hidden")
-                        .style("background-color", "#fff")
-                        .style("border", "1px solid black")
-                        .style("padding", "5px")
-                        .text("simple");
-
-        city.append("text")
-            .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-            .attr("transform", function(d, i) { return "translate(" + (x(d.value.date) - 55) + "," + (i * 20) + ")"; })
-            .attr("x", 3)
-            .attr("dy", ".35em")
-            .attr("font-size", "10pt")
-            .style("cursor", "default")
-            .text(function(d) { return d.name; })
-                .on("mouseover", function(d) {
-                    var curMean = means[d.name][2];
-                    return tooltip.text("Mean: " + curMean)
-                            .style("visibility","visible")
-                })
-                .on("mousemove", function() {return tooltip.style("top", (event.pageY-10) + "px")
-                                                            .style("left", (event.pageX+10) +"px");})
-                .on("mouseout",function(){return tooltip.style("visibility", "hidden");})
-            .style("stroke", function(d) { return color(d.name); });
-      });
-
-}
 
 function updateOpacity(box) {
   console.log(box.id);
@@ -325,9 +70,9 @@ function updateOpacity(box) {
        //        }
        // })
 
-var width = 800,
+var width = 960,
     height = 500;
-height = 860;
+height = 960;
 
 var colors = {
   'Huffington Post': 'rgb(141,160,203)',
@@ -487,7 +232,7 @@ var projection = d3.geo.mercator()
 //    .scale(200)
 //    .rotate([-180,0]);
 
-var svg = d3.select("#heatmap")
+var svg = d3.select("body")
     .append("div")
     .attr("class", "map")
     .append("svg")
@@ -500,10 +245,10 @@ var path = d3.geo.path()
 var g = svg.append("g");
 
 // load and display the World
-d3.json("/static/world-110m2.json", function(error, topology) {
+d3.json("world-110m2.json", function(error, topology) {
 
 //load and display the cities
-d3.csv("/static/map_data5.csv", function(error, data) {
+d3.csv("map_data5.csv", function(error, data) {
     g.selectAll("circle")
        .data(data)
        .enter()
@@ -577,5 +322,7 @@ var zoom = d3.behavior.zoom()
   });
 
 svg.call(zoom)
+
 </script>
-{% endblock body_content %}
+</body>
+</html>
