@@ -108,7 +108,7 @@ border-image: url(/static/scroll.png) 40 56 40 55 fill stretch;
         <input id='Al Jazeera' type="checkbox" onclick="updateOpacity(this)">Al Jazeera<br>
     </div>
     <div class="form-group mr">
-        <input id='BBC' type="checkbox" onclick="updateOpacity(this)">BBC<br>
+        <input id='BBC' type="checkbox" checked="checked" onclick="updateOpacity(this)">BBC<br>
     </div>
     <div class="form-group mr">
         <input id='The Chronicle' type="checkbox" onclick="updateOpacity(this)">The Chronicle<br>
@@ -137,7 +137,10 @@ border-image: url(/static/scroll.png) 40 56 40 55 fill stretch;
 
 
 <script>
-
+function onload(){
+console.log($("#BBC").get());
+updateOpacity($("#BBC").get(0));
+}
 $("#searchForm").submit(function(event) {
     var start = $('#start').val().split("/")
     start = new Array(start[2], start[0], start[1]).join("");
@@ -212,12 +215,10 @@ function startVisual(path, start, end){
         } else {
             $(".form-group").removeClass("has-error");
             $("#default").css("display","none");
-            console.log($("#default").css("display"));
         }
         var means = rData["means"];
       	var data = rData["d3"];
         showArticles(rData["articles"]);
-        console.log(means);
       	
         color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
@@ -229,9 +230,6 @@ function startVisual(path, start, end){
           return {
             name: name,
             values: data.map(function(d) {
-              console.log("before temperature");
-              console.log(name);
-              console.log(d[name]);
               return {date: d.date, count: +d[name]};
             })
           };
@@ -267,8 +265,6 @@ function startVisual(path, start, end){
         city.append("path")
             .attr("class", "line")
             .attr("d", function(d) { 
-              console.log("d.values is next:");
-              console.log(d.values);
               return line(d.values); })
             .style("stroke", function(d) { return color(d.name); });
 

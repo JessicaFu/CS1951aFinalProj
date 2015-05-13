@@ -20,13 +20,13 @@ h1 {
 
 .map {
   width: 960px;
-  height: 560px;
+  height: 960px;
   border-style: solid;
 border-width: 40px 56px 40px 55px;
--moz-border-image: url(scroll.png) 40 56 40 55 stretch;
--webkit-border-image: url(scroll.png) 40 56 40 55 stretch;
--o-border-image: url(scroll.png) 40 56 40 55 stretch;
-border-image: url(scroll.png) 40 56 40 55 fill stretch;
+-moz-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
+-webkit-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
+-o-border-image: url(/static/scroll.png) 40 56 40 55 stretch;
+border-image: url(/static/scroll.png) 40 56 40 55 fill stretch;
 }
 
 </style>
@@ -70,9 +70,9 @@ function updateOpacity(box) {
        //        }
        // })
 
-var width = 960,
+var width = 800,
     height = 500;
-height = 560;
+height = 960;
 
 var colors = {
   'Huffington Post': 'rgb(141,160,203)',
@@ -245,10 +245,10 @@ var path = d3.geo.path()
 var g = svg.append("g");
 
 // load and display the World
-d3.json("world-110m2.json", function(error, topology) {
+d3.json("/static/world-110m2.json", function(error, topology) {
 
 //load and display the cities
-d3.csv("map_data5.csv", function(error, data) {
+d3.csv("/static/map_data5.csv", function(error, data) {
     g.selectAll("circle")
        .data(data)
        .enter()
