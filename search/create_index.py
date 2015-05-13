@@ -15,82 +15,44 @@ import porter_stemmer
 import math
 from nltk.corpus import stopwords
 
-
-def get_tf_idf(id, words):
-	total_terms = word_count[id]
-	weight = 0
-
-	for word in words:
-		t_count = 0
-		d_count = 0
-		
-		if word in inverted_index:
-			d_count = len(inverted_index[word])
-			if id in inverted_index[word]:
-				t_count = inverted_index[word][id]
-
-		tf = t_count/total_terms
-		
-		idf = math.log(total_num_docs/d_count) 
-
-		weight += tf*idf
-
-	return weight
-
-def search(text):
-	words = get_words(text)
-	
-	articles = Article.objects.all()
-	for art in articles: 
-		if len(art.text) >0:
-			id = art.id
-			name = art.headline.encode('utf-8')
-			idf = get_tf_idf(id, words)
-			weights.append((id, name, idf, art.text))
-			
-	
+######################### create index #########################################
 def get_words(text):	
+	exclude = set(string.punctuation)
 	words = text.split()
 	proc_words = []
 	for word in words:
 		word = ''.join(ch for ch in word if ch not in exclude and ch.isalnum())
 		word = word.lower()
-		if not word in stop_words:
-			word = porter_stemmer.PorterStemmer().stem(word, 0,len(word)-1)
-			if len(word) > 0 and word != "\n" and word != "\r":
-				proc_words.append(word)
+		#if not word in stop_words:
+		word = porter_stemmer.PorterStemmer().stem(word, 0,len(word)-1)
+		if len(word) > 0 and word != "\n" and word != "\r":
+			proc_words.append(word)
 	return proc_words
 
-def put_in_index(word, id, weight):
-	#TODO put in positional index instead!
-
-	if not word in inverted_index:
-		inverted_index[word] = [];
-		inverted_index[word] = {id: weight}
-	elif not id in inverted_index[word]:
-		inverted_index[word][id] = weight
+def add_to_table(word, article, weight):
+	row = PosIndex.objects.filter(word = word, article = article)
+	if row != None:
+		newRow = PosIndex(word = word, article = article, count = weight)
+		newRow.save()
 	else:
-		inverted_index[word][id] = inverted_index[word][id] + weight
+		row.count += weight
+		row.save()
 
-def create_inverted_index(article):
-	id = article.id
 
-	#TODO need to be able to quantify date metadata
-	#TODO need to quantify keyword data
-
+def add_to_index(article):
 	total_count = 0
-
-	text = article.headline.encode('utf-8')
+	id = article.id
+	text = article.headline.encode('utf-8') + article.date.strftime("%B %d")
 	words = get_words(text)
 	total_count += len(words)
 	for word in words:
-		put_in_index(word, id, 8)
+		add_to_table(word, article, 2)
 
 	text = article.text.encode('utf-8') 
 	words = get_words(text)
 	total_count += len(words)
 	for word in words:
-		put_in_index(word, id, 1)
+		add_to_table(word, article, 1)
 	
 	keywords = Keyword.objects.filter(article__id=id)
 	text = ""
@@ -100,46 +62,132 @@ def create_inverted_index(article):
 	words = get_words(text)
 	total_count += len(words)
 	for word in words:
-		put_in_index(word, id, 8)
+		add_to_table(word, article, 5)
 
-	word_count[id] = total_count
+	article.word_count = total_count
+	article.save()
 
-def get_index():
+def get_index(article):
+	if article == None:
+		articles = Article.objects.all()
+		
+		temp = 1229
+		count = 0
+		for art in articles: 
+			print count
+			if len(art.text)>0 and count >= 1960 :
+				add_to_index(art)
+			count +=1
+			
+	else:
+		add_to_index(article)
+
+##########################search functions #################################
+def get_tf_idf(article, words):
+	total_terms = article.word_count
+	total_num_docs = Article.objects.count()
+	score = 0
+
+	for word in words:
+		t_count = 0
+		d_count = 0
+		
+		rows = PosIndex.objects.filter(word = word)
+
+		if rows != None:
+			for row in rows:
+				d_count += 1
+				if row.article == article:
+					t_count = row.count
+
+			tf = t_count/total_terms
+		
+			idf = math.log(total_num_docs/d_count) 
+
+			score += tf*idf
+
+	return score
+
+def search(query):
+	words = get_words(query)
+	ranking = []
 	articles = Article.objects.all()
-	global total_num_docs
-	total_num_docs = 0
-
 	for art in articles: 
 		if len(art.text) >0:
-			create_inverted_index(art)
-			total_num_docs +=1
+			tf_idf = get_tf_idf(art, words)
+			ranking.append((art, tf_idf))
+	
+	ranking = sorted(ranking,key=lambda x: x[1], reverse=True)
+	temp = []
+	for i in range(0, 50):
+		temp.append(ranking[i][0])
+	return temp
 
-	return inverted_index
+########################correlation functions###########################
 
-			
+def top_words(article, percent):
+	ranked_words = []
+
+	keywords = Keyword.objects.filter(article__id=article.id)
+	text = ""
+	for key in keywords:
+		text += key.word+ " "
+	words = get_words(text)
+	for word in words:
+		tf_idf = get_tf_idf(article, [word])
+		ranked_words.append((word, tf_idf))
+
+	text = article.headline.encode('utf-8')
+	words = get_words(text)
+	for word in words:
+		tf_idf = get_tf_idf(article, [word])
+		ranked_words.append((word, tf_idf))
+
+	text = article.text.encode('utf-8')
+	words = get_words(text)
+	for word in words:
+		tf_idf = get_tf_idf(article, [word])
+		ranked_words.append((word, tf_idf))	
+
+
+	ranked_words = sorted(top_words,key=lambda x: x[1], reverse = True)
+
+	top = int(len(sorted_list) * percent)
+	terms = []
+	for i in range(0, top):
+		word, weight = sorted_list[i]
+		terms.append(word)
+	
+	return terms
+
+##############################main function###############################
 def main():
-	global inverted_index 
-	inverted_index = {}
-	global exclude 
-	exclude = set(string.punctuation)
-	global word_count
-	word_count = {}
-	global stop_words
-	stop_words = stopwords.words('english')
-	global weights
-	weights = []
 
-	#TODO fix duplicate article entries
-	get_index();
-	text = "Nepal survivors"
-	search(text);
-	weights = sorted(weights,key=lambda x: x[2], reverse = True)
+	print PosIndex.objects.count()
 
-	with open('search_data.csv', 'w') as csvfile:
-		csv_writer = csv.writer(csvfile)
-		csv_writer.writerow([text])
-		for weight in weights:
-			csv_writer.writerow([weight])
+	get_index(None);
+
+	articles = Article.objects.all()
+	count = 0
+	for art in articles:
+		if count > 10:
+			break
+		if len(art.text) >0:
+			print art.id, art.headline,art.word_count, art.sentiment_score
+		count += 1
+
+	query = "napal survivors"
+	ranking = search(query)
+	for rank in ranking:
+		print ranking[1], ranking[0].headline
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+

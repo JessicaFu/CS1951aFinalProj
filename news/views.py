@@ -3,6 +3,7 @@ from django.template import RequestContext
 from django.http import Http404, HttpResponse, JsonResponse
 
 from collections import defaultdict
+import json
 import datetime
 import csv
 import numpy as np
@@ -38,10 +39,22 @@ def unix_time(dt):
     delta = dt - epoch
     return delta.total_seconds()
 
+def article_click(request, article_id=None):
+    if not article_id:
+        raise Http404('article_click could not be registered due to no article id')
+
+    searches = json.loads(request.session['clicks'])
+    searches.append(article_id)
+    request.session['clicks'] = json.dumps(searches)
 
 def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
     if not (request and begin_date and end_date):
         raise Http404('endpoint not properly formatted')
+
+    #session data
+    searches = json.loads(request.session['search'])
+    searches.append([keywords.split()])
+    request.session['search'] = json.dumps(searches)
 
     time_convert_str = "%Y%m%d"
     begin_date = datetime.datetime.strptime(begin_date, time_convert_str)
@@ -120,3 +133,6 @@ def timeline(request, keywords=None, begin_date=None, end_date=None, type=None):
         response = JsonResponse(res_dict)
         return response
 
+def heat_map(request):
+    context = RequestContext(request, {})
+    return render(request, 'heat_map.html', context)

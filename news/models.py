@@ -19,6 +19,8 @@ class Article(models.Model):
     url = models.CharField(unique=True, max_length=255)
     text = models.TextField()
     headline = models.CharField(max_length=255)
+    word_count = models.IntegerField()
+    sentiment_score = models.FloatField()
 
 class Keyword(models.Model):
     article = models.ForeignKey(Article)
@@ -43,6 +45,14 @@ class RedditComment(models.Model):
 class RedditKeyword(models.Model):
     post = models.ForeignKey(RedditPost)
     word = models.CharField(max_length=64)
+
+class PosIndex(models.Model):
+    word = models.CharField(max_length=64)
+    article = models.ForeignKey(Article)
+    count= models.IntegerField()
+
+class LastUpdate(models.Model):
+    value = models.IntegerField()
 
 #############################################################
 
