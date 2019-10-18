@@ -24,7 +24,7 @@ jsonpatch==1.3
 jsonpointer==1.0
 lxml==3.3.5
 newspaper==0.0.9.8
-nltk==2.0.5
+nltk==3.4.5
 oauth==1.0.1
 peewee==2.5.1
 prettytable==0.7.2
