@@ -22,7 +22,7 @@ html5lib==0.999
 jieba==0.35
 jsonpatch==1.3
 jsonpointer==1.0
-lxml==3.3.5
+lxml==4.6.2
 newspaper==0.0.9.8
 nltk==2.0.5
 oauth==1.0.1
